@@ -1,0 +1,29 @@
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+public class TwoferTest {
+
+  private Twofer twofer;
+
+  @Before
+  public void setup() {
+    twofer = new Twofer();
+  }
+
+  @Test
+  public void noNameGiven() {
+    Assert.fail("TODO");
+  }
+
+  @Test
+  public void aNameGiven() {
+    Assert.fail("TODO");
+  }
+
+  @Test
+  public void anotherNameGiven() {
+    Assert.fail("TODO");
+  }
+
+}

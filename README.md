@@ -9,6 +9,8 @@ Dépôt formation et coaching pour promo Renault Digital 2020 (voir [simplonco.g
 
 - [Simplon.co training](https://github.com/simplonco/training): resource principale
 - [La Poste promotion #4 - 2019](https://simplonco.github.io/lp4-2019/): contenu semblable à notre promo
+- [Exercices Java (exercism.io)](https://exercism.io/tracks/java/exercises): exercices java ([solutions](https://github.com/exercism/java/tree/master/exercises/))
+- [Exercices Java (leveluplunch.com)](https://www.leveluplunch.com/java/exercises/): exercices java
 
 ## Formations
 
