@@ -1,0 +1,18 @@
+# Travis CI (https://travis-ci.org/dubreuia/intellij-plugin-save-actions)
+
+dist: bionic
+
+language: java
+
+jdk:
+    - oraclejdk11
+
+script:
+    - cd exercices/exercism-two-fer && ./gradlew test
+
+branches:
+    only:
+        - /.*/
+
+notifications:
+    email: true
