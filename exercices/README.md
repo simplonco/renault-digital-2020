@@ -28,6 +28,7 @@ Les exercices sont classés selon la métrique Agile "[taille de t-shirt](https:
 
 - [Lego - Imprimer une brique de Lego dans la console (frank)](./lego)
 - [Darts - Implémenter un jeu de darts (exercism)](./exercism-darts)
+- [Yatch - Implémenter un jeu de yatch (exercism)](./exercism-yacht)
 
 ### Taille t-shirt: L
 
