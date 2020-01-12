@@ -5,12 +5,26 @@ Dépôt formation et coaching pour promo Renault Digital 2020 (voir [simplonco.g
 ![Logo Renault Digital](docs/img/renault-digital-logo.png)
 ![Logo Simplon](docs/img/simplon-logo.png)
 
+## [Calendrier](./calendrier)
+
+Contenu du coaching, semaine par semaine.
+
+## [Exercices](./exercices)
+
+Liste d'exercices que nous couvrirons en fonction des niveaux.
+
 ## Références
+
+### Simplon
 
 - [Simplon.co training](https://github.com/simplonco/training): resource principale
 - [La Poste promotion #4 - 2019](https://simplonco.github.io/lp4-2019/): contenu semblable à notre promo
-- [Exercices Java (exercism.io)](https://exercism.io/tracks/java/exercises): exercices java ([solutions](https://github.com/exercism/java/tree/master/exercises/))
-- [Exercices Java (leveluplunch.com)](https://www.leveluplunch.com/java/exercises/): exercices java
+
+### Resources Java
+
+- [Bonnes pratiques exercices (exercism.io)](https://github.com/exercism/java/blob/master/POLICIES.md): bonnes pratiques Java
+- TODO effective java
+- TODO oracle / google style guide
 
 ## Formations
 
@@ -25,7 +39,3 @@ Dépôt formation et coaching pour promo Renault Digital 2020 (voir [simplonco.g
 - [VAT - Implémenter un calcul sans TVA et arrondir un double (frank)](./vat)
 - [Lego - Imprimer une brique de Lego dans la console (frank)](./lego)
 - [Cowboy - Duel entre Lucky LUKE et Joe DALTON (frank)](./cowboy)
-
-## [Calendrier](./calendrier)
-
-Contenu du coaching, semaine par semaine.

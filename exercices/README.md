@@ -1,5 +1,10 @@
 # Exercices
 
+## Références
+
+- [Exercices Java (exercism.io)](https://exercism.io/tracks/java/exercises): exercices java ([solutions](https://github.com/exercism/java/tree/master/exercises/))
+- [Exercices Java (leveluplunch.com)](https://www.leveluplunch.com/java/exercises/): exercices java
+
 ## Taille t-shirt: S
 
 - [VAT - Implémenter un calcul sans TVA et arrondir un double (frank)](./vat)
