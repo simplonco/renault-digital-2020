@@ -2,8 +2,8 @@
 
 Dépôt formation et coaching pour promo Renault Digital 2020 (voir [simplonco.github.io/renault-digital-2020](https://simplonco.github.io/renault-digital-2020)).
 
-![Logo Renault Digital](docs/img/renault-digital-logo.png)
-![Logo Simplon](docs/img/simplon-logo.png)
+![Logo Renault Digital](docs/img/logo-renault-digital.png)
+![Logo Simplon](docs/img/logo-simplon.png)
 
 ## [Calendrier](./calendrier)
 

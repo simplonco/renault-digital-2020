@@ -1,5 +1,7 @@
 # Exercices
 
+![Icon Working (https://viewfromthegravytrain.files.wordpress.com/2014/01/icon_14894.png)](/docs/img/icon-working.png)
+
 ## Références
 
 - [Exercices Java (exercism.io)](https://exercism.io/tracks/java/exercises): exercices java ([solutions](https://github.com/exercism/java/tree/master/exercises/))
