@@ -16,75 +16,14 @@ Dépôt formation et coaching pour promo Renault Digital 2020 (voir [simplonco.g
 
 - [Formation module es3 5](https://github.com/VirtuoWorks/formation-module-es3-5)
 - [Formation module es2018 typescript](https://github.com/VirtuoWorks/formation-module-es2018-typescript)
-- [Tp systemes unix](https://github.com/VirtuoWorks/tp systemes-unix)
+- [TP systemes unix](https://github.com/VirtuoWorks/tp-systemes-unix)
 
 ### Formation back-end (Frank)
 
-- TODO
+- [VAT - Implémenter un calcul sans TVA et arrondir un double (frank)](./vat)
+- [Lego - Imprimer une brique de Lego dans la console (frank)](./lego)
+- [Cowboy - Duel entre Lucky LUKE et Joe DALTON (frank)](./cowboy)
 
-## Calendrier
+## [Calendrier](./calendrier)
 
-### Semaine 1 - 13/14/15 janvier
-
-TODO
-
-### Semaine 2 - 20/21/22 janvier
-
-TODO
-
-### Semaine 3 - 27/28/29 janvier
-
-TODO
-
-### Semaine 4 - 03/04/05 février
-
-TODO
-
-### Semaine 5 - 10/11/12 février
-
-TODO
-
-### Semaine 6 - 17/18/19 février
-
-TODO
-
-### Semaine 7 - formation
-
-TODO
-
-### Semaine 8 - 02/03/04 mars
-
-TODO
-
-### Semaine 9 - 09/10/11 mars
-
-TODO
-
-### Semaine 10 - 16/17/18 mars
-
-TODO
-
-### Semaine 11 - formation
-
-TODO
-
-### Semaine 12 - 30/31/01 mars
-
-TODO
-
-### Semaine 13 - 06/07/08 avril
-
-TODO
-
-### Semaine 14 - 13/14/15 avril
-
-TODO
-
-### Semaine 15 - formation
-
-TODO
-
-### Semaine 16 - 27/28/29 avril
-
-TODO
-
+Contenu du coaching, semaine par semaine.
