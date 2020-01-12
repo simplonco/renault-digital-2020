@@ -1,5 +1,6 @@
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class TwoferTest {
@@ -16,11 +17,13 @@ public class TwoferTest {
     Assert.fail("TODO");
   }
 
+  @Ignore("Remove to run test")
   @Test
   public void aNameGiven() {
     Assert.fail("TODO");
   }
 
+  @Ignore("Remove to run test")
   @Test
   public void anotherNameGiven() {
     Assert.fail("TODO");
