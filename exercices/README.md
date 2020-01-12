@@ -22,6 +22,7 @@ Les exercices sont classés selon la métrique Agile "[taille de t-shirt](https:
 
 - [VAT - Implémenter un calcul sans TVA et arrondir un double (frank)](./vat)
 - [Two Fer - Implémenter un hello world évolué (exercism)](./exercism-two-fer)
+- [RNA Transcription - Traduire DNA vers RNA (exercism)](./exercism-rna-transcription)
 
 ### Taille t-shirt: M
 
