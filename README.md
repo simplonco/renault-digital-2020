@@ -36,6 +36,6 @@ Liste d'exercices que nous couvrirons en fonction des niveaux.
 
 ### Formation back-end (Frank)
 
-- [VAT - Implémenter un calcul sans TVA et arrondir un double (frank)](./vat)
-- [Lego - Imprimer une brique de Lego dans la console (frank)](./lego)
-- [Cowboy - Duel entre Lucky LUKE et Joe DALTON (frank)](./cowboy)
+- [VAT - Implémenter un calcul sans TVA et arrondir un double (frank)](./exercices/frank-vat)
+- [Lego - Imprimer une brique de Lego dans la console (frank)](./exercices/frank-lego)
+- [Cowboy - Duel entre Lucky LUKE et Joe DALTON (frank)](./exercices/frank-cowboy)

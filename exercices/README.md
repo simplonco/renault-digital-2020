@@ -20,16 +20,16 @@ Les exercices sont classés selon la métrique Agile "[taille de t-shirt](https:
 
 ### Taille t-shirt: S
 
-- [VAT - Implémenter un calcul sans TVA et arrondir un double (frank)](./vat)
+- [VAT - Implémenter un calcul sans TVA et arrondir un double (frank)](./frank-vat)
 - [Two Fer - Implémenter un hello world évolué (exercism)](./exercism-two-fer)
 - [RNA Transcription - Traduire DNA vers RNA (exercism)](./exercism-rna-transcription)
 
 ### Taille t-shirt: M
 
-- [Lego - Imprimer une brique de Lego dans la console (frank)](./lego)
+- [Lego - Imprimer une brique de Lego dans la console (frank)](./frank-lego)
 - [Darts - Implémenter un jeu de darts (exercism)](./exercism-darts)
 - [Yatch - Implémenter un jeu de yatch (exercism)](./exercism-yacht)
 
 ### Taille t-shirt: L
 
-- [Cowboy - Duel entre Lucky LUKE et Joe DALTON (frank)](./cowboy)
+- [Cowboy - Duel entre Lucky LUKE et Joe DALTON (frank)](./frank-cowboy)
