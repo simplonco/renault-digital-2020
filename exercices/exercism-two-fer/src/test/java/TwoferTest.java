@@ -5,28 +5,28 @@ import org.junit.Test;
 
 public class TwoferTest {
 
-  private Twofer twofer;
+    private Twofer twofer;
 
-  @Before
-  public void setup() {
-    twofer = new Twofer();
-  }
+    @Before
+    public void setup() {
+        twofer = new Twofer();
+    }
 
-  @Test
-  public void noNameGiven() {
-    Assert.fail("TODO");
-  }
+    @Test
+    public void noNameGiven() {
+        Assert.fail("TODO");
+    }
 
-  @Ignore("Remove to run test")
-  @Test
-  public void aNameGiven() {
-    Assert.fail("TODO");
-  }
+    @Ignore("Remove to run test")
+    @Test
+    public void aNameGiven() {
+        Assert.fail("TODO");
+    }
 
-  @Ignore("Remove to run test")
-  @Test
-  public void anotherNameGiven() {
-    Assert.fail("TODO");
-  }
+    @Ignore("Remove to run test")
+    @Test
+    public void anotherNameGiven() {
+        Assert.fail("TODO");
+    }
 
 }
