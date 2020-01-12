@@ -1,5 +1,7 @@
 # Renault Digital 2020
 
+[![Travis CI Build Status](https://travis-ci.org/simplonco/renault-digital-2020.svg?branch=master)](https://travis-ci.org/simplonco/renault-digital-2020)
+
 Dépôt formation et coaching pour promo Renault Digital 2020 (voir [simplonco.github.io/renault-digital-2020](https://simplonco.github.io/renault-digital-2020)).
 
 ![Logo Renault Digital](docs/img/logo-renault-digital.png)

@@ -8,7 +8,10 @@ jdk:
     - oraclejdk11
 
 script:
+    - cd exercices/exercism-darts && ./gradlew test
+    - cd exercices/exercism-rna-transcription && ./gradlew test
     - cd exercices/exercism-two-fer && ./gradlew test
+    - cd exercices/exercism-yatch && ./gradlew test
 
 branches:
     only:
