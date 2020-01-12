@@ -13,7 +13,7 @@ Contenu du coaching, semaine par semaine.
 
 Liste d'exercices que nous ferons en groupe (mob programming).
 
-## Formations
+## Formation
 
 ### Formation front-end (Sami)
 

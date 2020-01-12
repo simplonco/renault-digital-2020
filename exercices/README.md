@@ -8,19 +8,19 @@
 
 Les exercices sont classés selon la métrique Agile [taille de t-shirt](https://producthabits.com/engineering-estimates/) : "T-shirt sizing – Assigning small, medium or large labels for each engineering initiative to indicate its complexity."
 
-### Taille t-shirt: S
+### Taille : SMALL
 
 - [VAT - Implémenter un calcul sans TVA et arrondir un double (frank)](./frank-vat)
 - [Two Fer - Implémenter un hello world évolué (exercism)](./exercism-two-fer)
 - [RNA Transcription - Traduire DNA vers RNA (exercism)](./exercism-rna-transcription)
 
-### Taille t-shirt: M
+### Taille : MEDIUM
 
 - [Lego - Imprimer une brique de Lego dans la console (frank)](./frank-lego)
 - [Darts - Implémenter un jeu de darts (exercism)](./exercism-darts)
 - [Yatch - Implémenter un jeu de yatch (exercism)](./exercism-yacht)
 
-### Taille t-shirt: L
+### Taille : LARGE
 
 - [Cowboy - Duel entre Lucky LUKE et Joe DALTON (frank)](./frank-cowboy)
 

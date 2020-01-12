@@ -1,7 +1,5 @@
 # VAT - Implémenter un calcul sans TVA et arrondir un double (frank)
 
-Taille t-shirt: S
-
 ## Objectif
 
 Tout est dans la Javadoc et les commentaires de la classe fournie. La classe peut être importée dans un autre package que celui déclaré selon votre organisation. Il n’y a pas besoin d’autres méthodes et classes que ce qui est fourni. Il faut uniquement implémenter les méthodes déjà déclarées.
