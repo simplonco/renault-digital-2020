@@ -12,6 +12,7 @@ public class RnaTranscriptionTest {
         rnaTranscription = new RnaTranscription();
     }
 
+    @Ignore("Remove to run test")
     @Test
     public void testEmptyRnaSequence() {
         Assert.fail();

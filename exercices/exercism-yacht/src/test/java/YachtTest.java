@@ -4,6 +4,7 @@ import org.junit.Test;
 
 public class YachtTest {
 
+    @Ignore("Remove to run test")
     @Test
     public void yacht() {
         Assert.fail("TODO");

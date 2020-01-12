@@ -4,6 +4,7 @@ import org.junit.Test;
 
 public class DartsTest {
 
+    @Ignore("Remove to run test")
     @Test
     public void missedTarget() {
         Assert.fail("TODO");

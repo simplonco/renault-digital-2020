@@ -12,6 +12,7 @@ public class TwoferTest {
         twofer = new Twofer();
     }
 
+    @Ignore("Remove to run test")
     @Test
     public void noNameGiven() {
         Assert.fail("TODO");
