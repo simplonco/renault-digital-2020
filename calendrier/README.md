@@ -1,6 +1,6 @@
 # Calendrier
 
-![Icon Calendar (https://maxcdn.icons8.com/Share/icon/p1em/Time_And_Date/calendar1600.png)](/docs/img/icon-calendar.png)
+![Icon Calendar (https://maxcdn.icons8.com/Share/icon/p1em/Time_And_Date/calendar1600.png)](../docs/img/icon-calendar.png)
 
 - **[Semaine 1 - 13/14/15 janvier](./semaine01)**
 - [Semaine 2 - 20/21/22 janvier](./semaine02)

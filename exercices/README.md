@@ -1,6 +1,6 @@
 # Exercices
 
-![Icon Working (https://viewfromthegravytrain.files.wordpress.com/2014/01/icon_14894.png)](/docs/img/icon-working.png)
+![Icon Working (https://viewfromthegravytrain.files.wordpress.com/2014/01/icon_14894.png)](../docs/img/icon-working.png)
 
 ## Références
 
