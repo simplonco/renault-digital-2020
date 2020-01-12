@@ -11,9 +11,7 @@ Contenu du coaching, semaine par semaine.
 
 ## [Exercices](./exercices)
 
-[![Travis CI Build Status](https://travis-ci.org/simplonco/renault-digital-2020.svg?branch=master)](https://travis-ci.org/simplonco/renault-digital-2020)
-
-Liste d'exercices que nous couvrirons en fonction des niveaux.
+Liste d'exercices que nous ferons en groupe (mob programming).
 
 ## Formations
 
