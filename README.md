@@ -1,7 +1,5 @@
 # Renault Digital 2020
 
-[![Travis CI Build Status](https://travis-ci.org/simplonco/renault-digital-2020.svg?branch=master)](https://travis-ci.org/simplonco/renault-digital-2020)
-
 Dépôt formation et coaching pour promo Renault Digital 2020 (voir [simplonco.github.io/renault-digital-2020](https://simplonco.github.io/renault-digital-2020)).
 
 ![Logo Renault Digital](docs/img/logo-renault-digital.png)
@@ -13,20 +11,9 @@ Contenu du coaching, semaine par semaine.
 
 ## [Exercices](./exercices)
 
+[![Travis CI Build Status](https://travis-ci.org/simplonco/renault-digital-2020.svg?branch=master)](https://travis-ci.org/simplonco/renault-digital-2020)
+
 Liste d'exercices que nous couvrirons en fonction des niveaux.
-
-## Références
-
-### Simplon
-
-- [Simplon.co training](https://github.com/simplonco/training): resource principale
-- [La Poste promotion #4 - 2019](https://simplonco.github.io/lp4-2019/): contenu semblable à notre promo
-
-### Resources Java
-
-- [Bonnes pratiques exercices (exercism.io)](https://github.com/exercism/java/blob/master/POLICIES.md): bonnes pratiques Java
-- TODO effective java
-- TODO oracle / google style guide
 
 ## Formations
 
@@ -41,3 +28,16 @@ Liste d'exercices que nous couvrirons en fonction des niveaux.
 - [VAT - Implémenter un calcul sans TVA et arrondir un double (frank)](./exercices/frank-vat)
 - [Lego - Imprimer une brique de Lego dans la console (frank)](./exercices/frank-lego)
 - [Cowboy - Duel entre Lucky LUKE et Joe DALTON (frank)](./exercices/frank-cowboy)
+
+## Références
+
+### Simplon
+
+- [Simplon.co training](https://github.com/simplonco/training): resource principale
+- [La Poste promotion #4 - 2019](https://simplonco.github.io/lp4-2019/): contenu semblable à notre promo
+
+### Resources Java
+
+- [Bonnes pratiques exercices (exercism.io)](https://github.com/exercism/java/blob/master/POLICIES.md): bonnes pratiques Java
+- TODO effective java
+- TODO oracle / google style guide
