@@ -12,16 +12,28 @@ public class RnaTranscriptionTest {
         rnaTranscription = new RnaTranscription();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void testEmptyRnaSequence() {
-        Assert.fail();
+        // data
+        String dnaStrand = "";
+
+        // execute
+        String transcribe = rnaTranscription.transcribe(dnaStrand);
+
+        // verif
+        Assert.assertEquals("", transcribe);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void testRnaTranscriptionOfCytosineIsGuanine() {
-        Assert.fail();
+        // data
+        String dnaStrand = "C";
+
+        // exec
+        String transcribe = rnaTranscription.transcribe(dnaStrand);
+
+        // verif
+        Assert.assertEquals("G", transcribe);
     }
 
     @Ignore("Remove to run test")
@@ -42,10 +54,16 @@ public class RnaTranscriptionTest {
         Assert.fail();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void testRnaTranscription() {
-        Assert.fail();
+        // data
+        String dnaStrand = "GCTAA";
+
+        // exec
+        String transcription = rnaTranscription.transcribe(dnaStrand);
+
+        // assert
+        Assert.assertEquals("CGAUU", transcription);
     }
 
 }
