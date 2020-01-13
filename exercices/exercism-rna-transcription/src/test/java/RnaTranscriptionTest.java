@@ -12,16 +12,25 @@ public class RnaTranscriptionTest {
         rnaTranscription = new RnaTranscription();
     }
 
-    @Ignore("Remove to run test")
     @Test
-    public void testEmptyRnaSequence() {
-        Assert.fail();
+    public void testEmptyRnaSequence(){
+        // given
+        String dnaStrand = "";
+        // when
+        String actualRnaTranscription = rnaTranscription.transcribe(dnaStrand);
+        // then
+        Assert.assertEquals("", actualRnaTranscription);
     }
 
-    @Ignore("Remove to run test")
+
     @Test
     public void testRnaTranscriptionOfCytosineIsGuanine() {
-        Assert.fail();
+        // given
+        String dnaStrand = "C";
+        // when
+        String actualRnaTranscription = rnaTranscription.transcribe(dnaStrand);
+        // then
+        Assert.assertEquals("G", actualRnaTranscription);
     }
 
     @Ignore("Remove to run test")
