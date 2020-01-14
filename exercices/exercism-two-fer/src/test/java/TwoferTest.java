@@ -12,16 +12,16 @@ public class TwoferTest {
         twofer = new Twofer();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void noNameGiven() {
-        Assert.fail("TODO");
+     String reponse = twofer.twofer("");
+     Assert.assertEquals(reponse, "One for you, one for me.");
     }
 
-    @Ignore("Remove to run test")
     @Test
-    public void aNameGiven() {
-        Assert.fail("TODO");
+    public void aNameGiven(){
+    String reponse = twofer.twofer("Alice");
+    Assert.assertEquals(reponse, "One for Alice, one for me.");
     }
 
     @Ignore("Remove to run test")
