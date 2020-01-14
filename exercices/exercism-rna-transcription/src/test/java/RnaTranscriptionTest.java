@@ -8,20 +8,28 @@ public class RnaTranscriptionTest {
     private RnaTranscription rnaTranscription;
 
     @Before
-    public void setUp() {
+    public void init() {
         rnaTranscription = new RnaTranscription();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void testEmptyRnaSequence() {
-        Assert.fail();
+        //Given -> data
+        String dnaStrand = "";
+        //When -> executing
+       String results = rnaTranscription.transcribe(dnaStrand);
+       //Then -> verification
+        Assert.assertEquals("",results);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void testRnaTranscriptionOfCytosineIsGuanine() {
-        Assert.fail();
+        //Given -> data
+        String dnaStrand = "C";
+        //When -> executing
+        String results = rnaTranscription.transcribe(dnaStrand);
+        //Then -> verification
+        Assert.assertEquals("G",results);
     }
 
     @Ignore("Remove to run test")
