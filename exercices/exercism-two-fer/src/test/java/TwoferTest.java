@@ -7,7 +7,7 @@ public class TwoferTest {
 
     private Twofer twofer;
 
-    @BeforeEach
+    @Before
     public void setup() {
         twofer = new Twofer();
     }
