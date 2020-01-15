@@ -15,8 +15,6 @@
 
 ## Contenu
 
-TODO finir contenu
-
 - Workflow ticket dev
     - priorisation du ticket
     - JIRA
@@ -80,22 +78,22 @@ TODO finir contenu
 
 ## Kahoot!
 
-- x git, et autres VCS
-- x syntaxes iteration java
--   if else java
--   oop
--   interface
-- x fleur extends plante
--   types fleur plante affectation variable
-- x typage statique
-- x try catch checked exception
-- x junit, jest, jasmine, etc.
--   tdd
--   sql
-- x maven gradle, npm, grunt, babel, webpack
--   etapes prise ticket
-- x code review
-- x equals vs ==
-- x assert junit
-- x @Test et @Ignore
+- git, et autres VCS (x)
+- syntaxes iteration java (x)
+- if else java ( )
+- oop ( )
+- interface ( )
+- fleur extends plante (x)
+- types fleur plante affectation variable ( )
+- typage statique (x)
+- try catch checked exception (x)
+- junit, jest, jasmine, etc. (x)
+- tdd ( )
+- sql ( )
+- maven gradle, npm, grunt, babel, webpack (x)
+- etapes prise ticket ( )
+- code review (x)
+- equals vs == (x)
+- assert junit (x)
+- @Test et @Ignore (x)
 
