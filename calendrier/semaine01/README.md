@@ -75,6 +75,9 @@
 - question sur import projet eclipse
 - question sur async / await (callbacks)
 - question sur lego brick / refacto
+- question sur bash
+- question sur ps et ctrl-z
+- question sur parseInt
 
 ## Kahoot!
 
