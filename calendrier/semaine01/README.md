@@ -15,44 +15,70 @@
 
 ## Contenu
 
+TODO finir contenu
+
 - Workflow ticket dev
-    - developpeur participe analyse
+    - priorisation du ticket
     - JIRA
-    - git branch
-    - ...
-    - git merge
+    - relecture du ticket
+        - title / description
+        - domaine, équipe
+        - DOD
+            - code review
+            - tests verts
+            - couverture
+            - qualité
+    - git pull + git branch
+    - tdd + code
+    - git push sur branch
+    - usine logicielle (intégration continue IC / CI)
+    - code review
+    - validation PO / BA / TL / archi
+    - JIRA + git merge
     - deploy
-    - developpeur participe deploy
 - JUnit
     - framework de test
-    - jest, jasmin, etc.
-    - annotations before / test
-    - ..
+    - js: jest, jasmin, mocha, etc.
+    - annotations @Before / @Test
+    - assertion et execution de tests
 - Typage statique en java
+    - Le type de la variable est fixée à l'instanciation
     - Difference typage dynamique js
 - Exceptions
     - try / catch
 - Code review
     - ligne par ligne
-    - code style
-    - algo
-    - tests
+    - on regarde: code style, algo, tests
 - Gradle
-    - dependence
-    - execution test
+    - gère les dépendance
+    - gère la compilation et l'exécution
+    - gère le format du projet
 - Boucles
-    - foreach
-    - for classique index
+    - for index: for (var i = 0; i < elements.size(); i++)
+    - foreach: for (var element : elements)
 - Types primitif
-    - avec types objets
-    - boxing
+    - int / long / double / float / boolean / char
+    - avec types objets (Integer, Long, etc.)
+    - boxing: int -> Integer automatique
 - Classes
     - hierarchie classe simple
-    - interfaces
-    - surcharge
+    - interfaces (implements)
+    - surcharge (extends)
     - polymorphisme
 
-## Notes
+## Coaching
+
+- question sur debug vs console.log (!)
+- question sur className attribut
+- question sur hoverin / hoverout 2 functions
+- question sur function(event)
+- question sur title attribut (affectation variable) (!)
+- question sur retour implicite undefined
+- question sur import projet eclipse
+- question sur async / await (callbacks)
+- question sur lego brick / refacto
+
+## Kahoot!
 
 - x git, et autres VCS
 - x syntaxes iteration java
@@ -72,5 +98,4 @@
 - x equals vs ==
 - x assert junit
 - x @Test et @Ignore
-
 
