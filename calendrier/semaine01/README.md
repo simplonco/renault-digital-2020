@@ -105,5 +105,5 @@ Questions (11) sur le contenu ici-haut (https://create.kahoot.it/details/4d90396
 - code review (x)
 - equals vs == (x)
 - assert junit (x)
-- @Test et @Ignore (x)
+- @Test et @Disabled (x)
 
