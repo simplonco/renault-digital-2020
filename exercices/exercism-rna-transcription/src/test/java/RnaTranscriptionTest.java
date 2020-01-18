@@ -21,7 +21,7 @@ public class RnaTranscriptionTest {
         String transcribe = rnaTranscription.transcribe(dnaStrand);
 
         // verif
-        Assert.assertEquals("", transcribe);
+        Assertions.assertEquals("", transcribe);
     }
 
     @Test
@@ -33,7 +33,7 @@ public class RnaTranscriptionTest {
         String transcribe = rnaTranscription.transcribe(dnaStrand);
 
         // verif
-        Assert.assertEquals("G", transcribe);
+        Assertions.assertEquals("G", transcribe);
     }
 
     @Disabled("Remove to run test")
@@ -63,7 +63,7 @@ public class RnaTranscriptionTest {
         String transcription = rnaTranscription.transcribe(dnaStrand);
 
         // assert
-        Assert.assertEquals("CGAUU", transcription);
+        Assertions.assertEquals("CGAUU", transcription);
     }
 
 }
