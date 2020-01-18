@@ -1,13 +1,13 @@
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 public class RnaTranscriptionTest {
 
     private RnaTranscription rnaTranscription;
 
-    @Before
+    @BeforeEach
     public void init() {
         rnaTranscription = new RnaTranscription();
     }
@@ -19,7 +19,7 @@ public class RnaTranscriptionTest {
         //When -> executing
        String results = rnaTranscription.transcribe(dnaStrand);
        //Then -> verification
-        Assert.assertEquals("",results);
+        Assertions.assertEquals("",results);
     }
 
     @Test
@@ -29,31 +29,31 @@ public class RnaTranscriptionTest {
         //When -> executing
         String results = rnaTranscription.transcribe(dnaStrand);
         //Then -> verification
-        Assert.assertEquals("G",results);
+        Assertions.assertEquals("G",results);
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
     public void testRnaTranscriptionOfGuanineIsCytosine() {
-        Assert.fail();
+        Assertions.fail();
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
     public void testRnaTranscriptionOfThymineIsAdenine() {
-        Assert.fail();
+        Assertions.fail();
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
     public void testRnaTranscriptionOfAdenineIsUracil() {
-        Assert.fail();
+        Assertions.fail();
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
     public void testRnaTranscription() {
-        Assert.fail();
+        Assertions.fail();
     }
 
 }
