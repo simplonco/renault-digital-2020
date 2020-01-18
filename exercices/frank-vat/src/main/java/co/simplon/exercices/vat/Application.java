@@ -1,5 +1,8 @@
 package co.simplon.exercices.vat;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class Application {
 
     /**
@@ -18,12 +21,23 @@ public class Application {
          */
         double[] prices = {49.99, 19.99, 9.99, 14.59, 99.99};
         double[] rates = {20.0, 10.0, 10.0, 5.0, 20.0};
+        printPricesWithoutTax(prices, rates, false);
+        printPricesWithoutTax(prices, rates, true);
     }
 
-    private static double calculateWithoutTax(double price, double rate,
-                                              boolean rounded) {
+    private static void printPricesWithoutTax(double[] prices, double[] rates, boolean rounded) {
+        for (int index = 0; index < prices.length; index++) {
+            double price = prices[index];
+            double rate = rates[index];
+            double withoutTax = calculateWithoutTax(price, rate, rounded);
+            System.out.println("With VAT=€" + price + ", without VAT=€" + withoutTax + " (rate=" + rate + "%)");
+        }
+        System.out.println();
+    }
+
+    private static double calculateWithoutTax(double price, double rate, boolean rounded) {
         // Implémenter pour que result = price HT basé sur rate
-        double result = 0.0;
+        double result = price / (1 + (rate / 100));
         /*
          * Retourne le résultat arrondi ou non en fonction de rounded = false ou
          * rounded = true. Rien à changer ci-dessous.
@@ -37,7 +51,9 @@ public class Application {
          * plusieurs méthodes pour arrondir en Java, travail de recherche sur
          * Google...
          */
-        return result;
+        BigDecimal rounded = BigDecimal.valueOf(result);
+        rounded = rounded.setScale(2, RoundingMode.HALF_UP);
+        return rounded.doubleValue();
     }
 
 }
