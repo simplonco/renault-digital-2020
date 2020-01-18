@@ -15,71 +15,78 @@
 
 ## Contenu
 
-- Workflow ticket dev
-    - priorisation du ticket
-    - JIRA
-    - relecture du ticket
-        - title / description
-        - domaine, équipe
-        - DOD
-            - code review
-            - tests verts
-            - couverture
-            - qualité
-    - git pull + git branch
-    - tdd + code
-    - git push sur branch
-    - usine logicielle (intégration continue IC / CI)
-    - code review
-    - validation PO / BA / TL / archi
-    - JIRA + git merge
-    - deploy
+- Récapitulatif du "Workflow d'un ticket" pour un dévelopeur
+    - Priorisation du ticket (selon méthode Agile)
+    - Récupération du ticket dans JIRA (et sur le tableau)
+    - Relecture et vérification du ticket
+        - Vérification du titre et description
+        - Vérification du domaine métier et équipe
+        - Vérification des "Definition Of Done (DOD)", à minima
+            - Code review
+            - Tests verts
+            - Couverture des tests
+            - Qualité du code
+            - Déploiement OK
+    - Création de la branche avec `git pull` et `git branch`
+    - Écriture du code en TDD
+    - Lorsque terminé `git push` et création Pull Request
+    - Vérification de l'usine logicielle, Intégration Continue (IC / CI)
+    - Vérification de la code review du TL
+    - Validation par PO / BA / TL / archi
+    - Mise à jour de JIRA et `git merge`
+    - Déploiement de la feature en prod
 - JUnit
-    - framework de test
-    - js: jest, jasmin, mocha, etc.
-    - annotations @Before / @Test
-    - assertion et execution de tests
+    - Framework d'exécution de test de d'assertion
+    - Équivalent JavaScript: Jest, Jasmin, Mocha, etc.
+    - Utilisation d'annotations: `@Before` / `@Test`
+    - Utilisation des assertions: `Assert.assertEquals()`
 - Typage statique en java
     - Le type de la variable est fixée à l'instanciation
-    - Difference typage dynamique js
+    - Different du typage dynamique JavaScript: le type de la variable peut changer
 - Exceptions
-    - try / catch
-- Code review
-    - ligne par ligne
-    - on regarde: code style, algo, tests
-- Gradle
-    - gère les dépendance
-    - gère la compilation et l'exécution
-    - gère le format du projet
+    - Utilisation du `try / catch`: permet d'attraper une exception
+    - Les exceptions "checked" doivent avoir un try / catch
+    - Les exceptions "runtime" étendent `RuntimeException`
+- Code Review
+    - On relit ligne par ligne, charactère par char
+    - On regarde: code style, algorithmie (est-ce compréhensible ?), tests
+- Gradle / Maven
+    - Gestion de la configuration du projet
+    - Gestion des dépendances
+    - Gestion de la compilation et l'exécution
+    - Exécution de tâche de build
 - Boucles
-    - for index: for (var i = 0; i < elements.size(); i++)
-    - foreach: for (var element : elements)
+    - for index: `for (var i = 0; i < elements.size(); i++) { ... }`
+    - foreach: `for (var element : elements) { ... }`
+    - while: `while (condition) { ... }`
 - Types primitif
-    - int / long / double / float / boolean / char
-    - avec types objets (Integer, Long, etc.)
-    - boxing: int -> Integer automatique
+    - `int` / `long` / `double` / `float` / `boolean` / `char`
+    - Avec types objets associés (`Integer`, `Long`, etc.)
+    - Le boxing change le type automatiquement: `int` -> `Integer`
 - Classes
-    - hierarchie classe simple
-    - interfaces (implements)
-    - surcharge (extends)
-    - polymorphisme
+    - Rappel sur hiérarchie classe simple
+    - Rappel sur interfaces (`implements`)
+    - Rappel sur la surcharge (`extends`)
+    - Introduction au polymorphisme
 
-## Coaching
+## Travail en groupe
 
-- question sur debug vs console.log (!)
-- question sur className attribut
-- question sur hoverin / hoverout 2 functions
-- question sur function(event)
-- question sur title attribut (affectation variable) (!)
-- question sur retour implicite undefined
-- question sur import projet eclipse
-- question sur async / await (callbacks)
-- question sur lego brick / refacto
-- question sur bash
-- question sur ps et ctrl-z
-- question sur parseInt
+- Question sur debug vs console.log (!)
+- Question sur className attribut
+- Question sur hoverin / hoverout 2 functions
+- Question sur function(event) (!)
+- Question sur title attribut (affectation variable) (!)
+- Question sur retour implicite undefined (!)
+- Question sur import projet eclipse
+- Question sur async / await (callbacks)
+- Question sur lego brick / refacto
+- Question sur bash
+- Question sur ps et ctrl-z
+- Question sur parseInt
 
 ## Kahoot!
+
+Questions (11) sur le contenu ici-haut (https://create.kahoot.it/details/4d903968-6370-4a54-9889-150de16e58ac).
 
 - git, et autres VCS (x)
 - syntaxes iteration java (x)

@@ -1,11 +1,20 @@
-# Semaine 02
+# Semaine 02 - 20/21/22 janvier
 
 ## Plan
 
-- Revue du contenu semaine passé (30 minutes)
-    - Focus sur 1 élément par groupe
+- Retour sur mercredi passé (30 minutes)
+    - Question sur "debug" vs "console.log"
+        - Utilisation d'un IDE recommandé (PAS sublime text)
+        - Utilisation d'un débuggeur pour JavaScript
+        - Utilisation d'un débuggeur pour Java
+    - Question sur `function(event)`
+        - Usage d'un `event` en JavaScript
+    - Question sur l'affectation d'un `window.title`
+        - Affectation de variable
+        - Passage de variable par référence / valeur
 - Mob programming sur un exercice (120 minutes)
-    - Même sujet que le focus
+    - Focus sur 1 sujet par groupe (à choisir ici bas)
+    - Faire les étapes ["Workflow d'un ticket"](https://simplonco.github.io/renault-digital-2020/calendrier/semaine02/)
 - Feedback
 
 ## Sujets
