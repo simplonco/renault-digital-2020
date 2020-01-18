@@ -14,10 +14,10 @@
         - Passage de variable par référence / valeur
 - Mob programming sur un exercice (120 minutes)
     - Focus sur 1 sujet par groupe (à choisir ici bas)
-    - Faire les étapes ["Workflow d'un ticket"](https://simplonco.github.io/renault-digital-2020/calendrier/semaine02/)
+    - Faire les étapes ["Workflow d'un ticket"](https://simplonco.github.io/renault-digital-2020/calendrier/semaine01/)
 - Feedback
 
-## Sujets
+## Sujets [exercism.io](https://exercism.io/my/tracks/java)
 
 - Algorithms
 - Arrays
