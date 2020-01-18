@@ -1,33 +1,33 @@
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 public class TwoferTest {
 
     private Twofer twofer;
 
-    @Before
+    @BeforeEach
     public void setup() {
         twofer = new Twofer();
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
     public void noNameGiven() {
-        Assert.fail("TODO");
+        Assertions.fail("TODO");
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
     public void aNameGiven() {
-        Assert.fail("TODO");
+        Assertions.fail("TODO");
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
     public void anotherNameGiven() {
-        Assert.fail("TODO");
+        Assertions.fail("TODO");
     }
 
 }

@@ -1,86 +1,86 @@
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 public class DartsTest {
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
     public void missedTarget() {
-        Assert.fail("TODO");
+        Assertions.fail("TODO");
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
     public void onTheOuterCircle() {
-        Assert.fail("TODO");
+        Assertions.fail("TODO");
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
     public void onTheMiddleCircle() {
-        Assert.fail("TODO");
+        Assertions.fail("TODO");
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
     public void onTheInnerCircle() {
-        Assert.fail("TODO");
+        Assertions.fail("TODO");
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
     public void exactlyOnCentre() {
-        Assert.fail("TODO");
+        Assertions.fail("TODO");
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
     public void nearTheCentre() {
-        Assert.fail("TODO");
+        Assertions.fail("TODO");
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
     public void justWithinTheInnerCircle() {
-        Assert.fail("TODO");
+        Assertions.fail("TODO");
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
     public void justOutsideTheInnerCircle() {
-        Assert.fail("TODO");
+        Assertions.fail("TODO");
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
     public void justWithinTheMiddleCirlce() {
-        Assert.fail("TODO");
+        Assertions.fail("TODO");
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
     public void justOutsideTheMiddleCircle() {
-        Assert.fail("TODO");
+        Assertions.fail("TODO");
     }
 
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
     public void justWithinTheOuterCirlce() {
-        Assert.fail("TODO");
+        Assertions.fail("TODO");
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
     public void justOutsideTheOuterCircle() {
-        Assert.fail("TODO");
+        Assertions.fail("TODO");
     }
 
-    @Ignore("Remove to run test")
+    @Disabled("Remove to run test")
     @Test
     public void asymmetricPositionBetweenTheInnerAndMiddleCircles() {
-        Assert.fail("TODO");
+        Assertions.fail("TODO");
     }
 
 }
