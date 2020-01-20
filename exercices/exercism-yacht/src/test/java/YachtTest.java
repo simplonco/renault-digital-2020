@@ -2,11 +2,13 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 public class YachtTest {
 
     @Test
     public void yacht() {
-        Yacht yacht = new Yacht(new int[]{4, 4, 4, 4, 4}, YachtCategory.YACHT);
+        Yacht yacht = new Yacht(List.of(4, 4, 4, 4, 4), YachtCategory.YACHT);
 
         int score = yacht.score();
 
@@ -45,7 +47,7 @@ public class YachtTest {
 
     @Test
     public void fours() {
-        Yacht yacht = new Yacht(new int[]{4, 4, 1, 6, 2}, YachtCategory.FOURS);
+        Yacht yacht = new Yacht(List.of(4, 4, 1, 6, 2), YachtCategory.FOURS);
 
         int score = yacht.score();
 

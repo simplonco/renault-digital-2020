@@ -4,17 +4,17 @@ import java.util.Optional;
 
 class Yacht {
 
-    private final int[] dice;
+    private final List<Integer> dice;
     private final YachtCategory yachtCategory;
 
     Yacht(List<Integer> dices, YachtCategory yachtCategory) {
-        this.dice = dice;
+        this.dice = dices;
         this.yachtCategory = yachtCategory;
     }
 
     int score() {
         if (yachtCategory.equals(YachtCategory.YACHT)) {
-            if (dice.stream().allMatch(value -> value == dice.get(0))) {
+            if (dice.stream().allMatch(value -> value.equals(dice.get(0)))) {
                 return 50;
             }
             return 0;
@@ -22,7 +22,7 @@ class Yacht {
             return dice.stream()
                     .filter(element -> element == 4)
                     .reduce(Integer::sum)
-                    .getAsInt();
+                    .get();
         }
         throw new UnsupportedOperationException();
     }
