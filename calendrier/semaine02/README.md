@@ -4,7 +4,7 @@
 
 - Retour sur mercredi passé (30 minutes)
     - Question sur "debug" vs "console.log"
-        - Utilisation d'un IDE recommandé (PAS sublime text)
+        - Utilisation d'un IDE recommandé (vscode, webstorm)
         - Utilisation d'un débuggeur pour JavaScript
         - Utilisation d'un débuggeur pour Java
     - Question sur l'affectation d'un `window.title`
@@ -26,7 +26,7 @@
     - Function
     - Predicate
     - etc.
-- Passage de variable par référence / valeur, définition de variable et définition mémoire:
+- TODO PAS VU: Passage de variable par référence / valeur, définition de variable et définition mémoire:
 
 | Variable        | Type          | Value          |
 | -------------   | ------------- | -----          |
@@ -41,57 +41,14 @@
 
 ## Sujets [exercism.io](https://exercism.io/my/tracks/java)
 
-- Algorithms
-- Arrays
-- Bitwise Operations
-- Booleans
-- Classes
-- Concurrency
-- Conditionals
-- Cryptography
-- Dates
-- Enumerations
-- Equality
-- Exception Handling
-- Files
-- Filtering
-- Floating Point Numbers
-- Functional Programming
-- Games
-- Generics
-- Graphs
-- Integers
-- Lists
-- Logic
-- Loops
-- Maps
-- Math
-- Matrices
-- Object Oriented Programming
-- Optional Values
-- Parsing
-- Pattern Matching
-- Pattern Recognition
-- Queues
-- Randomness
-- Records
-- Recursion
-- Refactoring
-- Regular Expressions
-- Searching
-- Security
-- Sets
-- Sorting
-- Stacks
-- Strings
-- Text Formatting
-- Time
-- Transforming
-- Trees
-- Type Conversion
-- Variables
+Sujets vu: objet, type primitifs, api collection (list)
 
 ## Notes
 
-TODO
+- question recursion
+- question utilisation git upstream
+- mercredi: correction lego
+- mercredi: coaching bien pour certain, moins pour d'autres
+- mercredi: prendre un probleme pour les autres et le resoudre ensemble
+- mercredi: probleme renault
 

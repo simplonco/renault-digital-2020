@@ -1,4 +1,8 @@
 # Semaine 03
 
-TODO
+## TODO
+
+- java servlet (+ review jar, + war packaging)
+- gradle?
+- tomcat? jetty?
 
