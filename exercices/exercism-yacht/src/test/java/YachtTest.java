@@ -4,10 +4,13 @@ import org.junit.jupiter.api.Test;
 
 public class YachtTest {
 
-    @Disabled("Remove to run test")
     @Test
     public void yacht() {
-        Assertions.fail("TODO");
+        Yacht yacht = new Yacht(new int[]{4, 4, 4, 4, 4}, YachtCategory.YACHT);
+
+        int score = yacht.score();
+
+        Assertions.assertEquals(50, score);
     }
 
     @Disabled("Remove to run test")
@@ -40,10 +43,13 @@ public class YachtTest {
         Assertions.fail("TODO");
     }
 
-    @Disabled("Remove to run test")
     @Test
     public void fours() {
-        Assertions.fail("TODO");
+        Yacht yacht = new Yacht(new int[]{4, 4, 1, 6, 2}, YachtCategory.FOURS);
+
+        int score = yacht.score();
+
+        Assertions.assertEquals(8, score);
     }
 
     @Disabled("Remove to run test")
