@@ -7,20 +7,19 @@ class Yacht {
     private final int[] dice;
     private final YachtCategory yachtCategory;
 
-
-    Yacht(int[] dice, YachtCategory yachtCategory) {
+    Yacht(List<Integer> dices, YachtCategory yachtCategory) {
         this.dice = dice;
         this.yachtCategory = yachtCategory;
     }
 
     int score() {
         if (yachtCategory.equals(YachtCategory.YACHT)) {
-            if (Arrays.stream(this.dice).allMatch(value -> value == this.dice[0])) {
+            if (dice.stream().allMatch(value -> value == dice.get(0))) {
                 return 50;
             }
             return 0;
         } else if (yachtCategory.equals(YachtCategory.FOURS)) {
-            return Arrays.stream(dice)
+            return dice.stream()
                     .filter(element -> element == 4)
                     .reduce(Integer::sum)
                     .getAsInt();
