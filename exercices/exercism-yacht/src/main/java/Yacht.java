@@ -1,6 +1,8 @@
+import java.util.List;
+
 class Yacht {
 
-    Yacht(int[] dice, YachtCategory yachtCategory) {
+    Yacht(List<Integer> dices, YachtCategory yachtCategory) {
         throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
     }
 
