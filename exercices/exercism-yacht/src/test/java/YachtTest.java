@@ -2,12 +2,20 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 public class YachtTest {
 
-    @Disabled("Remove to run test")
     @Test
     public void yacht() {
-        Assertions.fail("TODO");
+        //given
+        List<Integer> dices = List.of(1, 1, 1, 1, 1);
+        YachtCategory category = YachtCategory.YACHT;
+        Yacht yacht = new Yacht(dices, category);
+        //when
+        int result = yacht.score();
+        //then
+        Assertions.assertEquals(50, result);
     }
 
     @Disabled("Remove to run test")
