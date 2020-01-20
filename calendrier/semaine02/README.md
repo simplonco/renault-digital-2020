@@ -7,8 +7,6 @@
         - Utilisation d'un IDE recommandé (PAS sublime text)
         - Utilisation d'un débuggeur pour JavaScript
         - Utilisation d'un débuggeur pour Java
-    - Question sur `function(event)`
-        - Usage d'un `event` en JavaScript
     - Question sur l'affectation d'un `window.title`
         - Affectation de variable
         - Passage de variable par référence / valeur
@@ -16,6 +14,30 @@
     - Focus sur 1 sujet par groupe (à choisir ici bas)
     - Faire les étapes ["Workflow d'un ticket"](https://simplonco.github.io/renault-digital-2020/calendrier/semaine01/)
 - Feedback
+
+## Contenu
+
+- java.util.Collection
+    - différence avec int[]
+    - java.util.List (ArrayList)
+    - java.util.Set (HashSet)
+    - java.util.Map (HashMap)
+- java.util.stream
+    - Function
+    - Predicate
+    - etc.
+- Passage de variable par référence / valeur, définition de variable et définition mémoire:
+
+| Variable        | Type          | Value          |
+| -------------   | ------------- | -----          |
+| intVariable     | int           | 12345          |
+| integerVariable | Integer       | 0x7fff2df9d588 |
+| objectVariable  | Object        | 0x7fff2df9d589 |
+
+| Memory Address  | Value          |
+| -------------   | -------------  |
+| 0x7fff2df9d588  | 12345          |
+| 0x7fff2df9d589  | { "f1": "v1" } |
 
 ## Sujets [exercism.io](https://exercism.io/my/tracks/java)
 
@@ -68,10 +90,6 @@
 - Trees
 - Type Conversion
 - Variables
-
-## Contenu
-
-TODO
 
 ## Notes
 
