@@ -2,6 +2,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 public class YachtTest {
 
     @Disabled("Remove to run test")
@@ -34,16 +36,28 @@ public class YachtTest {
         Assertions.fail("TODO");
     }
 
-    @Disabled("Remove to run test")
     @Test
     public void twos() {
-        Assertions.fail("TODO");
+        // given
+        List<Integer> list = List.of(4, 1, 3, 4, 2);
+        YachtCategory yachtCategory = YachtCategory.TWOS;
+        Yacht yacht = new Yacht(list, yachtCategory);
+        // when
+        int resultat = yacht.score();
+        // then
+        Assertions.assertEquals(resultat, 2);
     }
 
-    @Disabled("Remove to run test")
     @Test
     public void fours() {
-        Assertions.fail("TODO");
+        // given
+        List<Integer> list = List.of(4, 1, 3, 4, 2);
+        YachtCategory yachtCategory = YachtCategory.FOURS;
+        Yacht yacht = new Yacht(list, yachtCategory);
+        // when
+        int resultat = yacht.score();
+        // then
+        Assertions.assertEquals(resultat, 8);
     }
 
     @Disabled("Remove to run test")
