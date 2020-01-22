@@ -6,7 +6,6 @@ package co.simplon.exercices.lego;
 public class LegoBrick {
 
     private final int height;
-
     private final int width;
 
     public LegoBrick(int height, int width) {
@@ -17,12 +16,12 @@ public class LegoBrick {
         this.width = width;
     }
 
-    public int getWidth() {
-        return width;
-    }
-
     public int getHeight() {
         return height;
+    }
+
+    public int getWidth() {
+        return width;
     }
 
 }
