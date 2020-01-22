@@ -2,6 +2,9 @@ apply plugin: "java"
 apply plugin: "eclipse"
 apply plugin: "idea"
 
+sourceCompatibility = 11
+targetCompatibility = 11
+
 repositories {
     mavenCentral()
 }
@@ -10,10 +13,21 @@ dependencies {
     testCompile "junit:junit:4.12"
 }
 
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Jar File Example',
+                'Implementation-Version': '1.0.0',
+                'Main-Class': 'GrepTool'
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
 test {
-  testLogging {
-    exceptionFormat = 'short'
-    showStandardStreams = true
-    events = ["passed", "failed", "skipped"]
-  }
+    testLogging {
+        exceptionFormat = 'short'
+        showStandardStreams = true
+        events = ["passed", "failed", "skipped"]
+    }
 }
