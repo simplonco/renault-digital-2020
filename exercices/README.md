@@ -16,9 +16,10 @@ Les exercices sont classés selon la métrique Agile [taille de t-shirt](https:/
 
 ### Taille : MEDIUM
 
-- [Lego - Imprimer une brique de Lego dans la console (frank)](./frank-lego)
+- [Lego - Imprimer une brique de Lego dans la console (frank)](./frank-lego) (done)
 - [Darts - Implémenter un jeu de darts (exercism)](./exercism-darts)
 - [Yatch - Implémenter un jeu de yatch (exercism)](./exercism-yacht)
+- [Grep - Search a file for lines matching a regular expression pattern](./exercism-grep2) (done)
 
 ### Taille : LARGE
 
