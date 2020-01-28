@@ -4,7 +4,7 @@
 
 - Retour sur mercredi passé (30 minutes)
     - Question sur "debug" vs "console.log"
-        - Utilisation d'un IDE recommandé (PAS sublime text)
+        - Utilisation d'un IDE recommandé (vscode, webstorm)
         - Utilisation d'un débuggeur pour JavaScript
         - Utilisation d'un débuggeur pour Java
     - Question sur l'affectation d'un `window.title`
@@ -17,81 +17,46 @@
 
 ## Contenu
 
-- java.util.Collection
-    - différence avec int[]
-    - java.util.List (ArrayList)
-    - java.util.Set (HashSet)
-    - java.util.Map (HashMap)
+- Utilisation de git
+    - git tag
+    - git branch
+    - git merge
+    - git pull / git push
+- Survol de `java.util.Collection`
+    - Différence entre `int[]` et `List<Integer>`
+    - Retour sur le boxing
+    - `java.util.List` (implementation `ArrayList`, utilisation de `List.of`)
+    - `java.util.Set` (implementation `HashSet`)
+    - `java.util.Map` (implementation `HashMap`)
+- Objets
+    - Déclaration d'une classe
+    - Déclaration d'un constructeur
+    - Déclaration de variable d'instance (différence variable locales)
+    - Marqueurs de visiblité (`private`, `protected`, `public`, et rien)
+- Point d'entrés
+    - Application classique : `public static void main`
+    - Packaging de type jar : un zip des classes
+- Lecture sur disque (à revoir)
+    - Lecture de fichier avec `Files.readAllLines`
+    - Écriture de fichier avec `Files.write`
+    - Suppression de fichier avec `Files.delete`
+    - Gestion `IOException` obligatoire (checked)
+    - Utilisation de `Path` avec `Paths`
 - java.util.stream
     - Function
     - Predicate
     - etc.
-- Passage de variable par référence / valeur, définition de variable et définition mémoire:
-
-| Variable        | Type          | Value          |
-| -------------   | ------------- | -----          |
-| intVariable     | int           | 12345          |
-| integerVariable | Integer       | 0x7fff2df9d588 |
-| objectVariable  | Object        | 0x7fff2df9d589 |
-
-| Memory Address  | Value          |
-| -------------   | -------------  |
-| 0x7fff2df9d588  | 12345          |
-| 0x7fff2df9d589  | { "f1": "v1" } |
 
 ## Sujets [exercism.io](https://exercism.io/my/tracks/java)
 
-- Algorithms
-- Arrays
-- Bitwise Operations
-- Booleans
-- Classes
-- Concurrency
-- Conditionals
-- Cryptography
-- Dates
-- Enumerations
-- Equality
-- Exception Handling
-- Files
-- Filtering
-- Floating Point Numbers
-- Functional Programming
-- Games
-- Generics
-- Graphs
-- Integers
-- Lists
-- Logic
-- Loops
-- Maps
-- Math
-- Matrices
-- Object Oriented Programming
-- Optional Values
-- Parsing
-- Pattern Matching
-- Pattern Recognition
-- Queues
-- Randomness
-- Records
-- Recursion
-- Refactoring
-- Regular Expressions
-- Searching
-- Security
-- Sets
-- Sorting
-- Stacks
-- Strings
-- Text Formatting
-- Time
-- Transforming
-- Trees
-- Type Conversion
-- Variables
+Sujets vu: objet, type primitifs, api collection (list)
 
 ## Notes
 
-TODO
+- question recursion
+- question utilisation git upstream
+- mercredi: correction lego
+- mercredi: coaching bien pour certain, moins pour d'autres
+- mercredi: prendre un probleme pour les autres et le resoudre ensemble
+- mercredi: probleme renault
 

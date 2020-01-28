@@ -27,9 +27,14 @@ public class Application {
         System.out.println("║ O O O O ║");
         System.out.println("║ O O O O ║");
         System.out.println("╚═════════╝");
+        System.out.println("╔═══════════╗");
+        System.out.println("║ O O O O O ║");
+        System.out.println("║ O O O O O ║");
+        System.out.println("║ O O O O O ║");
+        System.out.println("╚═══════════╝");
         System.out.println("Brain-coded example:");
         // Can change to test other dimensions
-        LegoBrick brick = new LegoBrick(2, 4);
+        LegoBrick brick = new LegoBrick(5, 12);
         displayBrick(brick);
     }
 
@@ -46,8 +51,21 @@ public class Application {
      */
     private static void displayBrick(LegoBrick brick) {
         StringBuilder sb = new StringBuilder();
-        // Implement here :)
+
+        addBrickBlocks(brick, sb, TOP);
+        for (int indexHeight = 0; indexHeight < brick.getHeight(); indexHeight++) {
+            addBrickBlocks(brick, sb, INTERMEDIATE);
+        }
+        addBrickBlocks(brick, sb, BOTTOM);
+
         System.out.print(sb);
+    }
+
+    private static void addBrickBlocks(LegoBrick brick, StringBuilder sb, String[] position) {
+        sb.append(position[0]);
+        sb.append(position[1].repeat(brick.getWidth()));
+        sb.append(position[2]);
+        sb.append('\n');
     }
 
 }

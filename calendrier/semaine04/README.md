@@ -1,4 +1,6 @@
 # Semaine 04
 
-TODO
+## TODO
+
+- java servlet + gcp
 
