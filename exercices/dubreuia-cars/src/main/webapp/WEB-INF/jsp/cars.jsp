@@ -1,3 +1,4 @@
+<%@ page import="java.util.Set" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,14 @@
 <body>
 <h1>Cars</h1>
 <div>
-    <!-- TODO step 1 -->
+    <%
+        Set<String> brands = (Set<String>) request.getAttribute("brands");
+        for (String s : brands) {
+    %>
+    <button data-brand="<%=s.toLowerCase()%>"><%=s%></button>
+    <%
+        }
+    %>
 </div>
 <h2>List</h2>
 <div id="content">
