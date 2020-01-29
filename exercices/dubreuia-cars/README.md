@@ -22,6 +22,18 @@ For the first step, implement the "TODO step 1" comments. The returned HTML from
 
 For the second step, implement the "TODO step 2" comments. The resulting DOM should correspond to [step2.html](step2.html).
 
+- In `CarsService`, implement the `getCars()` method:
+    - The method should return the cars from the .csv
+    - The method should filter on the provided argument
+    - Use the `Car` constructor with the brand and model
+- In `CarsServlet`, implement the `goGetJson()` method:
+    - Use [JSON-P](https://javaee.github.io/jsonp/getting-started.html) to convert to JSON
+    - Use `PrintWriter writer = response.getWriter()` to print the output
+- In `cars.jsp` page, implement the js to send the request to the server:
+    - Use the [`fetch` API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+    - Send a request to the proper URL for example "http://localhost:8080/dubreuia-cars/cars?brand=BMW"
+    - Put the content in the `div` element with the "content" id
+
 ## Deploy
 
 ```bash
