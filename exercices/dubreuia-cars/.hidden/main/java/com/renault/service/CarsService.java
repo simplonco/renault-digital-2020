@@ -13,6 +13,10 @@ import static java.util.stream.Collectors.toSet;
 
 public class CarsService {
 
+    private CarsService() {
+        // static only
+    }
+
     public static Set<String> getBrands() {
         return getCarsFromCsvFile().stream()
                 .map(line -> line.split(";")[0].replace('"', ' ').strip())
