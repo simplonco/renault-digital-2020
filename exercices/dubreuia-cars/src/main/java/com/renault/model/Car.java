@@ -18,4 +18,12 @@ public class Car {
         return model;
     }
 
+    @Override
+    public String toString() {
+        return "Car{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                '}';
+    }
+
 }
