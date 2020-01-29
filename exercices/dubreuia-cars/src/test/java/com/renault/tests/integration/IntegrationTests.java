@@ -17,14 +17,16 @@ public class IntegrationTests {
     public void should_implementation_return_correct_cars() {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("localhost:8080/cars/?brand=BMW"))
+                .header("Content-Type", "application/json")
+                .uri(URI.create("http://localhost:8080/dubreuia-cars/cars"))
                 .build();
         List<String> lines = new ArrayList<>();
         client.sendAsync(request, BodyHandlers.ofString())
                 .thenApply(HttpResponse::body)
                 .thenAccept(lines::add)
                 .join();
-        long count = lines.stream().filter(line -> line.contains("<div>")).count();
+//        long count = lines.stream().collect(Collectors.joining()).split(",").length
+        long count = lines.size();
         Assertions.assertEquals(67, count);
     }
 
