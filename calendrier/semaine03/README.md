@@ -6,7 +6,7 @@
 - Retour sur [semaine passé](../semaine02) (30 minutes)
     - Git: tag, branch, merge, pull, push
     - Java: objets, List, main, jar, File, Path
-- Mob programming sur [Java Servlet](../../exercices/eugenp-javax-servlets) (120 minutes)
+- Groupe: Mob programming sur [Java Servlet](../../exercices/eugenp-javax-servlets) (120 minutes)
     - Revoir le packaging jar (dépendances)
     - Revoir le packaging war (déploiement tomcat)
 - Mercredi: mob programming sur [Java Servlet (cars)](../../exercices/dubreuia-cars) (240 minutes)
@@ -35,7 +35,7 @@
     - Redirection vers vue (jsp): `RequestDispatcher#forward`
 - Java Servlet (partie JavaServerPages - JSP)
     - Utilisation de variable Java: `${variable}`
-    - Utilisation de scriptlet Java: `<% java %>>`
-    - Utilisation de expression Java: `<%= java %>>`
+    - Utilisation de scriptlet Java: `<% java %>`
+    - Utilisation de expression Java: `<%= java %>`
 - JavaScript (ajax)
-    - Utilsation de l'API `fetch`
+    - Utilisation de l'API `fetch`
