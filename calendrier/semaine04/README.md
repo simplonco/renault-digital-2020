@@ -2,9 +2,11 @@
 
 ## Plan
 
-- TODO
+- Feuille émargement
+- Retour sur [semaine passé](../semaine03) (30 minutes)
+- Groupe: Mob programming sur [JPA et SQL](../../exercices/dubreuia-jpa) (120 minutes)
+- Mercredi: mob programming sur [Java Servlet (cars)](../../exercices/dubreuia-cars) (240 minutes)
 
 ## Contenu
 
-- Continuer sur l'application cars
-- Au lieu de charger du CSV, charger d'une BDD (h2? sqlite?) avec jpa
+- TODO
