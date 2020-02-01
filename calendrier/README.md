@@ -4,8 +4,8 @@
 
 - [Semaine 1 - 13/14/15 janvier](./semaine01)
 - [Semaine 2 - 20/21/22 janvier](./semaine02)
-- **[Semaine 3 - 27/28/29 janvier](./semaine03)**
-- [Semaine 4 - 03/04/05 février](./semaine04)
+- [Semaine 3 - 27/28/29 janvier](./semaine03)
+- **[Semaine 4 - 03/04/05 février](./semaine04)**
 - [Semaine 5 - 10/11/12 février](./semaine05)
 - [Semaine 6 - 17/18/19 février](./semaine06)
 - [Semaine 7 - formation](./semaine07)
