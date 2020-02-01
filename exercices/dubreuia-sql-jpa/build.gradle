@@ -7,16 +7,16 @@ repositories {
 }
 
 dependencies {
-    // JPA interfaces
-    compile 'javax.persistence:javax.persistence-api:2.2'
-
-    // Hibernate JPA implementation
-    compile 'org.hibernate:hibernate-core:5.4.10.Final'
-
-    // SQLite JDBC connector https://www.sqlitetutorial.net/sqlite-java/sqlite-jdbc-driver/
+    // Java SQL : SQLite JDBC connector https://www.sqlitetutorial.net/sqlite-java/sqlite-jdbc-driver/
     compile 'org.xerial:sqlite-jdbc:3.30.1'
 
-    // SQLite dialect for hibernate https://github.com/gwenn/sqlite-dialect/
+    // JPA : interfaces Java EE
+    compile 'javax.persistence:javax.persistence-api:2.2'
+
+    // JPA : implementation JPA de Hibernate
+    compile 'org.hibernate:hibernate-core:5.4.10.Final'
+
+    // JPA : dialect SQLite pour hibernate https://github.com/gwenn/sqlite-dialect/
     compile 'com.github.gwenn:sqlite-dialect:0.1.0'
 }
 
