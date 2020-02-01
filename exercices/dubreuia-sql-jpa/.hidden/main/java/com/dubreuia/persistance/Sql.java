@@ -34,6 +34,18 @@ public class Sql {
      */
     private static void printStudents()
             throws SQLException {
+        try (Connection connection = DriverManager.getConnection(URL)) {
+            String sql = "SELECT * FROM students";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                System.out.println(resultSet.getInt("id") + ", "
+                        + resultSet.getString("first_name") + ", "
+                        + resultSet.getString("last_name") + ", "
+                        + resultSet.getString("birthdate") + ", "
+                        + resultSet.getDouble("note"));
+            }
+        }
     }
 
     /**
@@ -47,6 +59,20 @@ public class Sql {
      */
     private static void addStudent(String firstName, String lastName, String birthdate, Double note)
             throws SQLException {
+        try (Connection connection = DriverManager.getConnection(URL)) {
+            String sql = "INSERT INTO students VALUES (NULL, ?, ?, ?, ?)";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setString(1, firstName);
+            statement.setString(2, lastName);
+            statement.setString(3, birthdate);
+            if (note == null) {
+                statement.setString(4, null);
+            } else {
+                statement.setDouble(4, note);
+            }
+            int result = statement.executeUpdate();
+            System.out.println(result);
+        }
     }
 
     /**
@@ -60,7 +86,15 @@ public class Sql {
      */
     private static boolean isStudentPresent(String firstName, String lastName)
             throws SQLException {
-        return false;
+        try (Connection connection = DriverManager.getConnection(URL)) {
+            String sql = "SELECT count(*) FROM students " +
+                    "WHERE first_name = '" + firstName + "'" +
+                    "AND last_name = '" + lastName + "'";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            ResultSet resultSet = statement.executeQuery();
+            resultSet.next();
+            return resultSet.getInt(1) >= 1;
+        }
     }
 
 }
