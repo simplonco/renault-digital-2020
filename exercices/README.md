@@ -6,23 +6,24 @@
 
 [![Travis CI Build Status](https://travis-ci.org/simplonco/renault-digital-2020.svg?branch=master)](https://travis-ci.org/simplonco/renault-digital-2020)
 
-Les exercices sont classés selon la métrique Agile [taille de t-shirt](https://producthabits.com/engineering-estimates/) : "T-shirt sizing – Assigning small, medium or large labels for each engineering initiative to indicate its complexity."
+Projets groupes du mercredi :
 
-### Taille : SMALL
+- [Cars](./dubreuia-cars)
 
-- [VAT - Implémenter un calcul sans TVA et arrondir un double (frank)](./frank-vat)
-- [Two Fer - Implémenter un hello world évolué (exercism)](./exercism-two-fer)
-- [RNA Transcription - Traduire DNA vers RNA (exercism)](./exercism-rna-transcription)
+Exercices sur technos :
 
-### Taille : MEDIUM
+- [Java Servlets](./eugenp-javax-servlets) (done)
+- [SQL et JPA](./dubreuia-sql-jpa)
 
+Exercices généraux :
+
+- [VAT - Implémenter un calcul sans TVA et arrondir un double (frank)](./frank-vat) (done)
+- [Two Fer - Implémenter un hello world évolué (exercism)](./exercism-two-fer) (done)
+- [RNA Transcription - Traduire DNA vers RNA (exercism)](./exercism-rna-transcription) (done)
 - [Lego - Imprimer une brique de Lego dans la console (frank)](./frank-lego) (done)
 - [Darts - Implémenter un jeu de darts (exercism)](./exercism-darts)
-- [Yatch - Implémenter un jeu de yatch (exercism)](./exercism-yacht)
+- [Yatch - Implémenter un jeu de yatch (exercism)](./exercism-yacht) (done)
 - [Grep - Search a file for lines matching a regular expression pattern](./exercism-grep2) (done)
-
-### Taille : LARGE
-
 - [Cowboy - Duel entre Lucky LUKE et Joe DALTON (frank)](./frank-cowboy)
 
 ## Procédure
