@@ -1,5 +1,8 @@
 # Travis CI (https://travis-ci.org/dubreuia/intellij-plugin-save-actions)
 
+env:
+    - TERM=dumb
+
 dist: bionic
 
 language: java
@@ -8,10 +11,16 @@ jdk:
     - oraclejdk11
 
 script:
+    - cd exercices/dubreuia-cars && ./gradlew test && cd ../../
+    - cd exercices/eugenp-javax-servlets && ./gradlew test && cd ../../
     - cd exercices/exercism-darts && ./gradlew test && cd ../../
+    - cd exercices/exercism-grep2 && ./gradlew test && cd ../../
     - cd exercices/exercism-rna-transcription && ./gradlew test && cd ../../
     - cd exercices/exercism-two-fer && ./gradlew test && cd ../../
     - cd exercices/exercism-yacht && ./gradlew test && cd ../../
+    - cd exercices/frank-cowboy && ./gradlew test && cd ../../
+    - cd exercices/frank-lego && ./gradlew test && cd ../../
+    - cd exercices/frank-vat && ./gradlew test && cd ../../
 
 branches:
     only:
