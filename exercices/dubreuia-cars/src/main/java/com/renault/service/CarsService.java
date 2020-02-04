@@ -14,15 +14,12 @@ import static java.util.stream.Collectors.toList;
 
 public class CarsService {
 
-    public static void main(String[] args) {
-        System.out.println(CarsService.getCars("Cadillac"));
-    }
-
     private CarsService() {
         // static only
     }
 
     public static Set<String> getBrands() {
+        // TODO step 3
         Set<String> brands = new HashSet<>();
         for (String line : CarsService.getCarsFromCsvFile()) {
             String[] column = line.split(";");
@@ -33,6 +30,7 @@ public class CarsService {
     }
 
     public static List<Car> getCars(String brand) {
+        // TODO step 3
         List<Car> cars = new ArrayList<>();
         for (String line : CarsService.getCarsFromCsvFile()) {
             String[] column = line.split(";");
@@ -47,6 +45,7 @@ public class CarsService {
     }
 
     private static List<String> getCarsFromCsvFile() {
+        // TODO step 3
         InputStream resource = CarsService.class.getResourceAsStream("cars.csv");
         return new BufferedReader(new InputStreamReader(resource)).lines().collect(toList());
     }

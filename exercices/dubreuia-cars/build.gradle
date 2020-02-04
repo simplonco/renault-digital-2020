@@ -11,6 +11,9 @@ dependencies {
     // Servlet
     compile "javax.servlet:javax.servlet-api:4.0.1"
 
+    // JDBC mysql
+    // TODO step 3
+
     // Json
     compile "javax.json:javax.json-api:1.1.4"
     compile "org.glassfish:javax.json:1.1.4"
