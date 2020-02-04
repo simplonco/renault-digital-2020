@@ -2,6 +2,9 @@ package com.dubreuia.persistance;
 
 import com.dubreuia.bean.Student;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+
 public class Jpa {
 
     public static void main(String[] args) {
