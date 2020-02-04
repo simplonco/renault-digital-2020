@@ -32,8 +32,19 @@ public class Sql {
      * - {@link ResultSet#getString(String)}} pour récupérer une colonne de type String
      * - {@link ResultSet#getDouble(String)}} pour récupérer une colonne de type Double
      */
-    private static void printStudents()
-            throws SQLException {
+    private static void printStudents() throws SQLException {
+        try (Connection connection = DriverManager.getConnection(Sql.URL)) {
+            var preparedStatement = connection.prepareStatement("SELECT * FROM students");
+            var resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                var id = resultSet.getInt("id");
+                var firstName = resultSet.getString("first_name");
+                var lastName = resultSet.getString("last_name");
+                var birthdate = resultSet.getString("birthdate");
+                var note = resultSet.getString("note");
+                System.out.println(id + ", " + firstName + ", " + lastName + ", " + birthdate + ", " + note);
+            }
+        }
     }
 
     /**
@@ -45,8 +56,16 @@ public class Sql {
      * - {@link PreparedStatement#setDouble(int, double)} pour ajouter une valeur double à la requête
      * - {@link PreparedStatement#executeUpdate()} pour exécuter la requête
      */
-    private static void addStudent(String firstName, String lastName, String birthdate, Double note)
-            throws SQLException {
+    private static void addStudent(String firstName, String lastName, String birthdate, Double note) throws SQLException {
+        try (Connection connection = DriverManager.getConnection(Sql.URL)) {
+            var preparedStatement = connection.prepareStatement ("INSERT INTO students VALUES (NULL, ?, ?, ?, ?)");
+            preparedStatement.setString(1, firstName);
+            preparedStatement.setString(2, lastName);
+            preparedStatement.setString(3, birthdate);
+            preparedStatement.setObject(4, note);
+            var resultSet = preparedStatement.executeUpdate();
+
+        }
     }
 
     /**
@@ -58,9 +77,18 @@ public class Sql {
      * - {@link ResultSet#next()}} pour récupérer le résultat
      * - {@link ResultSet#getInt(String)}} pour récupérer le résultat
      */
-    private static boolean isStudentPresent(String firstName, String lastName)
-            throws SQLException {
-        return false;
+    private static boolean isStudentPresent(String firstName, String lastName) throws SQLException {
+        try (Connection connection = DriverManager.getConnection(Sql.URL)) {
+            String sql = "SELECT COUNT(*) " +
+                    "FROM students " +
+                    "WHERE first_name = '" + firstName + "' " +
+                    "AND last_name ='" + lastName + "'";
+            var preparedStatement = connection.prepareStatement(sql);
+            var resultSet = preparedStatement.executeQuery();
+            resultSet.next();
+            int count = resultSet.getInt(1);
+            return 0 < count;
+        }
     }
 
 }
