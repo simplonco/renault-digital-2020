@@ -12,7 +12,7 @@ dependencies {
     compile "javax.servlet:javax.servlet-api:4.0.1"
 
     // JDBC mysql
-    // TODO step 3
+    compile "mysql:mysql-connector-java:8.0.19"
 
     // Json
     compile "javax.json:javax.json-api:1.1.4"
