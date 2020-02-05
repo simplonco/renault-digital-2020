@@ -43,7 +43,8 @@ For the third step, start a MySql server using Docker, and use Java to insert an
     - Run latest mysql image `docker run --name mysql_renault -e MYSQL_ROOT_PASSWORD=12345 -d mysql:latest`
     - Make sure the "mysql_renault" image is running `docker ps`
     - Use inspect to find the IP of the running docker `docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mysql`
-    - Try connecting to it using docker `docker run -it --rm mysql_renault  mysql -h 172.17.0.2 -u root -p` (password: 12345)
+    - Try connecting to it using docker `docker run -it --rm mysql mysql -h 172.17.0.2 -u root -p` (password: 12345)
+    - Try connecting to it using docker (on windows) `winpty docker run -it --rm mysql mysql -h 172.17.0.2 -u root -p` (password: 12345)
     - In Mysql, you need to create a database first, use `CREATE DATABASE renault`
     - Then use the database using `USE renault`
     - (`docker stop mysql_renault`, `docker ps -a`, `docker start mysql_renault`)
