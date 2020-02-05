@@ -2,8 +2,11 @@
 
 ## Plan
 
-TODO
+- TODO
 
 ## Contenu
 
+- TODO
+- JPA Hibernate
+- JPA Spring
 
