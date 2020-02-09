@@ -51,13 +51,20 @@ Installer [sqlite3](https://sqlite.org/download.html) (`sudo apt-get install sql
 
 Pour se connecter à la base de donnée, il faut ajouter [le driver JDBC pour SQlite](https://www.sqlitetutorial.net/sqlite-java/sqlite-jdbc-driver/).
 
-- Écrire une méthode `printStudents`, qui affiche le contenu de la table "students"
-- Écrire une méthode `isStudentPresent`, qui retourne `true` si au moins un étudiant avec ce nom et prénom est présent
-- Écrire une méthode `addStudent`, qui ajoute un étudiant à la table "students"
+Dans la classe `Sql`:
+    - Écrire une méthode `printStudents`, qui affiche le contenu de la table "students"
+    - Écrire une méthode `isStudentPresent`, qui retourne `true` si au moins un étudiant avec ce nom et prénom est présent
+    - Écrire une méthode `addStudent`, qui ajoute un étudiant à la table "students"
 
 ## JPA
 
-TODO
+- Lancer un MySQL dans un docker avec le code du [step 3 du README cars](../dubreuia-cars/README.md)
+- Compléter le persistence.xml
+- Compléter la classe `Students`
+- Dans la classe `Jpa`:
+    - Écrire une méthode `printStudents`, qui affiche le contenu de la table "students"
+    - Écrire une méthode `isStudentPresent`, qui retourne `true` si au moins un étudiant avec ce nom et prénom est présent
+    - Écrire une méthode `addStudent`, qui ajoute un étudiant à la table "students"
 
 ## References
 
