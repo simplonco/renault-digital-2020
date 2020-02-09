@@ -3,6 +3,7 @@
 ## Plan
 
 - Feuille émargement
+- Présentation de Johan, successeur de Préscilia
 - Retour sur [semaine passé](../semaine04/README.md) (30 minutes)
 - Revue des compétences des semaines passée (30 minutes)
     - 1.1 - Maquetter une application (En utilisant un outil de maquettage (InVision, Marvel App, Balsamiq))
@@ -28,10 +29,12 @@
     - 7.3 - Développer la partie back-end d’une application web ou web mobile (En dévelopant l’application en respectant une architecture définie (MVC, n-tiers…))
     - 7.4 - Développer la partie back-end d’une application web ou web mobile (En vérifiant la sécurité de l’application à partir d’un guide (OWASP par exemple))
     - 7.5 - Développer la partie back-end d’une application web ou web mobile (En utilisant des frameworks back-end (Spring framework, Spring Boot, etc.))
-- Présentation de Johan, successeur de Préscilia
+- Groupe
+    - Mob programming sur [JPA et SQL](../../exercices/dubreuia-sql-jpa) (60 minutes)
+    - Mob programming sur [Spring data](../../exercices/dubreuia-spring-data) (60 minutes)
+- Mercredi: mob programming sur [Java Servlet (cars)](../../exercices/dubreuia-cars) (240 minutes)
 
 ## Contenu
 
-- TODO
 - JPA Hibernate
-- JPA Spring
+- Spring Boot JPA
