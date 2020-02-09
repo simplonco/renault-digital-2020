@@ -7,7 +7,7 @@
     <persistence-unit name="database">
         <description>Hibernate JPA Configuration Example</description>
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>com.dubreuia.bean.Student</class>
+        <class>com.dubreuia.Student</class>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
             <property name="javax.persistence.jdbc.driver" value=""/>

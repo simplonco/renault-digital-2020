@@ -40,6 +40,7 @@ public class Jpa {
      */
     private static void addStudent(Student student) {
         // TODO
+        System.out.println(student);
     }
 
     /**
