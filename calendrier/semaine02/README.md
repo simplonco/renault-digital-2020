@@ -2,7 +2,7 @@
 
 ## Plan
 
-- Retour sur mercredi passé (30 minutes)
+- Retour sur [semaine passé](../semaine01/README.md) (30 minutes)
     - Question sur "debug" vs "console.log"
         - Utilisation d'un IDE recommandé (vscode, webstorm)
         - Utilisation d'un débuggeur pour JavaScript

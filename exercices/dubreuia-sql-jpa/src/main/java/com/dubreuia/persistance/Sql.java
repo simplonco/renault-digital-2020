@@ -11,10 +11,12 @@ public class Sql {
     private static final String URL = "jdbc:sqlite:/home/alex/Project/renault-digital-2020/exercices/dubreuia-sql-jpa/database.db";
 
     public static void main(String[] args) throws SQLException {
-        if (!isStudentPresent("Barack", "Obama")) {
-            addStudent("Barack", "Obama", "1961-08-04", null);
+        try (Connection connection = DriverManager.getConnection(URL)) {
+            if (!isStudentPresent(connection, "Barack", "Obama")) {
+                addStudent(connection, "Barack", "Obama", "1961-08-04", null);
+            }
+            printStudents(connection);
         }
-        printStudents();
     }
 
     /**

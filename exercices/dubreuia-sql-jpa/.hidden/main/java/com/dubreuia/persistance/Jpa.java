@@ -4,75 +4,64 @@ import com.dubreuia.bean.Student;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
+import java.time.LocalDate;
+import java.util.List;
 
 public class Jpa {
 
+    public static final EntityManagerFactory ENTITY_MANAGER_FACTORY = Persistence
+            .createEntityManagerFactory("database");
+
     public static void main(String[] args) {
-        Student student;
+        Student obama = new Student("Barack", "Obama", LocalDate.of(1961, 3, 15));
+        if (!isStudentPresent(obama)) {
+            addStudent(obama);
+        }
+        printStudents();
+        ENTITY_MANAGER_FACTORY.close();
+    }
 
-        student = getStudentsWithId(10);
-        if (student == null) {
-            insertStudent(new Student(10, "Barack", "Obama", "1961-08-04", 5.7));
-        } else {
+    /**
+     * Imprime dans la console les étudiants de la table "students", ligne par ligne, selon le format suivant :
+     * "Student{id=1, firstName='Barack', lastName='Obama', birthdate=1961-03-15, note=null}"
+     */
+    private static void printStudents() {
+        EntityManager entityManager = ENTITY_MANAGER_FACTORY.createEntityManager();
+        String qlString = "SELECT s FROM students s";
+        TypedQuery<Student> query = entityManager.createQuery(qlString, Student.class);
+        List<Student> resultList = query.getResultList();
+        for (Student student : resultList) {
             System.out.println(student);
         }
-
-        student = getStudentsWithId(20);
-        if (student == null) {
-            insertStudentNoCommit(new Student(20, "Barack", "Obama", "1961-08-04", 5.7));
-        } else {
-            System.out.println(student);
-        }
-
-        student = getStudentsWithId(30);
-        if (student == null) {
-            insertStudentNoCommit(new Student(30, "Barack", "Obama", "1961-08-04", 5.7));
-        } else {
-            System.out.println(student);
-        }
     }
 
-    private static Student getStudentsWithId(int id) {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("database");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        Student student = entityManager.find(Student.class, id);
-        try {
-            return student;
-        } finally {
-            entityManagerFactory.close();
-        }
-    }
-
-    private static void insertStudent(Student student) {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("database");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        EntityTransaction transaction = entityManager.getTransaction();
-        transaction.begin();
+    /**
+     * Ajoute un étudiant dans la table "students".
+     */
+    private static void addStudent(Student student) {
+        EntityManager entityManager = ENTITY_MANAGER_FACTORY.createEntityManager();
+        entityManager.getTransaction().begin();
         entityManager.persist(student);
-        transaction.commit();
-        entityManagerFactory.close();
+        entityManager.getTransaction().commit();
     }
 
-    private static void insertStudentNoCommit(Student student) {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("database");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        EntityTransaction transaction = entityManager.getTransaction();
-        transaction.begin();
-        entityManager.persist(student);
-        entityManagerFactory.close();
-    }
-
-    private static void insertStudentCommitAndRollback(Student student) {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("database");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        EntityTransaction transaction = entityManager.getTransaction();
-        transaction.begin();
-        entityManager.persist(student);
-        transaction.commit();
-        transaction.rollback();
-        entityManagerFactory.close();
+    /**
+     * Retourne vrai si l'étudiant est présent dans la table "students".
+     */
+    private static boolean isStudentPresent(Student student) {
+        EntityManager entityManager = ENTITY_MANAGER_FACTORY.createEntityManager();
+        String qlString = "SELECT s FROM students s " +
+                "WHERE s.firstName = :firstName " +
+                "AND s.lastName = :lastName " +
+                "AND s.birthdate = :birthdate ";
+        TypedQuery<Student> query = entityManager.createQuery(qlString, Student.class);
+        query.setParameter("firstName", student.getFirstName());
+        query.setParameter("lastName", student.getLastName());
+        query.setParameter("birthdate", student.getBirthdate());
+        List<Student> resultList = query.getResultList();
+        return resultList.contains(student);
     }
 
 }
