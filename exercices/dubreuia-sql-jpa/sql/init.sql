@@ -2,7 +2,7 @@ SET @@global.time_zone = '+01:00';
 
 CREATE TABLE students (
     id         INTEGER PRIMARY KEY AUTO_INCREMENT,
-    first_name VARCHAR(128),
+    first_name VARCHAR(128) NOT NULL,
     last_name  VARCHAR(128) NOT NULL,
     birthdate  DATE         NOT NULL,
     note       DOUBLE
