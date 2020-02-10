@@ -3,7 +3,7 @@
 ## Plan
 
 - Feuille émargement
-- Retour sur [semaine passé](../semaine02) (30 minutes)
+- Retour sur [semaine passé](../semaine02/README.md) (30 minutes)
     - Git: tag, branch, merge, pull, push
     - Java: objets, List, main, jar, File, Path
 - Groupe: Mob programming sur [Java Servlet](../../exercices/eugenp-javax-servlets) (120 minutes)
