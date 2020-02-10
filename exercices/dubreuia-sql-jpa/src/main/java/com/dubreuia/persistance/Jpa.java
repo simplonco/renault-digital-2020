@@ -6,11 +6,13 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
+import java.time.LocalDate;
+import java.util.List;
 
 public class Jpa {
 
     public static void main(String[] args) {
-        Student obama = new Student();
+        Student obama = new Student(0, "Barack", "Obama", LocalDate.of(1961, 03, 15), null);
         if (!isStudentPresent(obama)) {
             addStudent(obama);
         }
@@ -27,7 +29,14 @@ public class Jpa {
      * - {@link TypedQuery#getResultList()}
      */
     private static void printStudents() {
-        // TODO
+        EntityManagerFactory database = Persistence.createEntityManagerFactory("database");
+        EntityManager entityManager = database.createEntityManager();
+        String qlstring = "SELECT s FROM students s";
+        TypedQuery<Student> query = entityManager.createQuery(qlstring, Student.class);
+        List<Student> resultList = query.getResultList();
+        for (Student student : resultList) {
+            System.out.println(student);
+        }
     }
 
     /**
@@ -39,8 +48,13 @@ public class Jpa {
      * - {@link EntityManager#getTransaction()#commit()}
      */
     private static void addStudent(Student student) {
-        // TODO
-        System.out.println(student);
+        EntityManagerFactory database = Persistence.createEntityManagerFactory("database");
+        EntityManager entityManager = database.createEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.persist(student);
+        entityManager.getTransaction().commit();
+        Student george = entityManager.find(Student.class, 2);
+        System.out.println(george);
     }
 
     /**

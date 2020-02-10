@@ -11,12 +11,10 @@ public class Sql {
     private static final String URL = "jdbc:sqlite:/home/alex/Project/renault-digital-2020/exercices/dubreuia-sql-jpa/database.db";
 
     public static void main(String[] args) throws SQLException {
-        try (Connection connection = DriverManager.getConnection(URL)) {
-            if (!isStudentPresent(connection, "Barack", "Obama")) {
-                addStudent(connection, "Barack", "Obama", "1961-08-04", null);
-            }
-            printStudents(connection);
+        if (!isStudentPresent("Barack", "Obama")) {
+            addStudent("Barack", "Obama", "1961-08-04", null);
         }
+        printStudents();
     }
 
     /**
@@ -36,8 +34,8 @@ public class Sql {
      */
     private static void printStudents() throws SQLException {
         try (Connection connection = DriverManager.getConnection(Sql.URL)) {
-            var preparedStatement = connection.prepareStatement("SELECT * FROM students");
-            var resultSet = preparedStatement.executeQuery();
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM students");
+            ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 var id = resultSet.getInt("id");
                 var firstName = resultSet.getString("first_name");
@@ -60,7 +58,7 @@ public class Sql {
      */
     private static void addStudent(String firstName, String lastName, String birthdate, Double note) throws SQLException {
         try (Connection connection = DriverManager.getConnection(Sql.URL)) {
-            var preparedStatement = connection.prepareStatement ("INSERT INTO students VALUES (NULL, ?, ?, ?, ?)");
+            var preparedStatement = connection.prepareStatement("INSERT INTO students VALUES (NULL, ?, ?, ?, ?)");
             preparedStatement.setString(1, firstName);
             preparedStatement.setString(2, lastName);
             preparedStatement.setString(3, birthdate);
