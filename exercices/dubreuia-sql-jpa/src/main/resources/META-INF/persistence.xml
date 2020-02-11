@@ -7,13 +7,13 @@
     <persistence-unit name="database">
         <description>Hibernate JPA Configuration Example</description>
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>com.dubreuia.Student</class>
+        <class>com.dubreuia.bean.Student</class>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
-            <property name="javax.persistence.jdbc.driver" value=""/>
-            <property name="javax.persistence.jdbc.url" value=""/>
-            <property name="hibernate.connection.username" value=""/>
-            <property name="hibernate.connection.password" value=""/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://172.17.0.2:3306/renault"/>
+            <property name="hibernate.connection.username" value="root"/>
+            <property name="hibernate.connection.password" value="12345"/>
             <property name="hibernate.show_sql" value="true"/>
             <property name="format_sql" value="true"/>
         </properties>

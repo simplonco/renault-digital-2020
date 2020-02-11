@@ -6,11 +6,14 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
+import java.time.LocalDate;
+import java.util.List;
 
 public class Jpa {
 
     public static void main(String[] args) {
-        Student obama = new Student();
+        // TODO utiliser constructeur
+        Student obama = new Student(0, "Barack", "Obama", LocalDate.of(1961, 03, 15), null);
         if (!isStudentPresent(obama)) {
             addStudent(obama);
         }
@@ -27,20 +30,31 @@ public class Jpa {
      * - {@link TypedQuery#getResultList()}
      */
     private static void printStudents() {
-        // TODO
+        EntityManagerFactory database = Persistence.createEntityManagerFactory("database");
+        EntityManager entityManager = database.createEntityManager();
+        String sql = "SELECT s FROM students s";
+        TypedQuery<Student> query = entityManager.createQuery(sql, Student.class);
+        List<Student> resultList = query.getResultList();
+        for (Student student : resultList) {
+            System.out.println(student);
+        }
     }
 
     /**
      * Ajoute un étudiant dans la table "students".
      * <p>
      * - {@link Persistence#createEntityManagerFactory(String)}
+     * - {@link EntityManagerFactory#createEntityManager()}
      * - {@link EntityManager#getTransaction#begin()}
      * - {@link EntityManager#persist(Object)}
      * - {@link EntityManager#getTransaction()#commit()}
      */
     private static void addStudent(Student student) {
-        // TODO
-        System.out.println(student);
+        EntityManagerFactory database = Persistence.createEntityManagerFactory("database");
+        EntityManager entityManager = database.createEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.persist(student);
+        entityManager.getTransaction().commit();
     }
 
     /**
@@ -53,8 +67,14 @@ public class Jpa {
      * - {@link TypedQuery#getResultList()}
      */
     private static boolean isStudentPresent(Student student) {
-        // TODO
-        return false;
+        EntityManagerFactory database = Persistence.createEntityManagerFactory("database");
+        EntityManager entityManager = database.createEntityManager();
+        String sql = "SELECT s FROM students s WHERE s.firstName = :fn AND s.lastName = :ln";
+        TypedQuery<Student> query = entityManager.createQuery(sql, Student.class);
+        query.setParameter("fn", student.getFirstName());
+        query.setParameter("ln", student.getLastName());
+        List<Student> resultList = query.getResultList();
+        return resultList.size() > 0;
     }
 
 }
