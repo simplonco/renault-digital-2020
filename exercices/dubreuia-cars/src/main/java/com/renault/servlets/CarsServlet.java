@@ -2,6 +2,7 @@ package com.renault.servlets;
 
 import com.renault.model.Car;
 import com.renault.service.CarsRepository;
+import com.renault.service.CarsService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.json.Json;
@@ -21,12 +22,19 @@ import java.util.Set;
 public class CarsServlet extends HttpServlet {
 
     @Autowired
-    private CarsRepository carsRepository = ApplicationContextHolder.getContext().getBean(CarsRepository.class);
+    private CarsRepository carsRepository;
+
+    public CarsServlet() {
+        try {
+            carsRepository = ApplicationContextHolder.getContext().getBean(CarsRepository.class);
+        } catch (Exception e) {
+            // nop
+        }
+    }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println(carsRepository);
         String contentType = request.getHeader("Content-Type");
         if ("application/json".equals(contentType)) {
             doGetJson(request, response);
@@ -38,7 +46,7 @@ public class CarsServlet extends HttpServlet {
     private void doGetJson(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
         String brand = request.getParameter("brand");
-        List<Car> cars = carsRepository.findCarsByBrand(brand);
+        List<Car> cars = CarsService.getCars(brand);
         JsonArrayBuilder json = Json.createArrayBuilder();
         for (Car car : cars) {
             json.add(car.getBrand() + " - " + car.getModel());
@@ -50,7 +58,7 @@ public class CarsServlet extends HttpServlet {
 
     private void doGetHtml(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Set<String> brands = carsRepository.findBrands();
+        Set<String> brands = CarsService.getBrands();
         request.setAttribute("brands", brands);
         RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/cars.jsp");
         dispatcher.forward(request, response);

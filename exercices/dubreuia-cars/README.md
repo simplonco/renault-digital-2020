@@ -60,7 +60,7 @@ For the third step, start a MySql server using Docker, and use Java to insert an
 
 ### Step 4 (semaine 5)
 
-We'll convert the application to a Spring application.
+We'll convert the application to a Spring application. Use the "deployToTomcat" task to deploy to tomcat.
 
 - MySQL
     - Start the MySql database using docker
@@ -70,7 +70,7 @@ We'll convert the application to a Spring application.
     - Add the spring-boot-starter-data-jpa jar to the build file
     - Create the application.yml file for Spring
     - Convert the `Car` class to an `Entity`
-    - Create the `CarsRepository` class
+    - Add content to the `CarsRepository` class
     - Modify the `CarsServlet` class to use the new `CarsRepository`
 
 Bonus (CMS):
