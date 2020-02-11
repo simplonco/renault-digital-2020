@@ -62,12 +62,16 @@ For the third step, start a MySql server using Docker, and use Java to insert an
 
 We'll convert the application to a Spring application.
 
-- Start the MySql database using docker
-- Add the spring-boot-starter-data-jpa jar to the build file
-- Create the application.yml file for Spring
-- Convert the `Car` class to an `Entity`
-- Convert the `CarsService` class to a `Repository`
-- Modify the `CarsServlet` class to use the new `CarsService`
+- MySQL
+    - Start the MySql database using docker
+    - Create the "renault" database and the "cars" table
+    - Insert the data in the cars database using `CarsDatabaseInsert`
+- Spring
+    - Add the spring-boot-starter-data-jpa jar to the build file
+    - Create the application.yml file for Spring
+    - Convert the `Car` class to an `Entity`
+    - Create the `CarsRepository` class
+    - Modify the `CarsServlet` class to use the new `CarsRepository`
 
 Bonus (CMS):
 
