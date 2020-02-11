@@ -2,6 +2,7 @@ package com.dubreuia.bean;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
@@ -18,6 +19,10 @@ import javax.persistence.Id;
  * - {@link Entity} pour déclarer le lien entre la classe et la table
  * - {@link Id} pour déclarer la clef primaire
  * - {@link Column} pour déclarer une colonne
+ * - {@link GeneratedValue} pour déclarer une colonne générée
  */
 public class Student {
+
+    // TODO
+
 }
