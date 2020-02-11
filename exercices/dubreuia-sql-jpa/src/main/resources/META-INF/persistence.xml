@@ -7,11 +7,13 @@
     <persistence-unit name="database">
         <description>Hibernate JPA Configuration Example</description>
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>com.dubreuia.bean.Student</class>
+        <class>com.dubreuia.Student</class>
         <properties>
-            <property name="hibernate.dialect" value="org.hibernate.dialect.SQLiteDialect"/>
-            <property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:sqlite:/home/alex/Project/renault-digital-2020/exercices/dubreuia-sql-jpa/database.db"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="javax.persistence.jdbc.driver" value=""/>
+            <property name="javax.persistence.jdbc.url" value=""/>
+            <property name="hibernate.connection.username" value=""/>
+            <property name="hibernate.connection.password" value=""/>
             <property name="hibernate.show_sql" value="true"/>
             <property name="format_sql" value="true"/>
         </properties>
