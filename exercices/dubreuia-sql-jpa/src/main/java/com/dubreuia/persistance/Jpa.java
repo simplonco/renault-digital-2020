@@ -6,11 +6,14 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
+import java.time.LocalDate;
+import java.util.List;
 
+// hibernate
 public class Jpa {
 
     public static void main(String[] args) {
-        Student obama = new Student();
+        Student obama = new Student(0, "Barack", "Obama", LocalDate.of(1961, 03, 15), null);
         if (!isStudentPresent(obama)) {
             addStudent(obama);
         }
@@ -27,7 +30,13 @@ public class Jpa {
      * - {@link TypedQuery#getResultList()}
      */
     private static void printStudents() {
-        // TODO
+        EntityManagerFactory database = Persistence.createEntityManagerFactory("database");
+        EntityManager entityManager = database.createEntityManager();
+        TypedQuery<Student> query = entityManager.createQuery("SELECT s FROM students s", Student.class);
+        List<Student> resultList = query.getResultList();
+        for (Student student : resultList) {
+            System.out.println(student);
+        }
     }
 
     /**
@@ -39,8 +48,11 @@ public class Jpa {
      * - {@link EntityManager#getTransaction()#commit()}
      */
     private static void addStudent(Student student) {
-        // TODO
-        System.out.println(student);
+        EntityManagerFactory database = Persistence.createEntityManagerFactory("database");
+        EntityManager entityManager = database.createEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.persist(student);
+        entityManager.getTransaction().commit();
     }
 
     /**
@@ -53,8 +65,13 @@ public class Jpa {
      * - {@link TypedQuery#getResultList()}
      */
     private static boolean isStudentPresent(Student student) {
-        // TODO
-        return false;
+        EntityManagerFactory database = Persistence.createEntityManagerFactory("database");
+        EntityManager entityManager = database.createEntityManager();
+        String sql = "SELECT s FROM students s WHERE s.firstName = :firstName";
+        TypedQuery<Student> query = entityManager.createQuery(sql, Student.class);
+        query.setParameter("firstName", student.getFirstName());
+        List<Student> resultList = query.getResultList();
+        return resultList.size() > 0;
     }
 
 }
