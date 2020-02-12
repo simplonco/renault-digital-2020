@@ -21,7 +21,7 @@ public class CarsDatabaseInsert {
     }
 
     public static void main(String[] args) throws SQLException {
-        String url = "jdbc:mysql://172.17.0.2:3306/renault";
+        String url = "jdbc:mysql://172.17.0.2:3306/cars";
         try (Connection connection = DriverManager.getConnection(url, "root", "12345")) {
             List<Car> cars = getCars();
             for (Car car : cars) {

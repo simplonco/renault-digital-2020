@@ -46,7 +46,7 @@ public class CarsServlet extends HttpServlet {
     private void doGetJson(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
         String brand = request.getParameter("brand");
-        List<Car> cars = CarsService.getCars(brand);
+        List<Car> cars = carsRepository.findByBrand(brand);
         JsonArrayBuilder json = Json.createArrayBuilder();
         for (Car car : cars) {
             json.add(car.getBrand() + " - " + car.getModel());
@@ -58,7 +58,7 @@ public class CarsServlet extends HttpServlet {
 
     private void doGetHtml(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Set<String> brands = CarsService.getBrands();
+        Set<String> brands = carsRepository.findBrands();
         request.setAttribute("brands", brands);
         RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/cars.jsp");
         dispatcher.forward(request, response);
