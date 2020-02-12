@@ -5,4 +5,4 @@
 - Feuille émargement
 - Retour sur [semaine passé](../semaine05/README.md) (30 minutes)
 - Mob programming sur [exercism](../../exercices/exercism-all) (120 minutes)
-- Mercredi: mob programming sur [Java Servlet (cars)](../../exercices/dubreuia-cars) (240 minutes)
+- Mercredi: mob programming sur [exercism](../../exercices/exercism-all) (240 minutes)
