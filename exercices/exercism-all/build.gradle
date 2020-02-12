@@ -30,3 +30,9 @@ test {
         events "passed", "skipped", "failed"
     }
 }
+
+// Copy JUnit report to docs
+task copyReport(type: Copy) {
+    from file("$buildDir/reports/tests")
+    into file("docs/tests")
+}

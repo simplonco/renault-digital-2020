@@ -17,7 +17,11 @@ From [Exercism Java Track](https://exercism.io/my/tracks/java) (easy).
 ## Execute test and check results
 
 ```bash
+# Executes tests and generates report in build/reports/tests/test/index.html
 ./gradlew tests
+
+# Copy report from build/reports/tests/test/index.html to docs/tests/test/index.html 
+./gradlew copyReport
 ```
 
-See tests results in [JUnit test report](build/reports/tests/test/index.html).
+See tests results in [JUnit test report](docs/tests/test/index.html).
