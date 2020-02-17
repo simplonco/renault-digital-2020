@@ -1,7 +1,9 @@
 package com.renault.servlets;
 
 import com.renault.model.Car;
+import com.renault.service.CarsRepository;
 import com.renault.service.CarsService;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.json.Json;
 import javax.json.JsonArrayBuilder;
@@ -19,6 +21,17 @@ import java.util.Set;
 @WebServlet(name = "CarsServlet", value = "/cars")
 public class CarsServlet extends HttpServlet {
 
+    @Autowired
+    private CarsRepository carsRepository;
+
+    public CarsServlet() {
+        try {
+            carsRepository = ApplicationContextHolder.getContext().getBean(CarsRepository.class);
+        } catch (Exception e) {
+            // nop
+        }
+    }
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -33,7 +46,7 @@ public class CarsServlet extends HttpServlet {
     private void doGetJson(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
         String brand = request.getParameter("brand");
-        List<Car> cars = CarsService.getCars(brand);
+        List<Car> cars = carsRepository.findByBrand(brand);
         JsonArrayBuilder json = Json.createArrayBuilder();
         for (Car car : cars) {
             json.add(car.getBrand() + " - " + car.getModel());
@@ -45,7 +58,7 @@ public class CarsServlet extends HttpServlet {
 
     private void doGetHtml(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Set<String> brands = CarsService.getBrands();
+        Set<String> brands = carsRepository.findBrands();
         request.setAttribute("brands", brands);
         RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/cars.jsp");
         dispatcher.forward(request, response);

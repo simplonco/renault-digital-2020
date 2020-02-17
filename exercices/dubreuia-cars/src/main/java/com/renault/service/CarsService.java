@@ -22,11 +22,11 @@ public class CarsService {
         Set<String> brands = new HashSet<>();
         String url = "jdbc:mysql://172.17.0.2:3306/renault";
         try (Connection connection = DriverManager.getConnection(url, "root", "12345")) {
-            String sql = "SELECT brands FROM cars";
+            String sql = "SELECT brand FROM cars";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                String carBrand = resultSet.getString("brands");
+                String carBrand = resultSet.getString("brand");
                 brands.add(carBrand);
             }
         } catch (SQLException e) {
@@ -39,12 +39,12 @@ public class CarsService {
         List<Car> coche = new ArrayList<>();
         String url = "jdbc:mysql://172.17.0.2:3306/renault";
         try (Connection connection = DriverManager.getConnection(url, "root", "12345")) {
-            String sql = "SELECT brands, model FROM cars WHERE brands = ?";
+            String sql = "SELECT brand, model FROM cars WHERE brand = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, brand);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                String carBrand = resultSet.getString("brands");
+                String carBrand = resultSet.getString("brand");
                 String carModel = resultSet.getString("model");
                 Car car = new Car(carBrand, carModel);
                 coche.add(car);

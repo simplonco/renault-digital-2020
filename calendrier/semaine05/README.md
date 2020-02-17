@@ -37,4 +37,15 @@
 ## Contenu
 
 - JPA Hibernate
+    - Déclaration de `@Entity`, avec `@Id`, `@Column`, etc.
+    - Format d'un Java Bean
+    - Utilisation d'un `EntityManagerFactory` avec le "persistance.xml"
+    - Utilisation d'un `EntityManager`
+    - Utilisation d'un `TypedQuery` pour créer la query en JPQL
+    - Définition de JPQL
+    - Récupération des entity à partir de la bdd
 - Spring Boot JPA
+    - Création d'un "application.yml" pour Spring
+    - Création d'une Spring boot application avec `@SpringBootApplication`
+    - Création d'un repository avec `@Repository`
+    - Utilisation des formats de méthode pour faire des finds
