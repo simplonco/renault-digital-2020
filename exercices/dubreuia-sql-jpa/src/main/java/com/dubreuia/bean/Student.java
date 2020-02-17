@@ -7,45 +7,27 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.time.LocalDate;
 
-/**
- * Créer une classe étudiant avec les attributs suivants :
- * <p>
- * - id (int)
- * - firstName (String)
- * - lastName (String)
- * - birthdate (String)
- * - note (double)
- * <p>
- * Utiliser les annotations suivantes pour paramétrer l'entité :
- * <p>
- * - {@link Entity} pour déclarer le lien entre la classe et la table
- * - {@link Id} pour déclarer la clef primaire
- * - {@link Column} pour déclarer une colonne
- * - {@link GeneratedValue} pour déclarer une colonne générée
- */
-// Bean
 @Entity(name = "students")
 public class Student {
 
     @Id
-    @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "first_name", nullable = false, length = 128)
+    @Column(name = "first_name", nullable = false)
     private String firstName;
 
-    @Column(name = "last_name", nullable = false, length = 128)
+    @Column(name = "last_name", nullable = false)
     private String lastName;
 
-    @Column(nullable = false)
+    @Column(name = "birthdate", nullable = false)
     private LocalDate birthdate;
 
     @Column
     private Double note;
 
     public Student() {
-        // bean
+        // jpa
     }
 
     public Student(String firstName, String lastName, LocalDate birthdate) {
@@ -90,8 +72,8 @@ public class Student {
         return birthdate;
     }
 
-    public void setBirthdate(LocalDate date) {
-        this.birthdate = date;
+    public void setBirthdate(LocalDate birthdate) {
+        this.birthdate = birthdate;
     }
 
     public Double getNote() {
@@ -118,7 +100,7 @@ public class Student {
         if (this == o) {
             return true;
         }
-        if (o == null || this.getClass() != o.getClass()) {
+        if (o == null || getClass() != o.getClass()) {
             return false;
         }
         Student student = (Student) o;
@@ -128,7 +110,10 @@ public class Student {
         if (!lastName.equals(student.lastName)) {
             return false;
         }
-        return birthdate.equals(student.birthdate);
+        if (!birthdate.equals(student.birthdate)) {
+            return false;
+        }
+        return true;
     }
 
 }

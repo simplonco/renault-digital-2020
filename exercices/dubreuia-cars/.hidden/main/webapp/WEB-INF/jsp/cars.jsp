@@ -15,9 +15,9 @@
 <div>
     <%
         Set<String> brands = (Set<String>) request.getAttribute("brands");
-        for (String brand : brands) {
+        for (String s : brands) {
     %>
-    <button data-brand="<%=brand%>"><%=brand%>
+    <button data-brand="<%=s%>"><%=s%>
     </button>
     <%
         }
@@ -33,17 +33,16 @@
     for (let button of buttons) {
         button.addEventListener("click", (event) => {
             let brand = button.getAttribute("data-brand");
-            fetch("http://localhost:8080/dubreuia-cars/cars?brand=" + brand, {
+            fetch('?brand=' + brand, {
                 headers: {
-                    "Content-Type": "application/json",
+                    "Content-Type": "application/json"
                 }
             }).then((response) => {
                 return response.json();
-            }).then((cars) => {
-                console.log(cars);
+            }).then((myJson) => {
                 content.innerHTML = "";
-                for (let car of cars) {
-                    content.innerHTML = content.innerHTML + "<div>" + car + "</div>";
+                for (let car of myJson) {
+                    content.innerHTML += "<div>" + car + "</div>";
                 }
             });
         });

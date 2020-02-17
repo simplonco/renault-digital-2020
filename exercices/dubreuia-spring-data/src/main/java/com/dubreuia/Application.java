@@ -6,13 +6,21 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import javax.annotation.PostConstruct;
 import java.time.LocalDate;
+import java.util.List;
+import java.util.TimeZone;
 
-@SpringBootApplication
+@SpringBootApplication()
 public class Application {
 
     @Autowired
-    StudentRepository repository;
+    private StudentRepository repository;
+
+    @PostConstruct
+    void started() {
+        TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
@@ -20,11 +28,25 @@ public class Application {
 
     @Bean
     public CommandLineRunner commandLineRunner() {
-        return (arg) -> {
+        return (args) -> {
+            System.out.println("delete all");
+            repository.deleteAll();
+
+            System.out.println("find all");
             System.out.println(repository.findAll());
-            repository.save(new Student("Alex", "Dubreuil", LocalDate.now()));
-            System.out.println(repository.findAll());
-            System.out.println(repository.findByLastName("Dubreuil"));
+
+            System.out.println("add barack and find all");
+            repository.save(new Student("Barack", "Obama", LocalDate.of(1965, 7, 17)));
+            List<Student> all = repository.findAll();
+            System.out.println(all);
+
+            Student firstStudent = all.get(0);
+            System.out.println("find by id " + firstStudent.getId());
+            System.out.println(repository.findById(firstStudent.getId()));
+
+            System.out.println("find by last name");
+            System.out.println(repository.findByLastName("Obama"));
+            System.out.println(repository.findByLastName("Bush"));
         };
     }
 
