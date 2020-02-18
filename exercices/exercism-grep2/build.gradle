@@ -15,18 +15,18 @@ dependencies {
 
 task fatJar(type: Jar) {
     manifest {
-        attributes 'Implementation-Title': 'Gradle Jar File Example',
-                'Implementation-Version': '1.0.0',
-                'Main-Class': 'GrepTool'
+        attributes "Implementation-Title": "Gradle Jar File Example",
+                "Implementation-Version": "1.0.0",
+                "Main-Class": "GrepTool"
     }
-    baseName = project.name + '-all'
+    baseName = project.name + "-all"
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
 }
 
 test {
     testLogging {
-        exceptionFormat = 'short'
+        exceptionFormat = "short"
         showStandardStreams = true
         events = ["passed", "failed", "skipped"]
     }
