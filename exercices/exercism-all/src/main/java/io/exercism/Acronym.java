@@ -2,12 +2,21 @@ package io.exercism;
 
 class Acronym {
 
+    String phrase;
+
     Acronym(String phrase) {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        this.phrase = phrase.toUpperCase().replaceAll("[-_]", " ");
     }
 
     String get() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        String[] words = this.phrase.split(" ");
+        StringBuilder acronym = new StringBuilder();
+        for (String word : words) {
+            if (!word.isEmpty()) {
+                acronym.append(word.charAt(0));
+            }
+        }
+        return acronym.toString();
     }
 
 }

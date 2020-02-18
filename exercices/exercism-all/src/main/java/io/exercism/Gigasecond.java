@@ -5,16 +5,20 @@ import java.time.LocalDateTime;
 
 class Gigasecond {
 
-    Gigasecond(LocalDate moment) {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+    private LocalDateTime localDateTime;
+
+    // overload
+    Gigasecond(LocalDate localDate) {
+        this.localDateTime = localDate.atTime(0, 0, 0);
     }
 
-    Gigasecond(LocalDateTime moment) {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+    // overload
+    Gigasecond(LocalDateTime localDateTime) {
+        this.localDateTime = localDateTime;
     }
 
     LocalDateTime getDateTime() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return localDateTime.plusSeconds(1_000_000_000);
     }
 
 }
