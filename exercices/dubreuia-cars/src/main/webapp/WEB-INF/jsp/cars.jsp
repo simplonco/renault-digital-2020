@@ -33,7 +33,7 @@
     for (let button of buttons) {
         button.addEventListener("click", (event) => {
             let brand = button.getAttribute("data-brand");
-            fetch('http://localhost:8080/dubreuia-cars/cars?brand=' + brand, {
+            fetch('?brand=' + brand, {
                 headers: {
                     "Content-Type": "application/json"
                 }

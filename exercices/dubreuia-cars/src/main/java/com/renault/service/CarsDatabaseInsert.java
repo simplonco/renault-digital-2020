@@ -21,7 +21,7 @@ public class CarsDatabaseInsert {
     }
 
     public static void main(String[] args) throws SQLException {
-        String url = "jdbc:mysql://172.17.0.2:3306/renault";
+        String url = "jdbc:mysql://172.17.0.2:3306/cars";
         try (Connection connection = DriverManager.getConnection(url, "root", "12345")) {
             List<Car> cars = getCars();
             for (Car car : cars) {
@@ -35,7 +35,6 @@ public class CarsDatabaseInsert {
     }
 
     public static List<Car> getCars() {
-        // TODO step 3
         List<Car> cars = new ArrayList<>();
         for (String line : getCarsFromCsvFile()) {
             String[] column = line.split(";");
@@ -48,8 +47,7 @@ public class CarsDatabaseInsert {
     }
 
     public static List<String> getCarsFromCsvFile() {
-        // TODO step 3
-        InputStream resource = CarsService.class.getResourceAsStream("cars.csv");
+        InputStream resource = CarsDatabaseInsert.class.getResourceAsStream("cars.csv");
         return new BufferedReader(new InputStreamReader(resource)).lines().collect(toList());
     }
 
