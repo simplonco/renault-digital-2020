@@ -1,42 +1,120 @@
 package io.exercism;
 
+import java.util.Arrays;
+
+import static io.exercism.Orientation.Direction.CLOCKWISE;
+import static io.exercism.Orientation.Direction.COUNTER_CLOCKWISE;
+
 class Robot {
 
+    private GridPosition gridPosition;
+    private Orientation orientation;
+
     public Robot(GridPosition gridPosition, Orientation orientation) {
-        // TODO
+        this.gridPosition = gridPosition;
+        this.orientation = orientation;
     }
 
-    public Object getOrientation() {
-        // TODO
-        return null;
+    public Orientation getOrientation() {
+        return orientation;
     }
 
-    public Object getGridPosition() {
-        // TODO
-        return null;
+    public GridPosition getGridPosition() {
+        return gridPosition;
     }
 
     public void turnRight() {
-        // TODO
+        orientation = orientation.next(CLOCKWISE);
     }
 
     public void turnLeft() {
-        // TODO
+        orientation = orientation.next(COUNTER_CLOCKWISE);
     }
 
     public void advance() {
-        // TODO
+        gridPosition = new GridPosition(orientation.x, orientation.y);
     }
 
     public void simulate(String sequence) {
-        // TODO
+        sequence.chars().mapToObj(Command::fromInt).forEach(this::simulate);
+    }
+
+    public void simulate(Command command) {
+        command.simulate(this::turnRight, this::turnLeft, this::advance);
     }
 
 }
 
 enum Orientation {
 
-    NORTH, EAST, SOUTH, WEST
+    NORTH(0, 1),
+    EAST(1, 0),
+    SOUTH(0, -1),
+    WEST(-1, 0);
+
+    final int x;
+    final int y;
+
+    Orientation(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    Orientation next(Direction direction) {
+        int ordinal = Math.floorMod((this.ordinal() + direction.displacement), values().length);
+        return values()[ordinal];
+    }
+
+    enum Direction {
+
+        COUNTER_CLOCKWISE(-1),
+        CLOCKWISE(1);
+
+        private final int displacement;
+
+        Direction(int displacement) {
+            this.displacement = displacement;
+        }
+
+    }
+
+}
+
+enum Command {
+
+    LEFT('L') {
+        @Override
+        void simulate(Runnable left, Runnable right, Runnable advance) {
+            left.run();
+        }
+    },
+    RIGHT('R') {
+        @Override
+        void simulate(Runnable left, Runnable right, Runnable advance) {
+            right.run();
+        }
+    },
+    ADVANCE('A') {
+        @Override
+        void simulate(Runnable left, Runnable right, Runnable advance) {
+            advance.run();
+        }
+    };
+
+    private final char command;
+
+    Command(char command) {
+        this.command = command;
+    }
+
+    static Command fromInt(int command) {
+        return Arrays.stream(values())
+                .filter(value -> value.command == command)
+                .findAny()
+                .orElseThrow(() -> new IllegalArgumentException("Unknown command " + command));
+    }
+
+    abstract void simulate(Runnable left, Runnable right, Runnable advance);
 
 }
 
