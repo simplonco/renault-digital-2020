@@ -32,7 +32,7 @@ class Robot {
     }
 
     public void advance() {
-        gridPosition = new GridPosition(orientation.x, orientation.y);
+        gridPosition = new GridPosition(gridPosition.x + orientation.x, gridPosition.y + orientation.y);
     }
 
     public void simulate(String sequence) {
@@ -40,7 +40,7 @@ class Robot {
     }
 
     public void simulate(Command command) {
-        command.simulate(this::turnRight, this::turnLeft, this::advance);
+        command.simulate(this::turnLeft, this::turnRight, this::advance);
     }
 
 }
@@ -149,6 +149,14 @@ class GridPosition {
         } else {
             return true;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "GridPosition{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
     }
 
 }
