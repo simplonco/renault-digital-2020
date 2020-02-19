@@ -3,7 +3,13 @@ package io.exercism;
 class ReverseString {
 
     String reverse(String inputString) {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        char[] chars = inputString.toCharArray();
+        StringBuilder result = new StringBuilder();
+        for (int index = chars.length - 1; index >= 0; index--) {
+            char letter = chars[index];
+            result.append(letter);
+        }
+        return result.toString();
     }
   
 }

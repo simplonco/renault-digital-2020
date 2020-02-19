@@ -2,12 +2,26 @@ package io.exercism;
 
 class Acronym {
 
+    private String phrase;
+
     Acronym(String phrase) {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        this.phrase = phrase
+                .replace("-", " ")
+                .replace("_", " ");
     }
 
     String get() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        String acronyme = "";
+        String[] words = phrase.split(" ");
+        for (int index = 0; index < words.length; index++) {
+            String word = words[index];
+            if (!word.isBlank()) {
+                char firstCharacter = word.charAt(0);
+                acronyme += firstCharacter;
+            }
+        }
+        return acronyme.toUpperCase();
     }
 
 }
+
