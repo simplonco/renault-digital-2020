@@ -15,7 +15,10 @@ import java.util.TimeZone;
 public class Application {
 
     @Autowired
-    private StudentRepository repository;
+    private StudentRepository studentRepository;
+
+    @Autowired
+    private AddressRepository addressRepository;
 
     @PostConstruct
     void started() {
@@ -30,23 +33,32 @@ public class Application {
     public CommandLineRunner commandLineRunner() {
         return (args) -> {
             System.out.println("delete all");
-            repository.deleteAll();
+            studentRepository.deleteAll();
 
             System.out.println("find all");
-            System.out.println(repository.findAll());
+            System.out.println(studentRepository.findAll());
 
             System.out.println("add barack and find all");
-            repository.save(new Student("Barack", "Obama", LocalDate.of(1965, 7, 17)));
-            List<Student> all = repository.findAll();
+
+            // save address
+            Address address = new Address(151, "general leclerc");
+            addressRepository.save(address);
+
+            // save student
+            Student student = new Student("Barack", "Obama", LocalDate.of(1965, 7, 17), address);
+            studentRepository.save(student);
+
+            // find all
+            List<Student> all = studentRepository.findAll();
             System.out.println(all);
 
             Student firstStudent = all.get(0);
             System.out.println("find by id " + firstStudent.getId());
-            System.out.println(repository.findById(firstStudent.getId()));
+            System.out.println(studentRepository.findById(firstStudent.getId()));
 
             System.out.println("find by last name");
-            System.out.println(repository.findByLastName("Obama"));
-            System.out.println(repository.findByLastName("Bush"));
+            System.out.println(studentRepository.findByLastName("Obama"));
+            System.out.println(studentRepository.findByLastName("Bush"));
         };
     }
 
