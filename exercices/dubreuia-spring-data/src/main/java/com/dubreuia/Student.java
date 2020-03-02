@@ -5,10 +5,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Objects;
 
-@Entity(name = "students")
+@Entity
+@Table(name = "students")
 public class Student {
 
     @Id
@@ -27,15 +32,21 @@ public class Student {
     @Column
     private Double note;
 
+    @ManyToOne
+    @JoinColumn(name = "address_id")
+    private Address address;
+
     public Student() {
         // jpa
     }
 
-    // overload
-    public Student(String firstName, String lastName, LocalDate birthdate) {
+    public Student(String firstName, String lastName, LocalDate birthdate, Address address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthdate = birthdate;
+        this.address = address;
+        List<Student> students = this.address.getStudents();
+        students.add(this);
     }
 
     public Student(int id, String firstName, String lastName, LocalDate birthdate, Double note) {
@@ -86,6 +97,14 @@ public class Student {
         this.note = note;
     }
 
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -94,6 +113,7 @@ public class Student {
                 ", lastName='" + lastName + '\'' +
                 ", birthdate=" + birthdate +
                 ", note=" + note +
+                ", address=" + address +
                 '}';
     }
 
