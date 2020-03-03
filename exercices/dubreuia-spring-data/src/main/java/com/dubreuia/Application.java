@@ -14,8 +14,14 @@ import java.util.TimeZone;
 @SpringBootApplication()
 public class Application {
 
-    @Autowired
-    private StudentRepository repository;
+    private final StudentRepository studentRepository;
+
+    private final AddressRepository addressRepository;
+
+    public Application(StudentRepository studentRepository, AddressRepository addressRepository) {
+        this.studentRepository = studentRepository;
+        this.addressRepository = addressRepository;
+    }
 
     @PostConstruct
     void started() {
@@ -30,23 +36,23 @@ public class Application {
     public CommandLineRunner commandLineRunner() {
         return (args) -> {
             System.out.println("delete all");
-            repository.deleteAll();
+            studentRepository.deleteAll();
+//            addressRepository.deleteAll();
 
-            System.out.println("find all");
-            System.out.println(repository.findAll());
-
+            // save addresss
             System.out.println("add barack and find all");
-            repository.save(new Student("Barack", "Obama", LocalDate.of(1965, 7, 17)));
-            List<Student> all = repository.findAll();
+            Address address = new Address(151, "general leclerc", "paris");
+            addressRepository.save(address);
+
+            // save students
+            Student student = new Student("Barack", "Obama", LocalDate.of(1965, 7, 17));
+            student.setAddress(address);
+            address.setStudents(List.of(student));
+            studentRepository.save(student);
+
+            // select all
+            List<Student> all = studentRepository.findAll();
             System.out.println(all);
-
-            Student firstStudent = all.get(0);
-            System.out.println("find by id " + firstStudent.getId());
-            System.out.println(repository.findById(firstStudent.getId()));
-
-            System.out.println("find by last name");
-            System.out.println(repository.findByLastName("Obama"));
-            System.out.println(repository.findByLastName("Bush"));
         };
     }
 
