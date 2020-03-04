@@ -7,13 +7,10 @@
 <body>
 <script>
     let promise = new Promise((resolve, reject) => {
-        let innerPromise = new Promise((resolve, reject) => resolve("OK"));
+        let innerPromise = new Promise((resolve, reject) => resolve("TODO"));
         resolve({text: innerPromise});
     });
-    promise
-            .then(result => result.text)
-            .then(result => console.log("then " + result))
-            .catch(result => console.log("catch " + result))
+    /* TODO */
 </script>
 </body>
 </html>
