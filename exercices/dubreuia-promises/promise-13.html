@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Promise demos</title>
+</head>
+<body>
+<script>
+    let app = async () => {
+        async function promiseFunction() {
+            throw "ERROR";
+        }
+
+        let ok = await promiseFunction();
+        console.log(ok)
+    };
+    app().catch(result => console.log(result))
+</script>
+</body>
+</html>

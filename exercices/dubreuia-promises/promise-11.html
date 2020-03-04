@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Promise demos</title>
+</head>
+<body>
+<script>
+    async function promiseFunction() {
+        return "OK";
+    }
+
+    async function app() {
+        let ok = await promiseFunction();
+        console.log(ok)
+    }
+
+    Promise.all([app()]);
+</script>
+</body>
+</html>

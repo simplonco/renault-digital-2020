@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Promise demos</title>
+</head>
+<body>
+<script>
+    let promise1 = new Promise((resolve, reject) => resolve("OK"));
+    let promise2 = new Promise((resolve, reject) => reject("OK"));
+    let promise3 = new Promise((resolve, reject) => resolve("OK"));
+    Promise.all([promise1, promise2, promise3])
+            .then(result => console.log("then " + result))
+            .catch(result => console.log("catch " + result))
+</script>
+</body>
+</html>

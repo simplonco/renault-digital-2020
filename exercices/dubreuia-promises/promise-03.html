@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Promise demos</title>
+</head>
+<body>
+<script>
+    let promise = new Promise((resolve, reject) => {
+        (Math.random() > 0.5) ? resolve("OK") : reject("ERROR");
+    });
+    promise
+            .then(result => console.log("then " + result))
+            .catch(result => console.log("catch " + result))
+            .then(() => console.log("end"))
+</script>
+</body>
+</html>

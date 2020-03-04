@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Promise demos</title>
+</head>
+<body>
+<script>
+    async function promiseFunction() {
+        return "OK";
+    }
+
+    promiseFunction()
+            .then(result => console.log("then " + result))
+</script>
+</body>
+</html>
