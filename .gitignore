@@ -39,3 +39,6 @@ hs_err_pid*
 build
 !**/gradle/wrapper/gradle-wrapper.jar
 
+# NPM
+node_modules
+
