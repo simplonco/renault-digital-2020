@@ -9,11 +9,11 @@
     console.log("0")
     let promise = new Promise((resolve, reject) => {
         console.log("1")
-        setTimeout(() => resolve("TODO"), 100);
+        setTimeout(() => resolve(), 100);
         console.log("2")
     });
     console.log("4")
-    /* TODO */
+    promise.then(() => console.log("5 " + result))
     console.log("6")
 </script>
 </body>

@@ -7,9 +7,12 @@
 <body>
 <script>
     let promise = new Promise((resolve, reject) => {
-        (Math.random() > 0.5) ? resolve("TODO") : reject("TODO");
+        (Math.random() > 0.5) ? resolve("OK") : reject("ERROR");
     });
-    /* TODO */
+    promise
+            .then((result) => { console.log(result) })
+            .catch(result => console.log(result))
+            .finally(() => console.log("end"))
 </script>
 </body>
 </html>

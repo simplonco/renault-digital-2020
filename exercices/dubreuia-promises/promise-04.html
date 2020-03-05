@@ -7,10 +7,12 @@
 <body>
 <script>
     let promise = new Promise((resolve, reject) => {
-        let innerPromise = new Promise((resolve, reject) => resolve("TODO"));
+        let innerPromise = new Promise((resolve, reject) => resolve("OK"));
         resolve({text: innerPromise});
     });
-    /* TODO */
+    promise
+            .then(result => result.text)
+            .then(result => console.log(result))
 </script>
 </body>
 </html>

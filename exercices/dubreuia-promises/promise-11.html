@@ -7,12 +7,16 @@
 <body>
 <script>
     async function promiseFunction() {
-        return "TODO";
+        return "OK";
     }
 
     async function app() {
-        let ok = /* TODO */;
+        // avec await
+        let ok = await promiseFunction();
         console.log(ok)
+
+        // avec then
+        promiseFunction().then(result => console.log(result))
     }
 
     Promise.all([app()]);

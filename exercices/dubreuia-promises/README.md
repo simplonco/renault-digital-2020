@@ -9,8 +9,8 @@ Documentation :
 
 Exercices :
 
-- [promise-00.html](./promise-00.html) : "0" "1" "2" "3" "4" "6" "5 OK"
-- [promise-01.html](./promise-01.html) : "0" "1" "2" "3" "4" "6" "5 OK"
+- [promise-00.html](./promise-00.html) : "0" "1" "2" "4" "6" "5 OK"
+- [promise-01.html](./promise-01.html) : "0" "1" "2" "4" "6" "5 OK"
 - [promise-02.html](./promise-02.html) : "then OK" ou "catch ERROR"
 - [promise-03.html](./promise-03.html) : "then OK" ou "catch ERROR" puis "end"
 - [promise-04.html](./promise-04.html) : "then OK"
