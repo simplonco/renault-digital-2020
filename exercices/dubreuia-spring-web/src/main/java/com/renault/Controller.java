@@ -5,13 +5,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServlet;
 import java.util.List;
 
 @RestController
 @RequestMapping("/")
 @CrossOrigin
-public class Controller extends HttpServlet {
+public class Controller {
 
     @GetMapping("/persons")
     public List<PersonDto> get() {
