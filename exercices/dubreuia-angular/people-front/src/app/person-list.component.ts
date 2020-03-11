@@ -12,12 +12,10 @@ export class PersonListComponent implements OnInit {
   persons: Person[];
 
   constructor(private personService: PersonService) {
-    console.log("fu2")
     this.personService = personService;
   }
 
   ngOnInit() {
-    console.log("fu1")
     this.personService.findAll()
       .then(result => result.json())
       .then(result => this.persons = result)

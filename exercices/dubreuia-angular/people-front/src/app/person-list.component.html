@@ -1,7 +1,3 @@
-<div>
-  <p *ngFor="let person of persons">
-    {{ person }}
-    {{ person.firstName }}
-    {{ person.lastName }}
-  </p>
+<div *ngFor="let person of persons">
+  {{ person.firstName }} {{ person.lastName }}
 </div>

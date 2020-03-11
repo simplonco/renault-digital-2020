@@ -24,4 +24,3 @@ import { PersonService } from './person-service.service';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-console.log("fu3")
