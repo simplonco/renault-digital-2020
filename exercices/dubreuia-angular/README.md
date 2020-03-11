@@ -1,11 +1,12 @@
 # Angular
 
-- `npm install -g @angular/cli@1.7.4`
+- `npm install -g @angular/cli@latest`
 - `ng new people-front` (see dubreuia-spring-web TODO README)
 - `cd people-front`
-- `npm start` go to http://localhost:4200/
+- `npm start` go to http://localhost:4200/ ou `ng serve`
 - `ng generate class person`
-- `ng generate service person-service`
+- `ng generate service person`
+- `ng generate component person-list`
 
 ## Archive
 
@@ -14,4 +15,3 @@
     - https://github.com/public-apis/public-apis#weather
     - https://www.metaweather.com/api/location/search/?query=london
 - `npm start`
-
