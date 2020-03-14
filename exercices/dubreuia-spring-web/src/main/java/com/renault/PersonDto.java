@@ -4,10 +4,12 @@ public class PersonDto {
 
     private String firstName;
     private String lastName;
+    private String city;
 
-    public PersonDto(String firstName, String lastName) {
+    public PersonDto(String firstName, String lastName, String city) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.city = city;
     }
 
     public String getFirstName() {
@@ -26,11 +28,20 @@ public class PersonDto {
         this.lastName = lastName;
     }
 
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
     @Override
     public String toString() {
         return "PersonDto{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", city='" + city + '\'' +
                 '}';
     }
 
