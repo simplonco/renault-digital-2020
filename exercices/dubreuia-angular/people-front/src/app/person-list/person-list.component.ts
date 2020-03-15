@@ -18,7 +18,7 @@ export class PersonListComponent implements OnInit {
   ngOnInit() {
     this.personService.findAll()
       .then(result => result.json())
-      .then(result => this.persons = result)
+      .then(result => this.persons = result);
   }
 
 }
