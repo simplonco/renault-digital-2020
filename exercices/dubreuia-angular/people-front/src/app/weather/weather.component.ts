@@ -14,10 +14,11 @@ export class WeatherComponent implements OnInit {
   constructor(private dataService: DataService,
               private weatherService: WeatherService) {
     this.dataService.cityObservable.subscribe(city => {
-      // TODO use obervable for service
-      weatherService.getWeather(city)
-        .then(response => response.text())
-        .then(response => this.weather = `Weather for ${city} is: ${response}`)
+      this.weatherService.getWeather(city)
+        .subscribe(
+          response => this.weather = `Weather for ${city} is: ${response['weather_state_name']}`,
+          error => this.weather = error['error']['message']
+        );
     })
   }
 
