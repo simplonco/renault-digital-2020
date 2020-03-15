@@ -6,15 +6,11 @@ import {HttpClientModule} from '@angular/common/http';
 import {AppComponent} from './app.component';
 import {PersonListComponent} from './person-list/person-list.component';
 import {PersonService} from './services/person-service.service';
-import {WeatherService} from "./services/weather-service.service";
-import {WeatherComponent} from './weather/weather.component';
-import {DataService} from "./services/data.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonListComponent,
-    WeatherComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +20,7 @@ import {DataService} from "./services/data.service";
       {path: 'persons', component: PersonListComponent},
     ])
   ],
-  providers: [PersonService, WeatherService, DataService],
+  providers: [PersonService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
