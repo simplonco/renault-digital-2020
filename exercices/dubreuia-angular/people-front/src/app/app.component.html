@@ -1,7 +1,9 @@
 <div>
   <h2><a routerLink="/">{{title}}</a></h2>
   <div>
+    <!-- TODO ajouter un composant "weather" -->
     <!--<app-weather></app-weather>-->
+    <div>ajouter un composant weather ici</div>
   </div>
   <div>
     <button routerLink="/persons" class="">List Persons</button>
@@ -9,4 +11,5 @@
   <div>
     <router-outlet></router-outlet>
   </div>
+  <button (click)="click()">observable</button>
 </div>
