@@ -1,38 +1,27 @@
-# Semaine 08
+# Semaine 08 - 02/03/04 mars
 
-- 08 : sql join, @ManyToOne, @OneToMany, cars (mercredi : cars to spring, retour sur fetch et promesse)
-- 09 : angular (mercredi : cars to angular)
-- 10 : lambda et fonctionnel (js et java), rxjs et rxjava
-- 11 : (formation)
-- 12 : TODO
-- 13 : TODO
-- 14 : TODO
-- 15 : (formation)
-- 16 : java 14
+## Plan
 
-## Groupe 01
+- Feuille émargement
+- Retour sur semaine passé en formation (30 minutes)
+- Déterminer le programme des semaines à venir
+- Groupe : mob programming sur [les relations](../../exercices/dubreuia-spring-data) (120 minutes)
+    - SQL foreign key, `SELECT ... JOIN`
+    - JPA `@ManyToOne`, `@OneToMany`, `@JoinColumn`
+- Mercredi : exercices sur [application cars](https://github.com/simplonco/renault-digital-2020-projet)
+    - Retour sur [les promesses](../../exercices/dubreuia-promises)
+    - Migration de l'application cars vers spring (controler, service, front)
 
-- 08 : mercredi 01 : refactor cars app to spring
-- 09 : add angular
-- 10 : add authentification
-- formation
-- 12 : add crud (rest + bdd)
-- 13 : TODO
-- 14 : TODO
-- formation
-- 15 : TODO
+## Programme des semaines à venir
 
-- analyse statique
-- api rest
-
-## Groupe 02
-
-- angular : observables (rxjs avant ?), filtres, directive
-
-## Groupe 03
-
-- TODO
-
-## Groupe 04
-
-- TODO
+- Semaine 08
+    - groupes : SQL join avec @ManyToOne, @OneToMany
+    - groupes : retour sur fetch et promesse
+    - mercredi : migration application cars vers spring
+- Semaine 09
+    - groupes : introduction angular
+    - mercredi : migration application cars vers angular
+- Semaine 10
+    - groupes : introduction rxjs (observables seulement)
+    - groupes : utilisation observables sur angular
+    - mercredi : ???
