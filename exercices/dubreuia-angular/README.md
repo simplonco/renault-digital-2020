@@ -13,7 +13,7 @@
 Pour chaque personne, ajouter une ville, et un bouton qui permet d'afficher la météo pour cette ville. La météo est
 un composant à part, qui utilise les observables pour être notifié du changement de ville.
 
-- Modifier le backend dubreuia-spring-web pour ajouter un GET météo
+- Modifier le backend [dubreuia-spring-web](../../exercices/dubreuia-spring-web) pour ajouter un GET météo
     - Ajouter la ville à la personne
     - Le GET prend la ville et retourne un JSON avec les informations météo
     - Utliser le WeatherService qui est déjà écrit

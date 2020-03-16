@@ -8,8 +8,6 @@ import {Observable} from "rxjs";
 })
 export class AppComponent {
 
-  observableValue: string = "rien";
-
   observable() {
     console.log("Observable");
     let observable = new Observable(observer => {
@@ -19,7 +17,7 @@ export class AppComponent {
       observer.next("4")
     });
     let subscriber = observable.subscribe(
-      (value: string) => this.observableValue = value,
+      (value: string) => console.log(value),
       error => console.log("error: " + error)
     );
     // setTimeout(() => subscriber.unsubscribe(), 100)
