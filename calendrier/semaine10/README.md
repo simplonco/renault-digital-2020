@@ -4,7 +4,7 @@ Télétravail sur discord
 
 ## Plan
 
-- Retour sur [semaine passé](../semaine08/README.md)
+- Retour sur [semaine passé](../semaine09/README.md)
 - Groupe : sous forme d'exercices, avec corrigé (après le temps écoulé)
     - Introduction aux [observables](../../exercices/dubreuia-observables) (30 minutes démo)
     - Voir exercice [angular](../../exercices/dubreuia-angular/README.md)
