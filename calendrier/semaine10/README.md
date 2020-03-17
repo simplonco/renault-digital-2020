@@ -11,3 +11,9 @@ Télétravail sur discord
         - Ajout d'un composant angular "weather" (30 minutes exercice + 30 minutes correction)
         - Communication inter-composant avec observables (30 minutes exercices + 30 minutes correction)
 - Mercredi : exercices ???
+
+## Références
+
+- https://angular.io/guide/comparing-observables
+- https://www.learnrxjs.io/learn-rxjs/operators/filtering
+- https://www.learnrxjs.io/learn-rxjs/operators/transformation
