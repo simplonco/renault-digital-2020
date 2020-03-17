@@ -17,15 +17,15 @@ public class Controller extends HttpServlet {
     @GetMapping("/persons")
     public List<PersonDto> get() {
         return List.of(
-                new PersonDto("Emmanuel", "Macron"),
-                new PersonDto("François", "Hollande"),
-                new PersonDto("Nicolas", "Sarkozy"),
-                new PersonDto("Jacques", "Chirac"),
-                new PersonDto("François", "Mitterrand")
+                new PersonDto("Emmanuel", "Macron", "Paris"),
+                new PersonDto("François", "Hollande", "Marseilles"),
+                new PersonDto("Nicolas", "Sarkozy", "Lille"),
+                new PersonDto("Jacques", "Chirac", "Nantes"),
+                new PersonDto("François", "Mitterrand", "Brive")
         );
     }
 
-    @GetMapping("/weater/{city}")
+    @GetMapping("/weather/{city}")
     public String getWeather(@PathVariable("city") String city) {
         int id = weatherService.getWhereInTheWorldId(city);
         return weatherService.getLocationWeather(id);

@@ -4,11 +4,12 @@ public class PersonDto {
 
     private String firstName;
     private String lastName;
-    // TODO ajouter une ville
+    private String city;
 
-    public PersonDto(String firstName, String lastName) {
+    public PersonDto(String firstName, String lastName, String city) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.city = city;
     }
 
     public String getFirstName() {
@@ -25,6 +26,14 @@ public class PersonDto {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 
     @Override
