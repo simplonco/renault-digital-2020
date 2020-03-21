@@ -19,6 +19,8 @@ Contenu de la formation en cours
 
 ## [Projet](https://github.com/Frank-readresolve/people/)
 
-Projet fil rouge pendant la formation (dépôt github séparé)
+Projet fil rouge pendant le coaching (dépôt github séparé)
 
 ## [Références](./references)
+
+Liste de références, documents et livres pour le coaching.
