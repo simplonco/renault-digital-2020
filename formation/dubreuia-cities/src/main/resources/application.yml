@@ -1,0 +1,27 @@
+spring:
+    datasource:
+        name: database
+        # POSTGRES: change url for postgresql or mysql
+        # url: jdbc:postgresql://localhost:5432/cities
+        url: jdbc:mysql://172.17.0.2:3306/cities
+        # username: postgres
+        username: root
+        # password: toto
+        password: 12345
+    jpa:
+        properties:
+            hibernate:
+                # POSTGRES: change dialect for postgresql or mysql
+                # dialect: org.hibernate.dialect.PostgreSQL95Dialect
+                dialect: org.hibernate.dialect.MySQLDialect
+                show-sql: true
+
+logging:
+    level:
+        org:
+            hibernate:
+                SQL: DEBUG
+                type:
+                    descriptor:
+                        sql:
+                            BasicBinder: TRACE
