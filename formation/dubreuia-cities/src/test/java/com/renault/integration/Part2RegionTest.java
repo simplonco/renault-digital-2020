@@ -24,7 +24,6 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 public class Part2RegionTest extends TestCitiesApplication {
 
     @Test
-    @Disabled("TODO remove when part is ready")
     public void should_GET_country_with_id_returns_all_the_regions_for_country() {
         int canadaId = getCountryIdForName("Canada").orElseThrow();
 

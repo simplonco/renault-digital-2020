@@ -1,0 +1,6 @@
+CREATE TABLE country
+(
+    id       INTEGER PRIMARY KEY AUTO_INCREMENT,
+    language VARCHAR(16)  NOT NULL,
+    name     VARCHAR(512) NOT NULL UNIQUE
+);

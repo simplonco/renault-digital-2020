@@ -23,7 +23,6 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 public class Part0LanguageTest extends TestCitiesApplication {
 
     @Test
-    @Disabled("TODO remove when part is ready")
     public void should_GET_root_language_returns_all_languages() {
         JsonReader jsonReader = get("language/");
         JsonArray jsonArray = jsonReader.readArray();

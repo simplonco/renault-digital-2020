@@ -31,6 +31,7 @@ dependencies {
     // JDBC mysql
     compile "mysql:mysql-connector-java:8.0.19"
     compile "org.postgresql:postgresql:42.2.11"
+    compile "com.h2database:h2:1.4.200"
 
     // Json
     compile "javax.json:javax.json-api:1.1.4"

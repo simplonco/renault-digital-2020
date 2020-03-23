@@ -25,7 +25,6 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 public class Part1CountryTest extends TestCitiesApplication {
 
     @Test
-    @Disabled("TODO remove when part is ready")
     public void should_GET_root_returns_all_the_countries() {
         JsonReader response = get("country/");
         JsonArray countries = response.readArray();
@@ -42,7 +41,6 @@ public class Part1CountryTest extends TestCitiesApplication {
     }
 
     @Test
-    @Disabled("TODO remove when part is ready")
     public void should_GET_root_with_id_returns_specific_country() {
         JsonReader response = get("country/");
         JsonArray countriesArray = response.readArray();
@@ -60,7 +58,6 @@ public class Part1CountryTest extends TestCitiesApplication {
     }
 
     @Test
-    @Disabled("TODO remove when part is ready")
     public void should_POST_root_add_new_country() {
         JsonObject uk = Json.createObjectBuilder()
                 .add("name", "United Kingdom")
@@ -74,8 +71,6 @@ public class Part1CountryTest extends TestCitiesApplication {
     }
 
     @Test
-    @Disabled("TODO remove when part is ready")
-    // TODO add with throws in user test
     public void should_DELETE_root_remove_existing_country() {
         int japanId = getCountryIdForName("Japan").orElseThrow();
         delete(format("country/%s", japanId));
@@ -86,7 +81,6 @@ public class Part1CountryTest extends TestCitiesApplication {
     }
 
     @Test
-    @Disabled("TODO remove when part is ready")
     public void should_PUT_root_modify_existing_country() {
         int franceId = getCountryIdForName("France").orElseThrow();
         JsonObject updatedFrance = Json.createObjectBuilder()
