@@ -76,6 +76,12 @@ Dans `CitiesApplication`, ajouter du contenu au démarrage de l'application :
 - Supprimer tout le contenu de la table "country"
 - Ajouter les pays "France" et "Canada"
 
+| id        | language      | name     |
+| --------- | ------------- | -----    |
+| 1001      | "FR"          | "France" |
+| 1002      | "EN"          | "Canada" |
+| 1003      | "JA"          | "Japan"  |
+
 ### Partie 2 - `Region` - Mapping bidirectionnel
 
 Créer une nouvelle entitée `Region` avec les propriétés suivantes :
@@ -107,6 +113,11 @@ Dans `CitiesApplication`, ajouter du contenu au démarrage de l'application :
 - Ajouter la région "IDF" pour le pays "France"
 - Ajouter la région "Québec" pour le pays "Canada"
 
+| id        | name     | country_id    |
+| --------- | -------- | ------------- |
+| 2001      | "IDF"    | 1001          |
+| 2002      | "Québec" | 1002          |
+
 Questions :
 
 - Quelle est l'utilité d'une transaction ?
@@ -132,6 +143,13 @@ Dans `CitiesApplication`, ajouter du contenu au démarrage de l'application :
 - Supprimer tout le contenu de la table "city"
 - Ajouter la région "Paris" et "Montreuil" pour le pays "France"
 - Ajouter la région "Montréal" et "Laval" pour le pays "Canada"
+
+| id        | name        | region_id     |
+| --------- | --------    | ------------- |
+| 3001      | "Paris"     | 2001          |
+| 3002      | "Montreuil" | 2001          |
+| 3003      | "Montréal"  | 2002          |
+| 3004      | "Laval"     | 2002          |
 
 ### Partie 4 - `User` - Association ManyToMany
 
