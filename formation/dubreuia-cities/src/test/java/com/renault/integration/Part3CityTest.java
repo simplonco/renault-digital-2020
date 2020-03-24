@@ -11,6 +11,7 @@ import javax.json.Json;
 import javax.json.JsonObject;
 import java.util.List;
 
+import static java.lang.String.format;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
@@ -41,6 +42,21 @@ public class Part3CityTest extends TestCitiesApplication {
         List<String> cityNames = getCityNames();
         assertEquals(5, cityNames.size());
         assertTrue(cityNames.contains("London"));
+    }
+
+    @Test
+    @Disabled("TODO remove when part is ready")
+    public void should_PUT_city_modify_existing_city() {
+        int montrealId = getCityIdForName("Montréal").orElseThrow();
+        JsonObject updatedMontrel = Json.createObjectBuilder()
+                .add("id", montrealId)
+                .add("name", "Super Montréal")
+                .build();
+        put(format("country/region/city/%s", montrealId), updatedMontrel);
+
+        List<String> cityNames = getCityNames();
+        assertEquals(4, cityNames.size());
+        assertTrue(cityNames.contains("Super Montréal"));
     }
 
 }

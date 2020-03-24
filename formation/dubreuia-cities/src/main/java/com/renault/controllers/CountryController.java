@@ -1,10 +1,8 @@
 package com.renault.controllers;
 
 import com.renault.dtos.CountryDto;
-import com.renault.dtos.RegionDto;
 import com.renault.entities.Country;
 import com.renault.entities.Language;
-import com.renault.entities.Region;
 import com.renault.services.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -61,6 +59,5 @@ public class CountryController {
         country.setName(countryDto.getName());
         countryService.saveCountry(country);
     }
-
 
 }

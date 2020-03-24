@@ -41,7 +41,6 @@ public class Part2RegionTest extends TestCitiesApplication {
     }
 
     @Test
-    @Disabled("TODO remove when part is ready")
     public void should_GET_country_region_with_id_returns_specific_region() {
         int canadaId = getCountryIdForName("Canada").orElseThrow();
 
@@ -71,13 +70,21 @@ public class Part2RegionTest extends TestCitiesApplication {
     }
 
     @Test
-    @Disabled("TODO remove when part is ready")
     public void should_POST_region_add_new_region() {
         JsonObject ukMidwest = Json.createObjectBuilder()
-                .add("countryName", "United Kingdom")
-                .add("countryLanguage", "English")
-                .add("regionName", "Midwest")
+                .add("country", Json.createObjectBuilder()
+                        .add("name", "United Kingdom")
+                        .add("language", "English")
+                        .build())
+                .add("region", Json.createObjectBuilder()
+                        .add("name", "Midwest")
+                        .build())
                 .build();
+//        JsonObject ukMidwest = Json.createObjectBuilder()
+//                .add("countryName", "United Kingdom")
+//                .add("countryLanguage", "English")
+//                .add("regionName", "Midwest")
+//                .build();
         post("country/region", ukMidwest);
 
         List<String> countryNames = getCountryNames();

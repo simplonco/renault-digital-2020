@@ -1,7 +1,6 @@
 package com.renault.entities;
 
-import jdk.jfr.Enabled;
-
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -26,10 +25,12 @@ public class Country {
     @Enumerated(EnumType.STRING)
     private Language language;
 
-    @Column
+    @Column(nullable = false, length = 512)
     private String name;
 
-    // TODO relationship mapping
+    @OneToMany(mappedBy = "country",
+            cascade = CascadeType.REMOVE,
+            fetch = FetchType.LAZY)
     private List<Region> regions;
 
     public Country() {

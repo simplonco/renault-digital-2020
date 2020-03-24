@@ -7,19 +7,27 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.util.List;
 
-// TODO entity mapping
+@Entity
+@Table(name = "region")
 public class Region {
 
-    // TODO column mapping
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    // TODO column mapping
+    @Column
     private String name;
 
-    // TODO relationship mapping
+    @ManyToOne
+    @JoinColumn(name = "country_id")
     private Country country;
+
+    @OneToMany(mappedBy = "region")
+    private List<City> cities;
 
     public Region() {
     }
@@ -52,4 +60,21 @@ public class Region {
     public void setCountry(Country country) {
         this.country = country;
     }
+
+    public List<City> getCities() {
+        return cities;
+    }
+
+    public void setCities(List<City> cities) {
+        this.cities = cities;
+    }
+
+    @Override
+    public String toString() {
+        return "Region{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
 }

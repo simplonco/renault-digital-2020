@@ -81,6 +81,16 @@ public class Part1CountryTest extends TestCitiesApplication {
     }
 
     @Test
+    public void should_DELETE_root_remove_existing_country_with_region() {
+        int franceId = getCountryIdForName("France").orElseThrow();
+        delete(format("country/%s", franceId));
+
+        List<String> countryNames = getCountryNames();
+        assertEquals(2, countryNames.size());
+        assertFalse(countryNames.contains("France"));
+    }
+
+    @Test
     public void should_PUT_root_modify_existing_country() {
         int franceId = getCountryIdForName("France").orElseThrow();
         JsonObject updatedFrance = Json.createObjectBuilder()
