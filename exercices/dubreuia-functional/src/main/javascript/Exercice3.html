@@ -1,0 +1,30 @@
+<!--
+Retourner une liste contenant seulement les éléments pairs de la liste donnée, multipliés par 5. Utiliser `filter` et `map`.
+
+Sortie attendue :
+
+------------ Imperative ------------
+[10, 20, 30, 40]
+------------ Functional ------------
+[10, 20, 30, 40]
+-->
+<script>
+    function imperative(elements) {
+        let filteredAndMapped = [];
+        for (let element of elements) {
+            if (element % 2 === 0) {
+                filteredAndMapped.push(element * 5);
+            }
+        }
+        return filteredAndMapped;
+    }
+
+    function functional(elements) {
+        // TODO
+    }
+
+    console.log("------------ Imperative ------------");
+    console.log(imperative([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+    console.log("------------ Functional ------------");
+    console.log(functional([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+</script>

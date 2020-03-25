@@ -1,0 +1,34 @@
+<!--
+Retourner un String qui représente concaténation du contenu de la liste avec " et " entre chaque élément.
+
+- Java (Collector#joining) : https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/stream/Collectors.html#joining(java.lang.CharSequence)
+- JavaScript (Array#join) : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+
+Sortie attendue :
+
+------------ Imperative ------------
+1 et 2 et 3 et 4 et 5 et 6 et 7 et 8 et 9
+------------ Functional ------------
+1 et 2 et 3 et 4 et 5 et 6 et 7 et 8 et 9
+-->
+<script>
+    function imperative(elements) {
+        let joined = "";
+        for (let element of elements) {
+            joined += element;
+            if (elements.indexOf(element) !== elements.length - 1) {
+                joined += " et ";
+            }
+        }
+        return joined;
+    }
+
+    function functional(elements) {
+        // TODO
+    }
+
+    console.log("------------ Imperative ------------");
+    console.log(imperative([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+    console.log("------------ Functional ------------");
+    console.log(functional([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+</script>

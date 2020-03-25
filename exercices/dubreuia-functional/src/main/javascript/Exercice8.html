@@ -1,0 +1,31 @@
+<!--
+ * Retourner un String qui représente concaténation des éléments s'ils sont multiples de 2, avec " et " entre chaque élément, multipliés par 5.
+ *
+ * Sortie attendue :
+ *
+ * ------------ Imperative ------------
+ * 10 et 20 et 30 et 40
+ * ------------ Functional ------------
+ * 10 et 20 et 30 et 40
+-->
+<script>
+    function imperative(elements) {
+        let joined = "";
+        for (let element of elements) {
+            if (element % 2 === 0) {
+                element = element * 5;
+                joined += element + " et ";
+            }
+        }
+        return joined.substring(0, joined.length - 4);
+    }
+
+    function functional(elements) {
+        // TODO
+    }
+
+    console.log("------------ Imperative ------------");
+    console.log(imperative([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+    console.log("------------ Functional ------------");
+    console.log(functional([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+</script>
