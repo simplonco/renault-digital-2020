@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /*
  * Retourner une liste contenant seulement les éléments pairs de la liste donnée, multipliés par 5. Utiliser `filter` et `map`.
@@ -24,8 +25,10 @@ public class Exercice3 {
     }
 
     public static List<Integer> functional(List<Integer> elements) {
-        // TODO
-        return null;
+        return elements.stream()
+                .filter(element -> element % 2 == 0)
+                .map(element -> element * 5)
+                .collect(Collectors.toList());
     }
 
     public static void main(String[] args) {

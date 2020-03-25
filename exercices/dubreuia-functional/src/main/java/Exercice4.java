@@ -26,8 +26,7 @@ public class Exercice4 {
     }
 
     public static Optional<Integer> functional(List<Integer> elements) {
-        // TODO
-        return null;
+        return elements.stream().findFirst();
     }
 
     public static void main(String[] args) {

@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.stream.Collectors;
 
 /*
  * Retourner un String qui représente concaténation des éléments s'ils sont multiples de 2, avec " et " entre chaque élément, multipliés par 5.
@@ -24,8 +25,11 @@ public class Exercice8 {
     }
 
     public static String functional(List<Integer> elements) {
-        // TODO
-        return null;
+        return elements.stream()
+                .filter(element -> element % 2 == 0)
+                .map(element -> element * 5)
+                .map(String::valueOf)
+                .collect(Collectors.joining(" et "));
     }
 
     public static void main(String[] args) {

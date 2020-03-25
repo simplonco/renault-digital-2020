@@ -21,7 +21,10 @@
     }
 
     function functional(elements) {
-        // TODO
+        return elements
+                .filter(element => element % 2 === 0)
+                .map(element => element * 5)
+                .join(" et ")
     }
 
     console.log("------------ Imperative ------------");

@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.stream.Collectors;
 
 /*
  * Retourner un String qui représente concaténation du contenu de la liste avec " et " entre chaque élément.
@@ -27,8 +28,9 @@ public class Exercice7 {
     }
 
     public static String functional(List<Integer> elements) {
-        // TODO
-        return null;
+        return elements.stream()
+                .map(String::valueOf)
+                .collect(Collectors.joining(" et "));
     }
 
     public static void main(String[] args) {

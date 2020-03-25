@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /*
  * Retourner une liste contenant seulement les éléments pairs de la liste donnée.
@@ -27,8 +28,9 @@ public class Exercice2 {
     }
 
     public static List<Integer> functional(List<Integer> elements) {
-        // TODO
-        return null;
+        return elements.stream()
+                .filter(element -> element % 2 == 0)
+                .collect(Collectors.toList());
     }
 
     public static void main(String[] args) {

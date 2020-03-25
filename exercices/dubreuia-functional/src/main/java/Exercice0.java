@@ -26,7 +26,10 @@ public class Exercice0 {
     }
 
     public static void functional(List<Integer> elements) {
-        // TODO
+        // solution 1 : utilisation d'une lambda
+        elements.forEach(element -> System.out.println(element));
+        // solution 2 : utilisation d'une "method reference" (mieux !)
+        elements.forEach(System.out::println);
     }
 
     public static void main(String[] args) {

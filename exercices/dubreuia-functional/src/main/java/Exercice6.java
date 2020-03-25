@@ -30,8 +30,8 @@ public class Exercice6 {
     }
 
     public static Optional<Integer> functional(List<Integer> elements) {
-        // TODO
-        return null;
+        // return elements.stream().reduce((e1, e2) -> e1 + e2);
+        return elements.stream().reduce(Integer::sum);
     }
 
     public static void main(String[] args) {

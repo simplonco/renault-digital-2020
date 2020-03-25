@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /*
  * Retourner une liste contenant la multiplication par 2 de chaque élément (int) de la liste donnée.
@@ -25,8 +26,9 @@ public class Exercice1 {
     }
 
     public static List<Integer> functional(List<Integer> elements) {
-        // TODO
-        return null;
+        return elements.stream()
+                .map(element -> element * 2)
+                .collect(Collectors.toList());
     }
 
     public static void main(String[] args) {
