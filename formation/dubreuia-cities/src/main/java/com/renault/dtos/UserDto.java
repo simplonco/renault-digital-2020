@@ -1,15 +1,20 @@
 package com.renault.dtos;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+
 public class UserDto {
 
     private int id;
 
-    private int name;
+    @NotNull
+    @Pattern(regexp = "[a-zA-z0-9_-]")
+    private String name;
 
     public UserDto() {
     }
 
-    public UserDto(int id, int name) {
+    public UserDto(int id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -22,11 +27,11 @@ public class UserDto {
         this.id = id;
     }
 
-    public int getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(int name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -34,7 +39,7 @@ public class UserDto {
     public String toString() {
         return "UserDto{" +
                 "id=" + id +
-                ", name=" + name +
+                ", name='" + name + '\'' +
                 '}';
     }
 

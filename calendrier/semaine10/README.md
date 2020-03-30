@@ -10,7 +10,9 @@ Télétravail sur discord
     - Voir exercice [angular](../../exercices/dubreuia-angular/README.md)
         - Ajout d'un composant angular "weather" (30 minutes exercice + 30 minutes correction)
         - Communication inter-composant avec observables (30 minutes exercices + 30 minutes correction)
-- Mercredi : exercices ???
+- Mercredi : exercices sur [application cars](https://github.com/simplonco/renault-digital-2020-projet)
+    - Ajout du POST avec angular
+    - Communication inter-composants avec observables
 
 ## Références
 

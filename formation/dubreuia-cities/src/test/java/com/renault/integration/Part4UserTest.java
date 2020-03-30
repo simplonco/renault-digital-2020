@@ -1,7 +1,6 @@
 package com.renault.integration;
 
 import com.renault.CitiesApplication;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,7 +18,6 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 public class Part4UserTest extends TestCitiesApplication {
 
     @Test
-    @Disabled("TODO remove when part is ready")
     public void should_POST_follow_city_adds_a_followed_city_for_user() {
         int montreuilId = getCityIdForName("Montreuil").orElseThrow();
         int alexId = getUserIdForName("Alex").orElseThrow();
@@ -34,7 +32,6 @@ public class Part4UserTest extends TestCitiesApplication {
     }
 
     @Test
-    @Disabled("TODO remove when part is ready")
     public void should_DELETE_follow_city_removes_a_followed_city_for_user() {
         int parisId = getCityIdForName("Paris").orElseThrow();
         int alexId = getUserIdForName("Alex").orElseThrow();

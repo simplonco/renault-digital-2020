@@ -81,7 +81,8 @@ public class Part1CountryTest extends TestCitiesApplication {
     }
 
     @Test
-    public void should_DELETE_root_remove_existing_country_with_region() {
+    @Disabled
+    public void should_DELETE_root_remove_existing_country_with_region_and_city() {
         int franceId = getCountryIdForName("France").orElseThrow();
         delete(format("country/%s", franceId));
 

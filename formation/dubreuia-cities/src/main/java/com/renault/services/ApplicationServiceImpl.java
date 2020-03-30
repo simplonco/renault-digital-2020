@@ -4,11 +4,15 @@ import com.renault.entities.City;
 import com.renault.entities.Country;
 import com.renault.entities.Language;
 import com.renault.entities.Region;
+import com.renault.entities.User;
 import com.renault.repositories.CityRepository;
 import com.renault.repositories.CountryRepository;
 import com.renault.repositories.RegionRepository;
+import com.renault.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class ApplicationServiceImpl implements ApplicationService {
@@ -22,8 +26,12 @@ public class ApplicationServiceImpl implements ApplicationService {
     @Autowired
     private CityRepository cityRepository;
 
+    @Autowired
+    private UserRepository userRepository;
+
     @Override
     public void deleteAll() {
+        userRepository.deleteAll();
         cityRepository.deleteAll();
         regionRepository.deleteAll();
         countryRepository.deleteAll();
@@ -44,10 +52,18 @@ public class ApplicationServiceImpl implements ApplicationService {
         regionRepository.save(idf);
         regionRepository.save(quebec);
 
-        cityRepository.save(new City("Paris", idf));
-        cityRepository.save(new City("Montreuil", idf));
-        cityRepository.save(new City("Montréal", quebec));
-        cityRepository.save(new City("Laval", quebec));
+        City paris = new City("Paris", idf);
+        City montreuil = new City("Montreuil", idf);
+        City montreal = new City("Montréal", quebec);
+        City laval = new City("Laval", quebec);
+        cityRepository.save(paris);
+        cityRepository.save(montreuil);
+        cityRepository.save(montreal);
+        cityRepository.save(laval);
+
+        User user = new User("Alex");
+        user.setFollowedCities(List.of(paris, montreal));
+        userRepository.save(user);
     }
 
 }

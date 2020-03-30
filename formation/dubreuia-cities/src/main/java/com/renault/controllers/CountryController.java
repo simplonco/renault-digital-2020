@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,7 +43,7 @@ public class CountryController {
     }
 
     @PostMapping("")
-    public void createCountry(@RequestBody CountryDto countryDto) {
+    public void createCountry(@RequestBody @Valid CountryDto countryDto) {
         Language language = Language.fromName(countryDto.getLanguage()).orElseThrow();
         countryService.saveCountry(new Country(language, countryDto.getName()));
     }

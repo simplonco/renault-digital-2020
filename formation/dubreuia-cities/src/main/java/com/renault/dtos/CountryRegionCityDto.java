@@ -1,16 +1,28 @@
 package com.renault.dtos;
 
+import org.hibernate.validator.constraints.Length;
+
+import javax.validation.constraints.NotEmpty;
+
 // {"countryName": .., "countryLanguage", ...,
 public class CountryRegionCityDto {
 
     private int id;
 
+    @NotEmpty
+    @Length(min = 4, max = 255)
     private String countryName;
 
+    @NotEmpty
+    @Length(min = 4, max = 255)
     private String countryLanguage;
 
+    @NotEmpty
+    @Length(min = 4, max = 255)
     private String regionName;
 
+    @NotEmpty
+    @Length(min = 4, max = 255)
     private String cityName;
 
     public CountryRegionCityDto() {

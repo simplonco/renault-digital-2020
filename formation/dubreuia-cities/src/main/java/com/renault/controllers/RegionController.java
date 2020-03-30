@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,7 +48,7 @@ public class RegionController {
     }
 
     @PostMapping("/country/region")
-    public void createCountryRegion(@RequestBody CountryRegionDto countryRegionDto) {
+    public void createCountryRegion(@RequestBody @Valid CountryRegionDto countryRegionDto) {
         String countryName = countryRegionDto.getCountry().getName();
         String countryLanguage = countryRegionDto.getCountry().getLanguage();
         String regionName = countryRegionDto.getRegion().getName();

@@ -1,7 +1,6 @@
 package com.renault.integration;
 
 import com.renault.CitiesApplication;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -21,15 +20,14 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 public class Part3CityTest extends TestCitiesApplication {
 
     @Test
-    @Disabled("TODO remove when part is ready")
     public void should_POST_region_add_new_region() {
-        JsonObject ukMidwest = Json.createObjectBuilder()
+        JsonObject london = Json.createObjectBuilder()
                 .add("countryName", "United Kingdom")
                 .add("countryLanguage", "English")
                 .add("regionName", "Midwest")
                 .add("cityName", "London")
                 .build();
-        post("country/region/city", ukMidwest);
+        post("country/region/city", london);
 
         List<String> countryNames = getCountryNames();
         assertEquals(4, countryNames.size());
@@ -45,7 +43,6 @@ public class Part3CityTest extends TestCitiesApplication {
     }
 
     @Test
-    @Disabled("TODO remove when part is ready")
     public void should_PUT_city_modify_existing_city() {
         int montrealId = getCityIdForName("Montréal").orElseThrow();
         JsonObject updatedMontrel = Json.createObjectBuilder()

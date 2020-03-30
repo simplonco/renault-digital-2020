@@ -1,9 +1,15 @@
 package com.renault.dtos;
 
+import org.hibernate.validator.constraints.Length;
+
+import javax.validation.constraints.NotNull;
+
 public class CityDto {
 
     private int id;
 
+    @NotNull
+    @Length(min = 4, max = 512)
     private String name;
 
     public CityDto() {
