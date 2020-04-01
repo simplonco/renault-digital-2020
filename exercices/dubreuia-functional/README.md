@@ -18,8 +18,7 @@
 | Execution order of statements is not so important | Execution order of statements is very important |
 | Supports both "Abstraction over Data" and "Abstraction over Behavior" | Supports only "Abstraction over Data" |
 
-
-## Exercices
+## Exercices introduction
 
 Le code écrit en impératif vous est donné, vous devez le réécrire en fonctionnel. Nous n'avez PAS le droit aux boucles (`for`, `while`, etc.), ni aux structures de condition (`if`, `switch`, etc.). Chaque exercice vous suggère une function pour y arriver et présente sa documentation.
 
@@ -39,3 +38,17 @@ La liste des exercices à faire :
 - **Java :** [Exercice6.java](./src/main/java/Exercice6.java)  |  **JavaScript :** [Exercice6.html](./src/main/javascript/Exercice6.html) 
 - **Java :** [Exercice7.java](./src/main/java/Exercice7.java)  |  **JavaScript :** [Exercice7.html](./src/main/javascript/Exercice7.html) 
 - **Java :** [Exercice8.java](./src/main/java/Exercice8.java)  |  **JavaScript :** [Exercice8.html](./src/main/javascript/Exercice8.html) 
+
+## Application projet
+
+Nous allons appliquer ces notions à l'application "Cities", en transformant le code écrit grâce au Stream API :
+
+- Application [Cities](../../formation/dubreuia-cities) :
+    - Supprimer la boucle : `com.renault.controllers.CityController.getCitiesForRegion`
+    - Supprimer la boucle : `com.renault.controllers.CountryController.getCountries`
+    - Supprimer la boucle : `com.renault.controllers.LanguageController.getLanguages`
+    - Supprimer la boucle : `com.renault.controllers.RegionController.getRegionsForCountry`
+    - Supprimer la boucle : `com.renault.services.CityServiceImpl.deleteCity`
+    - Supprimer la condition : `com.renault.services.RegionServiceImpl.saveCountryRegion`
+    - Supprimer la condition : `com.renault.services.RegionServiceImpl.saveCountryRegionWithTransaction`
+    - Supprimer la boucle : `com.renault.services.UserServiceImpl.unfollowCityAndSave`
