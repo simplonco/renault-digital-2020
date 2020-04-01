@@ -11,6 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Entity
@@ -21,9 +22,11 @@ public class Region {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(nullable = false, length = 512)
+    @NotNull
+    @Column
     private String name;
 
+    @NotNull
     @ManyToOne
     @JoinColumn(name = "country_id")
     private Country country;

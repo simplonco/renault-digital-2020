@@ -9,11 +9,11 @@ public class CountryDto {
     private int id;
 
     @NotNull
-    @Length(min = 4, max = 512)
+    @Length(min = 3)
     private String language;
 
     @NotNull
-    @Length(min = 4, max = 512)
+    @Length(min = 3)
     private String name;
 
     public CountryDto() {

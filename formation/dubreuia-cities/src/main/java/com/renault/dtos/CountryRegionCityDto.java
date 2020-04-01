@@ -4,7 +4,6 @@ import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.NotEmpty;
 
-// {"countryName": .., "countryLanguage", ...,
 public class CountryRegionCityDto {
 
     private int id;

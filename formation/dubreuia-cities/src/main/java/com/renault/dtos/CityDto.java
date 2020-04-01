@@ -9,7 +9,7 @@ public class CityDto {
     private int id;
 
     @NotNull
-    @Length(min = 4, max = 512)
+    @Length(min = 4)
     private String name;
 
     public CityDto() {

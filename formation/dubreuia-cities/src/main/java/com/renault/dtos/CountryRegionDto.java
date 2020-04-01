@@ -2,7 +2,6 @@ package com.renault.dtos;
 
 import javax.validation.Valid;
 
-// { country: { "name", ...
 public class CountryRegionDto {
 
     @Valid

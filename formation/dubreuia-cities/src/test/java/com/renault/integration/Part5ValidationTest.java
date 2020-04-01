@@ -23,12 +23,12 @@ public class Part5ValidationTest extends TestCitiesApplication {
 
     @Test
     public void should_POST_root_country_name_too_short_validation_fails() {
-        JsonObject uk = Json.createObjectBuilder()
+        JsonObject badCountryName = Json.createObjectBuilder()
                 .add("name", "ff")
                 .add("language", "English")
                 .build();
-        HttpStatus status = assertThrows(ResponseStatusException.class,
-                () -> post("country/", uk)).getStatus();
+        HttpStatus status = assertThrows(ResponseStatusException.class, () -> post("country/", badCountryName))
+                .getStatus();
         assertEquals(BAD_REQUEST, status);
 
         List<String> countryNames = getCountryNames();
@@ -37,7 +37,7 @@ public class Part5ValidationTest extends TestCitiesApplication {
 
     @Test
     public void should_POST_root_region_name_too_short_validation_fails() {
-        JsonObject ukMidwest = Json.createObjectBuilder()
+        JsonObject badRegionName = Json.createObjectBuilder()
                 .add("country", Json.createObjectBuilder()
                         .add("name", "United Kingdom")
                         .add("language", "English")
@@ -46,8 +46,8 @@ public class Part5ValidationTest extends TestCitiesApplication {
                         .add("name", "ff")
                         .build())
                 .build();
-        HttpStatus status = assertThrows(ResponseStatusException.class,
-                () -> post("country/region", ukMidwest)).getStatus();
+        HttpStatus status = assertThrows(ResponseStatusException.class, () -> post("country/region", badRegionName))
+                .getStatus();
         assertEquals(BAD_REQUEST, status);
 
         List<String> countryNames = getCountryNames();
@@ -59,14 +59,14 @@ public class Part5ValidationTest extends TestCitiesApplication {
 
     @Test
     public void should_POST_root_city_name_too_short_validation_fails() {
-        JsonObject london = Json.createObjectBuilder()
+        JsonObject badCityName = Json.createObjectBuilder()
                 .add("countryName", "United Kingdom")
                 .add("countryLanguage", "English")
                 .add("regionName", "Midwest")
                 .add("cityName", "ff")
                 .build();
-        HttpStatus status = assertThrows(ResponseStatusException.class,
-                () -> post("country/region/city", london)).getStatus();
+        HttpStatus status = assertThrows(ResponseStatusException.class, () -> post("country/region/city", badCityName))
+                .getStatus();
         assertEquals(BAD_REQUEST, status);
 
         List<String> countryNames = getCountryNames();
@@ -81,11 +81,11 @@ public class Part5ValidationTest extends TestCitiesApplication {
 
     @Test
     public void should_POST_root_user_name_doesnt_match_pattern_validation_fails() {
-        JsonObject username = Json.createObjectBuilder()
+        JsonObject badUsername = Json.createObjectBuilder()
                 .add("name", "Wrong username")
                 .build();
-        HttpStatus status = assertThrows(ResponseStatusException.class,
-                () -> post("/user", username)).getStatus();
+        HttpStatus status = assertThrows(ResponseStatusException.class, () -> post("/user", badUsername))
+                .getStatus();
         assertEquals(BAD_REQUEST, status);
 
         List<String> userNames = getUserNames();

@@ -10,6 +10,7 @@ import com.renault.services.CityService;
 import com.renault.services.RegionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -57,6 +58,12 @@ public class CityController {
         Region region = new Region(dto.getRegionName(), country);
         City city = new City(dto.getCityName(), region);
         cityService.save(country, region, city);
+    }
+
+    @DeleteMapping("/country/region/city/{cityId}")
+    public void deleteCity(@PathVariable("cityId") int cityId) {
+        City city = cityService.getCity(cityId).orElseThrow();
+        cityService.deleteCity(city);
     }
 
 }

@@ -1,14 +1,12 @@
 package com.renault.dtos;
 
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 public class UserDto {
 
     private int id;
 
-    @NotNull
-    @Pattern(regexp = "[a-zA-z0-9_-]")
+    @Pattern(regexp = "[a-zA-Z0-9_-]+")
     private String name;
 
     public UserDto() {

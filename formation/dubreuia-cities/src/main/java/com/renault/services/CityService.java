@@ -14,4 +14,6 @@ public interface CityService {
 
     void save(Country country, Region region, City city);
 
+    void deleteCity(City city);
+
 }

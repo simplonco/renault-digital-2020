@@ -12,14 +12,14 @@ import javax.persistence.Table;
 import java.util.List;
 
 @Entity
-@Table(name = "user")
+@Table(name = "cities_user")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(nullable = false, length = 512)
+    @Column
     private String name;
 
     @ManyToMany

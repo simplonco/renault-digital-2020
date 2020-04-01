@@ -12,6 +12,7 @@ import java.util.List;
 
 import static java.lang.String.format;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
@@ -54,6 +55,20 @@ public class Part3CityTest extends TestCitiesApplication {
         List<String> cityNames = getCityNames();
         assertEquals(4, cityNames.size());
         assertTrue(cityNames.contains("Super Montréal"));
+    }
+
+    @Test
+    public void should_DELETE_city_should_remove_city_even_if_followed() {
+        int parisId = getCityIdForName("Paris").orElseThrow();
+        delete(format("country/region/city/%s", parisId));
+
+        List<String> cityNames = getCityNames();
+        assertEquals(3, cityNames.size());
+        assertFalse(cityNames.contains("Paris"));
+
+        List<String> userNames = getUserNames();
+        assertEquals(1, userNames.size());
+        assertTrue(userNames.contains("Alex"));
     }
 
 }
