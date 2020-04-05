@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Simplon.co - Renault Digital 2020 - Programmation fonctionnelle</title>
+    <link rel="stylesheet" href="https://simplonco.github.io/renault-digital-2020/exercices/dubreuia-functional/node_modules/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="https://simplonco.github.io/renault-digital-2020/exercices/dubreuia-functional/node_modules/reveal.js/css/theme/white.css">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <style>
+        pre.prettyprint {
+            padding: 10px;
+        }
+
+        .reveal pre code {
+            padding: 5px;
+            max-height: none;
+        }
+
+        .reveal p > code {
+            background-color: #333;
+            color: #fff;
+            padding: 0 5px;
+        }
+
+        .reveal .smaller {
+            font-size: smaller;
+        }
+
+        .reveal mark {
+            background-color: transparent;
+        }
+
+        .reveal mark.bold span {
+            font-weight: bold;
+        }
+
+        .reveal mark.highlight-00.visible {
+            background-color: rgba(0, 0, 0, 0.20);
+        }
+
+        .reveal mark.highlight-01.visible {
+            background-color: rgba(0, 73, 73, 0.33);
+        }
+
+        .reveal mark.highlight-02.visible {
+            background-color: rgba(0, 146, 146, 0.33);
+        }
+
+        .reveal mark.highlight-03.visible {
+            background-color: rgba(255, 109, 182, 0.33);
+        }
+
+        .reveal mark.highlight-04.visible {
+            background-color: rgba(255, 182, 119, 0.33);
+        }
+    </style>
+</head>
+<body>
+<div class="reveal">
+
+    <div class="slides">
+
+        <section>
+
+            <h5>Impératif</h5>
+
+            <div class="code-wrapper">
+                <pre class="prettyprint">
+                    <code class="code lang-java smaller" data-trim data-noescape>
+List&lt;String&gt; imperative(List&lt;String&gt; elements) {
+  <mark class="highlight-02 fragment highlight-red" data-fragment-index="1">List&lt;String&gt; lowerCases = new ArrayList&lt;&gt;()</mark>;
+  <mark class="highlight-03 fragment highlight-red" data-fragment-index="2">for</mark> (String <mark class="highlight-04 fragment highlight-red" data-fragment-index="3">element</mark> : <mark class="highlight-03 fragment highlight-red" data-fragment-index="2">elements</mark>) {
+    lowerCases.add(<mark class="highlight-04 fragment highlight-red" data-fragment-index="3">element.toLowerCase()</mark>);
+  }
+  return <mark class="highlight-02 fragment highlight-red" data-fragment-index="1">lowerCases</mark>;
+}
+                    </code>
+                </pre>
+            </div>
+
+            <h5>Fonctionnel</h5>
+
+            <div class="code-wrapper">
+                <pre class="prettyprint">
+                    <code class="code lang-java smaller" data-trim data-noescape>
+List&lt;String&gt; functional(List&lt;String&gt; elements) {
+  return <mark class="highlight-03 fragment highlight-red" data-fragment-index="2">elements.stream()</mark>                   <mark class="highlight-05 fragment bold" data-fragment-index="4">// (1) stream start</mark>
+      .<mark class="highlight-05 fragment highlight-red" data-fragment-index="4">map</mark>(<mark class="highlight-04 fragment highlight-red" data-fragment-index="3">element -&gt; element.toLowerCase()</mark>) <mark class="highlight-05 fragment bold" data-fragment-index="4">// (2) lazy operation(s)</mark>
+      .<mark class="highlight-05 fragment highlight-red" data-fragment-index="4">collect</mark>(<mark class="highlight-02 fragment highlight-red" data-fragment-index="1">Collectors.toList()</mark>);         <mark class="highlight-05 fragment bold" data-fragment-index="4">// (3) terminal operation</mark>
+}
+                    </code>
+                </pre>
+            </div>
+
+        </section>
+
+    </div>
+</div>
+<script src="https://simplonco.github.io/renault-digital-2020/exercices/dubreuia-functional/node_modules/reveal.js/js/reveal.js"></script>
+<script src="https://simplonco.github.io/renault-digital-2020/exercices/dubreuia-functional/node_modules/jquery/dist/jquery.js"></script>
+<script>
+    // Trims white space for code elements
+    $('.prettyprint').each(function () {
+        $(this).html($(this).html().trim());
+    });
+    $('.prettyprint .code').each(function () {
+        $(this).html($(this).html().trim());
+    });
+</script>
+<script>
+    Reveal.initialize({
+        progress: true,
+        history: true,
+        preloadIframes: false,
+    });
+</script>
+</body>
+</html>
