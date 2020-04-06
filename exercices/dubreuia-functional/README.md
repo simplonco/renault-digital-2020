@@ -59,4 +59,4 @@ Nous allons appliquer ces notions à l'application "Cities", en transformant le 
 
 ## Perfectionnement
 
-- Remplir les commentaires `TODO` dans [Cars.java](./src/main/java/Cars.java)
+- Remplir les commentaires `TODO` dans [Cars.java](./src/main/java/com/dubreuia/Cars.java)
