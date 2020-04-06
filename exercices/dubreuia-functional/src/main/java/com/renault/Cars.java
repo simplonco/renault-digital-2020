@@ -1,9 +1,9 @@
 package com.renault;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Cars {
@@ -16,24 +16,29 @@ public class Cars {
      * Utilise la méthode Car.build.
      */
     public static List<Car> getCars(Stream<String> lines) {
-        // TODO implement
-        return Collections.emptyList();
+        return lines
+                .skip(1)
+                .map(line -> line.split(","))
+                .map(columns -> Car.build(columns[0], columns[1], columns[2], columns[3]))
+                .collect(Collectors.toList());
     }
 
     /*
      * Retourne la voiture qui correspond à ces critères.
      */
     public static Optional<Car> getCar(List<Car> cars, int year, String brand, String model) {
-        // TODO implement
-        return Optional.empty();
+        return cars.stream()
+                .filter(car -> car.getYear() == year)
+                .filter(car -> car.getBrand().equals(brand))
+                .filter(car -> car.getModel().equals(model))
+                .findFirst();
     }
 
     /*
      * Retourne la consommation en MPG de la voiture, ou la valeur de DEFAULT_MPG si le MPG n'existe pas.
      */
     public static Integer getMpgOrDefault(Car car) {
-        // TODO implement
-        return null;
+        return car.getMpg().orElse(DEFAULT_MPG);
     }
 
     /*
@@ -41,40 +46,46 @@ public class Cars {
      * voir https://www.calculateme.com/gas-mileage/us-mpg-to-liters-per-100-km
      */
     public static Optional<Double> getLitersPer100Km(Car car) {
-        // TODO implement
-        return Optional.empty();
+        return car.getMpg().map(mpg -> (100 * 3.785411784) / (1.609344 * mpg));
     }
 
     /*
      * Retourne la somme de tous les MPG pour une marque en particulier.
      */
     public static Optional<Integer> sumMpgForBrand(List<Car> cars, String brand) {
-        // TODO implement
-        return Optional.empty();
+        cars.stream()
+                .filter(car -> car.getBrand().equals(brand))
+                .map(Car::getMpg)
+                .mapToInt(mpg -> mpg.orElse(0))
+                .sum();
+        return cars.stream()
+                .filter(car -> car.getBrand().equals(brand))
+                .map(Car::getMpg)
+                .map(mpg -> mpg.orElse(0))
+                .reduce(Integer::sum);
     }
 
     /*
      * Retourne vrai si ce modèle existe.
      */
     public static boolean containsModelIgnoreCase(List<Car> cars, String model) {
-        // TODO implement
-        return false;
+        return cars.stream().anyMatch(car -> car.getModel().equalsIgnoreCase(model));
     }
 
     /*
      * Retourne une map avec comme clefs les années, comme valeur la liste des voitures pour l'année correspondante.
      */
     public static Map<Integer, List<Car>> getCarsPerYear(List<Car> cars) {
-        // TODO implement
-        return Collections.emptyMap();
+        return cars.stream()
+                .collect(Collectors.groupingBy(Car::getYear));
     }
 
     /*
      * Retourne une map avec comme clefs les années, comme valeur le compte des voitures pour cette année.
      */
     public static Map<Integer, Long> getCarsCountPerYear(List<Car> cars) {
-        // TODO implement
-        return Collections.emptyMap();
+        return cars.stream()
+                .collect(Collectors.groupingBy(Car::getYear, Collectors.counting()));
     }
 
     /**
