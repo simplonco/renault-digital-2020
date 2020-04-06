@@ -64,4 +64,11 @@ Nous allons appliquer ces notions à l'application "Cities", en transformant le 
 
 ## Perfectionnement
 
-- Remplir les commentaires `TODO` dans [Cars.java](./src/main/java/com/dubreuia/Cars.java)
+- Java
+    - Remplir les commentaires `TODO` dans [Cars.java](./src/main/java/com/renault/Cars.java)
+    - Exécuter les tests dans [CarsTest.java](./src/test/java/com/renault/CarsTest.java)
+- JavaScript
+    - Exécuter `npm install`
+    - Remplir les commentaires `TODO` dans [cars.js](./src/main/javascript/cars/cars.js)
+    - Exécuter `node cars.js` dans le dossier "src/main/javascript/cars"
+    - Vérifier la sortie
