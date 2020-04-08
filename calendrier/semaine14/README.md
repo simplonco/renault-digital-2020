@@ -4,4 +4,10 @@
 
 - Stand up meeting
     - Revue [semaine 13](../semaine13/README.md)
-- Contenu à définir
+    - Thème de la semaine : authentification / autorisation
+- Lundi
+    - TODO
+- Mardi
+    - TODO
+- Mercredi
+    - TODO

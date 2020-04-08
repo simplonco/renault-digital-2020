@@ -18,7 +18,7 @@
 | Execution order of statements is not so important | Execution order of statements is very important |
 | Supports both "Abstraction over Data" and "Abstraction over Behavior" | Supports only "Abstraction over Data" |
 
-# Démo
+## Démo / présentation
 
 Voir [Demo.java](./src/main/java/Demo.java) et [https://simplonco.github.io/renault-digital-2020/exercices/dubreuia-functional/docs/functional-presentation.html](https://simplonco.github.io/renault-digital-2020/exercices/dubreuia-functional/docs/functional-presentation.html) :
 
