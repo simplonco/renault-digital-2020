@@ -8,8 +8,11 @@
     - Présentation du programme pour 12, 13, 14, 16
 - Groupe (lundi, mardi)
     - Terminer la formation partie 4 et 5
+    - Corrigé vidéo : [Simplon.co - Formation Java Spring - Cities - Partie 04](https://youtu.be/SVBHPcNAoE8)
+    - Corrigé vidéo : [Simplon.co - Formation Java Spring - Cities - Partie 05](https://youtu.be/XWIJS8sxYKA)
 - Projet (mercredi)
     - Terminer la formation partie 6
+    - Corrigé vidéo : [Simplon.co - Formation Java Spring - Cities - Partie 06](https://youtu.be/Ij1gIYuQmYw)
 - Proposition nouvelle organisation
     - Lundi
         - matin : temps entreprise + (questions / réponses coaching)
