@@ -2,7 +2,7 @@
     "name": "dubreuia-functional-presentation",
     "version": "1.0.0",
     "devDependencies": {
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.0",
         "reveal.js": "^3.9.2",
         "rxjs": "^6.5.5"
     }
