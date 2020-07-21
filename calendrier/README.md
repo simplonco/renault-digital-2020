@@ -19,3 +19,11 @@
 - Semaine 15 - formation
 - [Semaine 16 - 27/28/29 avril](./semaine16)
 
+Le retour :
+
+- [Semaine 17 - 23/24 juillet](./semaine17)
+- [Semaine 18 - 19/20/21 août](./semaine18)
+- [Semaine 19 - 02/03/04 septembre](./semaine19)
+- [Semaine 20 - 09/10/11 septembre](./semaine20)
+- [Semaine 21 - 16/17/18 septembre](./semaine21)
+- [Semaine 22 - 29/30/01 octobre](./semaine22)
