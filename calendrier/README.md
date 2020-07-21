@@ -27,3 +27,46 @@ Le retour :
 - [Semaine 20 - 09/10/11 septembre](./semaine20)
 - [Semaine 21 - 16/17/18 septembre](./semaine21)
 - [Semaine 22 - 29/30/01 octobre](./semaine22)
+
+## Contenu
+
+### Cas d'usage
+
+- Cas d'usage : authentification (gestion de la session et des cookies, Basic HTTP, OAuth)
+    - 👍 10
+- Cas d'usage : formulaire d'upload d'image (gestion des fichiers en base)
+    - 👍 8
+- Cas d'usage : notification par mail (batching, Spring batch, cron)
+    - 👍 7
+- Cas d'usage : formulaire de création de donnée avec plusieurs entités (POST)
+    - 👍 6
+- Cas d'usage : communication client-server bi-directionnelle (WebSocket)
+    - 👍 4
+
+### Technos
+
+- Technos : React
+    - 👍 6
+- Technos : Node.js
+    - 👍 6
+- Technos : Vue.js
+    - 👍 6
+- Technos : Angular
+    - 👍 6
+- Technos : JOOQ
+    - 👍 2
+- Technos : Firebase
+    - 👍 2
+
+<!--
+- Groupe 1
+    - anne : React
+    - victoria : Angular, Auth
+    - lucy : Auth (OAuth), RxJS, Cookie, Upload fichier
+    - clement : Spring, React, Docker, JOOQ
+- Groupe 2
+    - benoit : Node.js, Vue
+    - jessie : Auth, Node.js, Vue, double POST
+    - azise : Java, Angular, Auth, Cookie
+    - youssouf : Angular
+-->
