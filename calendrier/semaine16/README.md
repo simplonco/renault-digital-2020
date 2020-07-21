@@ -5,13 +5,17 @@
 - Stand up meeting
     - Revue [semaine 14](../semaine14/README.md)
     - Revue formation
-    - Revue des 4 derniers mois
-    - Thème de la semaine : Introduction sur Java 13/14
-    - Thème de la semaine : Kaout! / Arbre de compétances
-    - Thème de la semaine : Finalisation du projet Cars (documentation, déploiement, etc.)
+    - Thème de la semaine : enregistrement
+    - Thème de la semaine : documentation et UML
 - Lundi
-    - TODO
+    - [Enregistrement](https://github.com/simplonco/renault-digital-2020-projet#step-9---enregistrement)
+    - [Corrigé vidéo](https://youtu.be/QwILyZrOTIw)
 - Mardi
-    - TODO
+    - [Analyse fonctionnelle](https://github.com/simplonco/renault-digital-2020-projet#step-10---analyse-fonctionnelle)
+    - [Corrigé vidéo](https://youtu.be/kXR3Kimic3c)
+    - [Corrigé vidéo](https://youtu.be/PifJhRUzRLs)
+    - [Corrigé vidéo](https://youtu.be/lCVS4WLgLK4)
 - Mercredi
-    - TODO
+    - [Analyse technique](https://github.com/simplonco/renault-digital-2020-projet#step-11---analyse-technique)
+    - [Corrigé vidéo](https://youtu.be/hRvt08Oa1Tg)
+    - [Corrigé vidéo](https://youtu.be/WRlmzRIHX4s)
