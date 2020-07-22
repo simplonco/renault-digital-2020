@@ -1,0 +1,34 @@
+@startuml
+
+title
+Authentication - HTTP Basic Auth
+end title
+
+skinparam sequence {
+	BackgroundColor STRATEGY
+	ParticipantBackgroundColor STRATEGY
+	ArrowColor DarkSlateGray
+	BorderColor DarkSlateGray
+	LifeLineBorderColor DarkSlateGray
+	ParticipantBorderColor DarkSlateGray
+}
+
+Client -> Server: POST "/login", Body: {"username": "...", "password", "..."}
+activate Server
+Server -> Server: verifyUsernamePassword()
+Server -> Client: 200 / 401
+deactivate Server
+
+Client -> Server: GET "/admin/cars", Headers: { "Authorization": "Basic ..." }
+activate Server
+Server -> Server: verifyUsernamePassword() // again (!)
+Server -> Client: 200
+deactivate Server
+
+Client -> Server: GET "/admin/cars/53293", Headers: { "Authorization": "Basic ..." }
+activate Server
+Server -> Server: verifyUsernamePassword() // again (!)
+Server -> Client: 200
+deactivate Server
+
+@enduml

@@ -1,0 +1,34 @@
+@startuml
+
+title
+Authentication - OAuth2 JWT
+end title
+
+skinparam sequence {
+	BackgroundColor STRATEGY
+	ParticipantBackgroundColor STRATEGY
+	ArrowColor DarkSlateGray
+	BorderColor DarkSlateGray
+	LifeLineBorderColor DarkSlateGray
+	ParticipantBorderColor DarkSlateGray
+}
+
+Client -> AuthorizationServer: POST "/authorizationGrant", Body: {"username": "...", "password", "..."}
+activate AuthorizationServer
+AuthorizationServer -> AuthorizationServer: verifyUsernamePassword()
+AuthorizationServer -> Client: <JWT access token>
+deactivate AuthorizationServer
+
+Client -> Server: GET "/admin/cars", Auth: <JWT access token>
+activate Server
+Server -> Server: decryptTokenAndVerify() // no access to password
+Server -> Client: 200
+deactivate Server
+
+Client -> Server: GET "/admin/cars/53293", Auth: <JWT access token>
+activate Server
+Server -> Server: decryptTokenAndVerify() // no access to password
+Server -> Client: 200
+deactivate Server
+
+@enduml
