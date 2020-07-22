@@ -14,6 +14,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/', (req, res) => {
+    if (req.session.username) {
+        return res.redirect('/admin');
+    }
     res.send('<form action="/login" method="POST">\n' +
             '    <input type="text" placeholder="username" name="username"><br/>\n' +
             '    <input type="password" placeholder="password" name="password"><br/>\n' +
@@ -22,15 +25,26 @@ app.get('/', (req, res) => {
 });
 
 app.post('/login', (req, res) => {
-    // TODO verifier le login
+    if (req.body.username === "admin" && req.body.password === "password") {
+        req.session.username = req.body.username;
+        res.redirect('/admin');
+    } else {
+        res.send('Wrong username or password, try again? (<a href="/">Login</a>)');
+    }
 });
 
 app.get('/admin', (req, res) => {
-    // TODO afficher du contenu sur l'utilisateur loggué
+    if (req.session.username) {
+        res.send(`Hello ${req.session.username} (<a href="/logout">Logout</a>)`);
+    } else {
+        res.send('Please login first (<a href="/">Login</a>)');
+    }
 });
 
 app.get('/logout', (req, res) => {
-    // TODO supprimer la session de l'utilisateur
+    req.session.destroy(() => {
+        res.redirect('/');
+    });
 });
 
 app.listen(3000, () => {

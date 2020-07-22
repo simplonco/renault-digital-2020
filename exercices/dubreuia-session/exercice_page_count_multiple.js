@@ -10,11 +10,23 @@ app.use(session({
 }))
 
 app.use(function (req, res, next) {
-    // TODO déclarer / incrémenter les compteurs
+    if (!req.session.views) {
+        req.session.views = {}
+    }
+    // get the url pathname
+    var pathname = parseurl(req).pathname
+    // count the views
+    req.session.views[pathname] = (req.session.views[pathname] || 0) + 1
     next()
 })
 
-// TODO écrire les routes pour "page1" et "page2"
+app.get('/page1', function (req, res) {
+    res.send('you viewed this page ' + req.session.views['/page1'] + ' times')
+})
+
+app.get('/page2', function (req, res) {
+    res.send('you viewed this page ' + req.session.views['/page2'] + ' times')
+})
 
 app.listen(3000, () => {
     console.log(`App started on: http://127.0.0.1:3000`);

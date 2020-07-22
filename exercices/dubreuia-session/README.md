@@ -47,3 +47,4 @@ Pour faire les exercies, exécuter `npm install` dans ce dossier, pour installer
     - Dans un système de production, que devriez-vous utiliser pour valider ces valeurs ?
     - Dans la route "/admin", afficher "Bonjour <utilisateur>" avec le nom d'utilisateur, ou "Logguer vous en premier" si l'utilisateur n'a pas de session
     - Dans la route "/logout", supprimer la session de l'utilisateur, vous pouvez utiliser `req.session.destroy`
+

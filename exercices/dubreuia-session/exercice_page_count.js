@@ -13,14 +13,14 @@ app.use(function (req, res, next) {
     // ce qui permet de faire des opérations d'initialisation
     // et d'incrémentation...
     if (!req.session.count) {
-        // TODO utiliser req.session.count pour initialiser un compteur
+        req.session.count = 0
     }
-    // TODO incrementer le compteur
+    req.session.count += 1
     next()
 })
 
 app.get('/', function (req, res) {
-    // TODO imprimer "vous avez vu cette page x fois" avec x etant le compteur
+    res.send('you viewed this page ' + req.session.count + ' times')
 })
 
 app.listen(3000, () => {
