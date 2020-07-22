@@ -6,11 +6,10 @@
 
 ## Contenu
 
-- Stand up meeting
-    - Sujet de la semaine: Authentification
+- Sujet de la semaine: Authentification
 - Jeudi (tous)
-    - TODO
+    - Authentification session
 - Vendredi AM (g1)
-    - TODO
+    - Landing page pour chef d'oeuvre
 - Vendredi PM (g1 + g2)
-    - TODO
+    - Landing page et authentification (session, http basic, ou oauth2+jwt)

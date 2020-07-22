@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="542.5px" preserveAspectRatio="none" style="width:948px;height:542px;" version="1.1" viewBox="0 0 948 542" width="948.75px" zoomAndPan="magnify"><defs><filter height="300%" id="fze1zux9104n" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.5"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="5.0" dy="5.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="22.5" lengthAdjust="spacingAndGlyphs" textLength="370" x="291.5625" y="33.385">Authentication - HTTP Basic Auth</text><rect fill="#FFFFFF" filter="url(#fze1zux9104n)" height="89.082" style="stroke: #2F4F4F; stroke-width: 1.25;" width="12.5" x="603.125" y="130.4785"/><rect fill="#FFFFFF" filter="url(#fze1zux9104n)" height="89.082" style="stroke: #2F4F4F; stroke-width: 1.25;" width="12.5" x="603.125" y="255.9766"/><rect fill="#FFFFFF" filter="url(#fze1zux9104n)" height="89.082" style="stroke: #2F4F4F; stroke-width: 1.25;" width="12.5" x="603.125" y="381.4746"/><line style="stroke: #2F4F4F; stroke-width: 1.25; stroke-dasharray: 5.0,5.0;" x1="46.25" x2="46.25" y1="91.5625" y2="493.0566"/><line style="stroke: #2F4F4F; stroke-width: 1.25; stroke-dasharray: 5.0,5.0;" x1="608.75" x2="608.75" y1="91.5625" y2="493.0566"/><rect fill="#F8E7C0" filter="url(#fze1zux9104n)" height="37.8711" style="stroke: #2F4F4F; stroke-width: 1.875;" width="68.75" x="10" y="47.4414"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacingAndGlyphs" textLength="51.25" x="18.75" y="72.4353">Client</text><rect fill="#F8E7C0" filter="url(#fze1zux9104n)" height="37.8711" style="stroke: #2F4F4F; stroke-width: 1.875;" width="68.75" x="10" y="491.8066"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacingAndGlyphs" textLength="51.25" x="18.75" y="516.8005">Client</text><rect fill="#F8E7C0" filter="url(#fze1zux9104n)" height="37.8711" style="stroke: #2F4F4F; stroke-width: 1.875;" width="76.25" x="568.75" y="47.4414"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacingAndGlyphs" textLength="58.75" x="577.5" y="72.4353">Server</text><rect fill="#F8E7C0" filter="url(#fze1zux9104n)" height="37.8711" style="stroke: #2F4F4F; stroke-width: 1.875;" width="76.25" x="568.75" y="491.8066"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacingAndGlyphs" textLength="58.75" x="577.5" y="516.8005">Server</text><rect fill="#FFFFFF" filter="url(#fze1zux9104n)" height="89.082" style="stroke: #2F4F4F; stroke-width: 1.25;" width="12.5" x="603.125" y="130.4785"/><rect fill="#FFFFFF" filter="url(#fze1zux9104n)" height="89.082" style="stroke: #2F4F4F; stroke-width: 1.25;" width="12.5" x="603.125" y="255.9766"/><rect fill="#FFFFFF" filter="url(#fze1zux9104n)" height="89.082" style="stroke: #2F4F4F; stroke-width: 1.25;" width="12.5" x="603.125" y="381.4746"/><polygon fill="#2F4F4F" points="588.125,125.4785,600.625,130.4785,588.125,135.4785,593.125,130.4785" style="stroke: #2F4F4F; stroke-width: 1.25;"/><line style="stroke: #2F4F4F; stroke-width: 1.25;" x1="46.875" x2="595.625" y1="130.4785" y2="130.4785"/><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacingAndGlyphs" textLength="467.5" x="55.625" y="124.1461">POST "/login", Body: {"username": "...", "password", "..."}</text><line style="stroke: #2F4F4F; stroke-width: 1.25;" x1="615.625" x2="668.125" y1="166.8945" y2="166.8945"/><line style="stroke: #2F4F4F; stroke-width: 1.25;" x1="668.125" x2="668.125" y1="166.8945" y2="183.1445"/><line style="stroke: #2F4F4F; stroke-width: 1.25;" x1="616.875" x2="668.125" y1="183.1445" y2="183.1445"/><polygon fill="#2F4F4F" points="629.375,178.1445,616.875,183.1445,629.375,188.1445,624.375,183.1445" style="stroke: #2F4F4F; stroke-width: 1.25;"/><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacingAndGlyphs" textLength="221.25" x="624.375" y="160.5621">verifyUsernamePassword()</text><polygon fill="#2F4F4F" points="60.625,214.5605,48.125,219.5605,60.625,224.5605,55.625,219.5605" style="stroke: #2F4F4F; stroke-width: 1.25;"/><line style="stroke: #2F4F4F; stroke-width: 1.25;" x1="53.125" x2="608.125" y1="219.5605" y2="219.5605"/><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacingAndGlyphs" textLength="75" x="68.125" y="213.2281">200 / 401</text><polygon fill="#2F4F4F" points="588.125,250.9766,600.625,255.9766,588.125,260.9766,593.125,255.9766" style="stroke: #2F4F4F; stroke-width: 1.25;"/><line style="stroke: #2F4F4F; stroke-width: 1.25;" x1="46.875" x2="595.625" y1="255.9766" y2="255.9766"/><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacingAndGlyphs" textLength="477.5" x="55.625" y="249.6442">GET "/admin/cars", Headers: { "Authorization": "Basic ..." }</text><line style="stroke: #2F4F4F; stroke-width: 1.25;" x1="615.625" x2="668.125" y1="292.3926" y2="292.3926"/><line style="stroke: #2F4F4F; stroke-width: 1.25;" x1="668.125" x2="668.125" y1="292.3926" y2="308.6426"/><line style="stroke: #2F4F4F; stroke-width: 1.25;" x1="616.875" x2="668.125" y1="308.6426" y2="308.6426"/><polygon fill="#2F4F4F" points="629.375,303.6426,616.875,308.6426,629.375,313.6426,624.375,308.6426" style="stroke: #2F4F4F; stroke-width: 1.25;"/><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacingAndGlyphs" textLength="310" x="624.375" y="286.0602">verifyUsernamePassword() // again (!)</text><polygon fill="#2F4F4F" points="60.625,340.0586,48.125,345.0586,60.625,350.0586,55.625,345.0586" style="stroke: #2F4F4F; stroke-width: 1.25;"/><line style="stroke: #2F4F4F; stroke-width: 1.25;" x1="53.125" x2="608.125" y1="345.0586" y2="345.0586"/><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacingAndGlyphs" textLength="30" x="68.125" y="338.7262">200</text><polygon fill="#2F4F4F" points="588.125,376.4746,600.625,381.4746,588.125,386.4746,593.125,381.4746" style="stroke: #2F4F4F; stroke-width: 1.25;"/><line style="stroke: #2F4F4F; stroke-width: 1.25;" x1="46.875" x2="595.625" y1="381.4746" y2="381.4746"/><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacingAndGlyphs" textLength="532.5" x="55.625" y="375.1422">GET "/admin/cars/53293", Headers: { "Authorization": "Basic ..." }</text><line style="stroke: #2F4F4F; stroke-width: 1.25;" x1="615.625" x2="668.125" y1="417.8906" y2="417.8906"/><line style="stroke: #2F4F4F; stroke-width: 1.25;" x1="668.125" x2="668.125" y1="417.8906" y2="434.1406"/><line style="stroke: #2F4F4F; stroke-width: 1.25;" x1="616.875" x2="668.125" y1="434.1406" y2="434.1406"/><polygon fill="#2F4F4F" points="629.375,429.1406,616.875,434.1406,629.375,439.1406,624.375,434.1406" style="stroke: #2F4F4F; stroke-width: 1.25;"/><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacingAndGlyphs" textLength="310" x="624.375" y="411.5582">verifyUsernamePassword() // again (!)</text><polygon fill="#2F4F4F" points="60.625,465.5566,48.125,470.5566,60.625,475.5566,55.625,470.5566" style="stroke: #2F4F4F; stroke-width: 1.25;"/><line style="stroke: #2F4F4F; stroke-width: 1.25;" x1="53.125" x2="608.125" y1="470.5566" y2="470.5566"/><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacingAndGlyphs" textLength="30" x="68.125" y="464.2242">200</text><!--MD5=[11fefb8a199c1e4de340b7666b81d57a]
+@startuml
+
+title
+Authentication - HTTP Basic Auth
+end title
+
+skinparam sequence {
+	BackgroundColor STRATEGY
+	ParticipantBackgroundColor STRATEGY
+	ArrowColor DarkSlateGray
+	BorderColor DarkSlateGray
+	LifeLineBorderColor DarkSlateGray
+	ParticipantBorderColor DarkSlateGray
+}
+
+Client -> Server: POST "/login", Body: {"username": "...", "password", "..."}
+activate Server
+Server -> Server: verifyUsernamePassword()
+Server -> Client: 200 / 401
+deactivate Server
+
+Client -> Server: GET "/admin/cars", Headers: { "Authorization": "Basic ..." }
+activate Server
+Server -> Server: verifyUsernamePassword() // again (!)
+Server -> Client: 200
+deactivate Server
+
+Client -> Server: GET "/admin/cars/53293", Headers: { "Authorization": "Basic ..." }
+activate Server
+Server -> Server: verifyUsernamePassword() // again (!)
+Server -> Client: 200
+deactivate Server
+
+@enduml
+
+PlantUML version 1.2020.09(Sun May 10 12:51:06 CEST 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.7+10-b944.16
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,34 @@
+@startuml
+
+title
+Authentication - Session
+end title
+
+skinparam sequence {
+	BackgroundColor STRATEGY
+	ParticipantBackgroundColor STRATEGY
+	ArrowColor DarkSlateGray
+	BorderColor DarkSlateGray
+	LifeLineBorderColor DarkSlateGray
+	ParticipantBorderColor DarkSlateGray
+}
+
+Client -> Server: POST "/login", Body: {"username": "...", "password", "..."}
+activate Server
+Server -> Server: storeSessionId()
+Server -> Client: <session id>
+deactivate Server
+
+Client -> Server: GET "/admin/cars", Cookie: <session id>
+activate Server
+Server -> Server: loadSessionIdAndCheck() // checks only id (!)
+Server -> Client: 200
+deactivate Server
+
+Client -> Server: GET "/admin/cars/53293", Cookie: <session id>
+activate Server
+Server -> Server: loadSessionIdAndCheck() // checks only id (!)
+Server -> Client: 200
+deactivate Server
+
+@enduml

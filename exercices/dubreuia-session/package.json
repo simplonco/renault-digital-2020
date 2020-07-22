@@ -1,0 +1,13 @@
+{
+    "name": "dubreuia-session",
+    "version": "1.0.0",
+    "keywords": [],
+    "author": "",
+    "license": "Apache License",
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "express": "^4.16.4",
+        "express-session": "^1.16.1",
+        "session-file-store": "^1.4.0"
+    }
+}
