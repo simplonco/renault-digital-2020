@@ -75,9 +75,9 @@ Ajouter une navigation à la racine de votre app :
 </nav>
 ```
 
-## Ajout de contenu [grid layout](https://getbootstrap.com/docs/4.0/components/card/#using-grid-markup)
+## Ajout de structure [grid layout](https://getbootstrap.com/docs/4.0/components/card/#using-grid-markup)
 
-Ajouter du contenu en mode grid layout :
+Ajouter une structure en mode grid layout :
 
 | Angular | React |
 | --- | --- |
@@ -105,3 +105,10 @@ Ajouter du contenu en mode grid layout :
   </div>
 </div>
 ```
+
+## Ajouter du contenu
+
+Pour l'instant, le contenu n'est pas primordial, on cherche à créer un squelette d'application. Vous pouvez utiliser du contenu provisoire avec :
+
+- Images - Flickr a une section "creative commons" (images en "open source") : https://www.flickr.com/search/?text=cat&license=2%2C3%2C4%2C5%2C6%2C9
+- Texte - Le plus simple pour générer du texte : https://loremipsum.io/generator/
