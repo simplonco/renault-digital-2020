@@ -6,6 +6,7 @@
 - Framework front:
     - Si Angular, installer `ng` : `npm install -g @angular/cli`
     - Si React, rien à faire
+    - Si Vue,  installer `vue` : `npm install -g @vue/cli`
 - Un nouveau dépôt privé sur GitHub
     - Example Simplon.co : https://github.com/simplonco/renault-digital-2020-chef-doeuvre
     - `git clone git@github.com:simplonco/renault-digital-2020-chef-doeuvre.git`
@@ -15,25 +16,29 @@
 
 Dans un terminal :
 
-| Angular | React |
-| --- | --- |
-| `ng new client` | `npx create-react-app client` |
+| Angular | React | Vue |
+| --- | --- | --- |
+| `ng new client` | `npx create-react-app client` | `vue create client` |
 
 Cela devrait créer votre application front dans le dossier "client". Ensuite `cd client`.
 
 Pour votre application sur http://127.0.0.1:3000 :
 
 ```bash
+# Angular ou React
 npm start
+
+# Vue
+npm run serve
 ```
 
 ## Ajout de [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
 
 Ajouter Bootstrap dans le `head` :
 
-| Angular | React |
-| --- | --- |
-| "src/index.html" | "public/index.html" |
+| Angular | React | Vue |
+| --- | --- | --- |
+| "src/index.html" | "public/index.html" | "public/index.html" |
 
 ```html
     <link rel="stylesheet"
@@ -46,9 +51,9 @@ Ajouter Bootstrap dans le `head` :
 
 Ajouter une navigation à la racine de votre app :
 
-| Angular | React |
-| --- | --- |
-| "src/app/app.component.html" | "src/App.js" |
+| Angular | React | Vue |
+| --- | --- | --- |
+| "src/app/app.component.html" | "src/App.js" | "src/App.vue" |
 
 ```html
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -79,9 +84,9 @@ Ajouter une navigation à la racine de votre app :
 
 Ajouter une structure en mode grid layout :
 
-| Angular | React |
-| --- | --- |
-| "src/app/app.component.html" | "src/App.js" |
+| Angular | React | Vue |
+| --- | --- | --- |
+| "src/app/app.component.html" | "src/App.js" | "src/App.vue" |
 
 ```html
 <div class="row">
