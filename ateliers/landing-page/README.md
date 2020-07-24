@@ -17,7 +17,7 @@ Dans un terminal :
 
 | Angular | React |
 | --- | --- |
-| `npx create-react-app client` | `ng init client` |
+| `ng new client` | `npx create-react-app client` |
 
 Cela devrait créer votre application front dans le dossier "client". Ensuite `cd client`.
 
