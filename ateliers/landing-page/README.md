@@ -1,4 +1,4 @@
-# Création d'une landing page pour chef d'oeuvre
+# Workshop 1 : Création d'une landing page pour chef d'oeuvre
 
 ## Installation et pré-requis
 
