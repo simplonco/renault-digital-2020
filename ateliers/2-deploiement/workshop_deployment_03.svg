@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="627.5px" preserveAspectRatio="none" style="width:791px;height:627px;" version="1.1" viewBox="0 0 791 627" width="791.25px" zoomAndPan="magnify"><defs><filter height="300%" id="f18clca5hjw2gg" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.5"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="5.0" dy="5.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="22.5" lengthAdjust="spacingAndGlyphs" textLength="613.75" x="96.25" y="20.885">Workshop - Deployment frontend / backend / database</text><!--MD5=[2c8e42a4b202a16893752be544c8ef90]
+cluster node_server--><polygon fill="#FFFFFF" filter="url(#f18clca5hjw2gg)" points="27.5,172.4414,40,159.9414,763.75,159.9414,763.75,601.1914,751.25,613.6914,27.5,613.6914,27.5,172.4414" style="stroke: #000000; stroke-width: 1.875;"/><line style="stroke: #000000; stroke-width: 1.875;" x1="751.25" x2="762.5" y1="172.4414" y2="161.1914"/><line style="stroke: #000000; stroke-width: 1.875;" x1="27.5" x2="751.25" y1="172.4414" y2="172.4414"/><line style="stroke: #000000; stroke-width: 1.875;" x1="751.25" x2="751.25" y1="172.4414" y2="613.6914"/><text fill="#000000" font-family="sans-serif" font-size="17.5" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="453.75" x="163.75" y="192.4353">Server (Google Cloud Platform - VM Instance)</text><!--MD5=[9b1c3ea159b0e28ba24f652c8cb7173b]
+cluster node_nginx--><rect fill="#FFFFFF" filter="url(#f18clca5hjw2gg)" height="108.75" style="stroke: #000000; stroke-width: 1.875;" width="175" x="312.5" y="219.9414"/><text fill="#000000" font-family="sans-serif" font-size="17.5" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="57.5" x="371.25" y="238.6853">Nginx</text><!--MD5=[7c0f5859d98bf49b44156fc66ba4f0dc]
+cluster node_html--><rect fill="#FFFFFF" filter="url(#f18clca5hjw2gg)" height="108.75" style="stroke: #000000; stroke-width: 1.875;" width="281.25" x="57.5" y="369.9414"/><text fill="#000000" font-family="sans-serif" font-size="17.5" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="145" x="125.625" y="388.6853">/var/www/html</text><!--MD5=[9d38628d0e9cd155ae014866e5f0a84c]
+entity node_node--><rect fill="#FFFFFF" filter="url(#f18clca5hjw2gg)" height="45.3711" style="stroke: #000000; stroke-width: 1.875;" width="150" x="362.5" y="413.6914"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacingAndGlyphs" textLength="125" x="375" y="442.4353">node server.js</text><!--MD5=[64d218dc2a3387658140b3a5cded7dc5]
+entity node_java--><rect fill="#FFFFFF" filter="url(#f18clca5hjw2gg)" height="45.3711" style="stroke: #000000; stroke-width: 1.875;" width="187.5" x="556.25" y="413.6914"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacingAndGlyphs" textLength="162.5" x="568.75" y="442.4353">java -jar server.jar</text><!--MD5=[3a4c578d2879c1a3541f3747d21324ac]
+entity database_postgres--><path d="M480.625,549.9414 C480.625,537.4414 543.75,537.4414 543.75,537.4414 C543.75,537.4414 606.875,537.4414 606.875,549.9414 L606.875,581.5625 C606.875,594.0625 543.75,594.0625 543.75,594.0625 C543.75,594.0625 480.625,594.0625 480.625,581.5625 L480.625,549.9414 " fill="#FFFFFF" filter="url(#f18clca5hjw2gg)" style="stroke: #000000; stroke-width: 1.875;"/><path d="M480.625,549.9414 C480.625,562.4414 543.75,562.4414 543.75,562.4414 C543.75,562.4414 606.875,562.4414 606.875,549.9414 " fill="none" style="stroke: #000000; stroke-width: 1.875;"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacingAndGlyphs" textLength="101.25" x="493.125" y="583.6853">PostgreSQL</text><!--MD5=[ddf017435cc28893b683112041b80deb]
+entity node_nginx_root--><rect fill="#FFFFFF" filter="url(#f18clca5hjw2gg)" height="45.3711" style="stroke: #000000; stroke-width: 1.875;" width="31.25" x="333.125" y="263.6914"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacingAndGlyphs" textLength="6.25" x="345.625" y="292.4353">/</text><!--MD5=[44c11763bd8ef7bb3092ef012ea0e31e]
+entity node_nginx_api--><rect fill="#FFFFFF" filter="url(#f18clca5hjw2gg)" height="45.3711" style="stroke: #000000; stroke-width: 1.875;" width="58.75" x="408.125" y="263.6914"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacingAndGlyphs" textLength="33.75" x="420.625" y="292.4353">/api</text><!--MD5=[d23c324119b273ba3a74b5bade7014f3]
+entity file_index--><polygon fill="#FFFFFF" filter="url(#f18clca5hjw2gg)" points="199.375,413.6914,199.375,459.0625,318.125,459.0625,318.125,426.1914,305.625,413.6914,199.375,413.6914" style="stroke: #000000; stroke-width: 1.875;"/><path d="M305.625,413.6914 L305.625,426.1914 L318.125,426.1914 " fill="#FFFFFF" style="stroke: #000000; stroke-width: 1.875;"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacingAndGlyphs" textLength="93.75" x="211.875" y="442.4353">index.html</text><!--MD5=[ce209fb4b86c7b6c3f6b02d141ce1b76]
+entity file_app--><polygon fill="#FFFFFF" filter="url(#f18clca5hjw2gg)" points="77.5,413.6914,77.5,459.0625,155,459.0625,155,426.1914,142.5,413.6914,77.5,413.6914" style="stroke: #000000; stroke-width: 1.875;"/><path d="M142.5,413.6914 L142.5,426.1914 L155,426.1914 " fill="#FFFFFF" style="stroke: #000000; stroke-width: 1.875;"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacingAndGlyphs" textLength="52.5" x="90" y="442.4353">app.js</text><!--MD5=[baf24506ddd4fd12832fbc772a33af28]
+entity node_client--><rect fill="#FFFFFF" filter="url(#f18clca5hjw2gg)" height="45.3711" style="stroke: #000000; stroke-width: 1.875;" width="76.25" x="355.625" y="36.1914"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacingAndGlyphs" textLength="51.25" x="368.125" y="64.9353">Client</text><!--MD5=[73ed0e7167b17dabcab3efd1723a2199]
+link node_client to node_nginx_root--><path d="M349.1125,74.7414 C328.7875,83.9789 306.7125,98.1039 295,118.6914 C268.3875,165.4914 304.525,227.3164 329.175,260.8414 " fill="none" id="node_client-node_nginx_root" style="stroke: #000000; stroke-width: 1.25;"/><polygon fill="#000000" points="333.025,265.9664,330.275,253.9664,329.275,260.9664,322.275,259.9664,333.025,265.9664" style="stroke: #000000; stroke-width: 1.25;"/><polygon fill="#000000" points="355.35,72.0414,343.0395,71.9235,349.6146,74.5249,347.0132,81.1001,355.35,72.0414" style="stroke: #000000; stroke-width: 1.25;"/><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacingAndGlyphs" textLength="42.5" x="296.25" y="135.025">GET /</text><!--MD5=[79f875112996272916aa84a11d9d7f4d]
+link node_nginx_root to file_index--><path d="M331.35,314.5914 C324.6125,325.1914 316.8875,337.4664 310,348.6914 C297.8875,368.4289 284.5375,390.9414 274.5,408.0039 " fill="none" id="node_nginx_root-file_index" style="stroke: #000000; stroke-width: 1.25;"/><polygon fill="#000000" points="271.225,413.5789,281.2272,406.4013,274.3853,408.1868,272.5998,401.3448,271.225,413.5789" style="stroke: #000000; stroke-width: 1.25;"/><polygon fill="#000000" points="334.975,308.8914,324.7124,315.6915,331.6161,314.1621,333.1455,321.0658,334.975,308.8914" style="stroke: #000000; stroke-width: 1.25;"/><!--MD5=[35924ab227541acf08800dd46f757fca]
+link node_client to node_nginx_api--><path d="M417.5875,86.7164 C424.5625,96.1664 431.3,107.2914 435,118.6914 C450.1125,165.2789 446.2875,223.1539 441.9875,256.8789 " fill="none" id="node_client-node_nginx_api" style="stroke: #000000; stroke-width: 1.25;"/><polygon fill="#000000" points="441.1375,263.2914,447.6063,252.8168,441.9788,257.0983,437.6973,251.4708,441.1375,263.2914" style="stroke: #000000; stroke-width: 1.25;"/><polygon fill="#000000" points="413.7,81.6414,416.546,93.619,417.4899,86.6112,424.4977,87.5551,413.7,81.6414" style="stroke: #000000; stroke-width: 1.25;"/><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacingAndGlyphs" textLength="67.5" x="460" y="135.025">GET /api</text><!--MD5=[b7139dbfcf8b3e1044e1e6c27fc27e87]
+link node_nginx_api to node_node--><path d="M437.5,315.4414 C437.5,341.7289 437.5,380.8414 437.5,407.0914 " fill="none" id="node_nginx_api-node_node" style="stroke: #000000; stroke-width: 1.25;"/><polygon fill="#000000" points="437.5,413.4664,442.5,402.2164,437.5,407.2164,432.5,402.2164,437.5,413.4664" style="stroke: #000000; stroke-width: 1.25;"/><polygon fill="#000000" points="437.5,308.8914,432.5,320.1414,437.5,315.1414,442.5,320.1414,437.5,308.8914" style="stroke: #000000; stroke-width: 1.25;"/><!--MD5=[bec0be2bcf202ecc7e31c639bac0146a]
+link node_nginx_api to node_java--><path d="M472.3875,311.6539 C511.5125,338.8164 574.6375,382.6289 614.15,410.0539 " fill="none" id="node_nginx_api-node_java" style="stroke: #000000; stroke-width: 1.25;"/><polygon fill="#000000" points="619.325,413.6539,612.929,403.1347,614.1889,410.0926,607.231,411.3525,619.325,413.6539" style="stroke: #000000; stroke-width: 1.25;"/><polygon fill="#000000" points="467.05,307.9539,473.4631,318.4627,472.1919,311.5068,479.1478,310.2356,467.05,307.9539" style="stroke: #000000; stroke-width: 1.25;"/><!--MD5=[2ed9cdff374575e794c66d5bf19a236c]
+link node_node to database_postgres--><path d="M459.9375,464.2414 C476.55,484.0789 499.25,511.1789 516.8375,532.1789 " fill="none" id="node_node-database_postgres" style="stroke: #000000; stroke-width: 1.25;"/><polygon fill="#000000" points="521.2,537.3789,517.8434,525.5343,517.2006,532.5761,510.1588,531.9333,521.2,537.3789" style="stroke: #000000; stroke-width: 1.25;"/><polygon fill="#000000" points="455.525,458.9664,458.9293,470.7974,459.5437,463.7531,466.588,464.3675,455.525,458.9664" style="stroke: #000000; stroke-width: 1.25;"/><!--MD5=[5dc11ea4e0886b5145129eaeadce52a4]
+link node_java to database_postgres--><path d="M627.5625,464.2414 C610.95,484.0789 588.25,511.1789 570.6625,532.1789 " fill="none" id="node_java-database_postgres" style="stroke: #000000; stroke-width: 1.25;"/><polygon fill="#000000" points="566.3,537.3789,577.3412,531.9333,570.2994,532.5761,569.6566,525.5343,566.3,537.3789" style="stroke: #000000; stroke-width: 1.25;"/><polygon fill="#000000" points="631.975,458.9664,620.912,464.3675,627.9563,463.7531,628.5707,470.7974,631.975,458.9664" style="stroke: #000000; stroke-width: 1.25;"/><!--MD5=[55bff835e6843a9d486afffbd92bf473]
+@startuml
+
+title
+Workshop - Deployment frontend / backend / database
+end title
+
+skinparam component {
+    ArrowColor black
+    ArrowFontColor black
+}
+
+skinparam node {
+    BorderColor black
+    BackgroundColor white
+}
+
+skinparam rectangle {
+    BorderColor black
+    BackgroundColor white
+}
+
+skinparam file {
+    BorderColor black
+    BackgroundColor white
+}
+
+skinparam database {
+    BorderColor black
+    BackgroundColor white
+}
+
+rectangle "Client" as node_client
+node "Server (Google Cloud Platform - VM Instance)" as node_server {
+    rectangle "Nginx" as node_nginx {
+        rectangle "/" as node_nginx_root
+        rectangle "/api" as node_nginx_api
+    }
+    rectangle "/var/www/html" as node_html {
+        file "index.html" as file_index
+        file "app.js" as file_app
+    }
+    rectangle "node server.js" as node_node
+    rectangle "java -jar server.jar" as node_java
+    database "PostgreSQL" as database_postgres
+}
+
+node_client <- -> node_nginx_root : "GET /                 "
+node_nginx_root <- -> file_index
+
+node_client <- -> node_nginx_api : "    GET /api"
+node_nginx_api <- -> node_node
+node_nginx_api <- -> node_java
+
+node_node <- -> database_postgres
+node_java <- -> database_postgres
+
+@enduml
+
+PlantUML version 1.2020.09(Sun May 10 12:51:06 CEST 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.8+10-b944.31
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

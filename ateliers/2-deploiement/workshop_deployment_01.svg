@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="522.5px" preserveAspectRatio="none" style="width:603px;height:522px;" version="1.1" viewBox="0 0 603 522" width="603.75px" zoomAndPan="magnify"><defs><filter height="300%" id="f1vbk3qbxdatkz" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.5"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="5.0" dy="5.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="22.5" lengthAdjust="spacingAndGlyphs" textLength="372.5" x="123.125" y="20.885">Workshop - Deployment frontend</text><!--MD5=[2c8e42a4b202a16893752be544c8ef90]
+cluster node_server--><polygon fill="#FFFFFF" filter="url(#f1vbk3qbxdatkz)" points="27.5,172.4414,40,159.9414,576.25,159.9414,576.25,496.1914,563.75,508.6914,27.5,508.6914,27.5,172.4414" style="stroke: #000000; stroke-width: 1.875;"/><line style="stroke: #000000; stroke-width: 1.875;" x1="563.75" x2="575" y1="172.4414" y2="161.1914"/><line style="stroke: #000000; stroke-width: 1.875;" x1="27.5" x2="563.75" y1="172.4414" y2="172.4414"/><line style="stroke: #000000; stroke-width: 1.875;" x1="563.75" x2="563.75" y1="172.4414" y2="508.6914"/><text fill="#000000" font-family="sans-serif" font-size="17.5" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="453.75" x="70" y="192.4353">Server (Google Cloud Platform - VM Instance)</text><!--MD5=[9b1c3ea159b0e28ba24f652c8cb7173b]
+cluster node_nginx--><rect fill="#FFFFFF" filter="url(#f1vbk3qbxdatkz)" height="108.75" style="stroke: #000000; stroke-width: 1.875;" width="77.5" x="323.75" y="219.9414"/><text fill="#000000" font-family="sans-serif" font-size="17.5" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="57.5" x="333.75" y="238.6853">Nginx</text><!--MD5=[7c0f5859d98bf49b44156fc66ba4f0dc]
+cluster node_html--><rect fill="#FFFFFF" filter="url(#f1vbk3qbxdatkz)" height="108.75" style="stroke: #000000; stroke-width: 1.875;" width="281.25" x="161.25" y="369.9414"/><text fill="#000000" font-family="sans-serif" font-size="17.5" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="145" x="229.375" y="388.6853">/var/www/html</text><!--MD5=[ddf017435cc28893b683112041b80deb]
+entity node_nginx_root--><rect fill="#FFFFFF" filter="url(#f1vbk3qbxdatkz)" height="45.3711" style="stroke: #000000; stroke-width: 1.875;" width="31.25" x="346.875" y="263.6914"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacingAndGlyphs" textLength="6.25" x="359.375" y="292.4353">/</text><!--MD5=[d23c324119b273ba3a74b5bade7014f3]
+entity file_index--><polygon fill="#FFFFFF" filter="url(#f1vbk3qbxdatkz)" points="303.125,413.6914,303.125,459.0625,421.875,459.0625,421.875,426.1914,409.375,413.6914,303.125,413.6914" style="stroke: #000000; stroke-width: 1.875;"/><path d="M409.375,413.6914 L409.375,426.1914 L421.875,426.1914 " fill="#FFFFFF" style="stroke: #000000; stroke-width: 1.875;"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacingAndGlyphs" textLength="93.75" x="315.625" y="442.4353">index.html</text><!--MD5=[ce209fb4b86c7b6c3f6b02d141ce1b76]
+entity file_app--><polygon fill="#FFFFFF" filter="url(#f1vbk3qbxdatkz)" points="181.25,413.6914,181.25,459.0625,258.75,459.0625,258.75,426.1914,246.25,413.6914,181.25,413.6914" style="stroke: #000000; stroke-width: 1.875;"/><path d="M246.25,413.6914 L246.25,426.1914 L258.75,426.1914 " fill="#FFFFFF" style="stroke: #000000; stroke-width: 1.875;"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacingAndGlyphs" textLength="52.5" x="193.75" y="442.4353">app.js</text><!--MD5=[baf24506ddd4fd12832fbc772a33af28]
+entity node_client--><rect fill="#FFFFFF" filter="url(#f1vbk3qbxdatkz)" height="45.3711" style="stroke: #000000; stroke-width: 1.875;" width="76.25" x="324.375" y="36.1914"/><text fill="#000000" font-family="sans-serif" font-size="17.5" lengthAdjust="spacingAndGlyphs" textLength="51.25" x="336.875" y="64.9353">Client</text><!--MD5=[73ed0e7167b17dabcab3efd1723a2199]
+link node_client to node_nginx_root--><path d="M362.5,87.9039 C362.5,131.0914 362.5,213.5539 362.5,256.8414 " fill="none" id="node_client-node_nginx_root" style="stroke: #000000; stroke-width: 1.25;"/><polygon fill="#000000" points="362.5,263.4289,367.5,252.1789,362.5,257.1789,357.5,252.1789,362.5,263.4289" style="stroke: #000000; stroke-width: 1.25;"/><polygon fill="#000000" points="362.5,81.5164,357.5,92.7664,362.5,87.7664,367.5,92.7664,362.5,81.5164" style="stroke: #000000; stroke-width: 1.25;"/><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacingAndGlyphs" textLength="42.5" x="363.75" y="135.025">GET /</text><!--MD5=[79f875112996272916aa84a11d9d7f4d]
+link node_nginx_root to file_index--><path d="M362.5,315.4414 C362.5,341.7289 362.5,380.8414 362.5,407.0914 " fill="none" id="node_nginx_root-file_index" style="stroke: #000000; stroke-width: 1.25;"/><polygon fill="#000000" points="362.5,413.4664,367.5,402.2164,362.5,407.2164,357.5,402.2164,362.5,413.4664" style="stroke: #000000; stroke-width: 1.25;"/><polygon fill="#000000" points="362.5,308.8914,357.5,320.1414,362.5,315.1414,367.5,320.1414,362.5,308.8914" style="stroke: #000000; stroke-width: 1.25;"/><!--MD5=[79ff37ac9d775b0d5756bc985963cc54]
+@startuml
+
+title
+Workshop - Deployment frontend
+end title
+
+skinparam component {
+    ArrowColor black
+    ArrowFontColor black
+}
+
+skinparam node {
+    BorderColor black
+    BackgroundColor white
+}
+
+skinparam rectangle {
+    BorderColor black
+    BackgroundColor white
+}
+
+skinparam file {
+    BorderColor black
+    BackgroundColor white
+}
+
+skinparam database {
+    BorderColor black
+    BackgroundColor white
+}
+
+rectangle "Client" as node_client
+node "Server (Google Cloud Platform - VM Instance)" as node_server {
+    rectangle "Nginx" as node_nginx {
+        rectangle "/" as node_nginx_root
+    }
+    rectangle "/var/www/html" as node_html {
+        file "index.html" as file_index
+        file "app.js" as file_app
+    }
+}
+
+node_client <- -> node_nginx_root : "GET /                 "
+node_nginx_root <- -> file_index
+
+
+
+@enduml
+
+PlantUML version 1.2020.09(Sun May 10 12:51:06 CEST 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.8+10-b944.31
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

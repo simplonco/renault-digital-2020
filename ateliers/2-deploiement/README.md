@@ -1,13 +1,19 @@
 # Workshop 2 : Déployer son chef d'oeuvre
 
-Le but de ce workshop est de déployer la landing page produite pendant le dernier atelier sur Google Cloud Platform (GCP) afin de préparer l'oral blanc.
+Le but de ce workshop est de déployer la landing page produite pendant le dernier atelier sur Google Cloud Platform (GCP).
 
-## Créer son compte
+## Etape 01 - Déploiement frontend seulement
+
+### Overview
+
+![Workshop Deploy GCP 01](workshop_deployment_01.svg)
+
+### Créer son compte
 
 - Aller sur https://console.cloud.google.com/getting-started
 - Créer son compte, vous deviez obtenir 300$ gratuit si c'est votre 1e compte (pas nécessaire)
 
-## Créer un nouveau projet GCP
+### Créer un nouveau projet GCP
 
 - Aller sur la création de projet https://console.cloud.google.com/projectselector2/home/dashboard
 - Cliquer sur "Créer un projet", nommer le (ex. "Synthesizrs")
@@ -15,7 +21,7 @@ Le but de ce workshop est de déployer la landing page produite pendant le derni
 - Ensuite `gcloud init`, suivre les instruction
 - Choisir son projet, si vous avez beaucoup de projets, il faudra entrer l'id (ex. synthesizrs)
 
-## Créer une nouvelle instance VM gratuite
+### Créer une nouvelle instance VM gratuite
 
 GCP : https://cloud.google.com/free/ (1 instance f1-micro + 30 Go disk)
 
@@ -33,7 +39,7 @@ Référence : https://medium.com/@hbmy289/how-to-set-up-a-free-micro-vps-on-goog
 
 ![Workshop Deploy GCP create instance](./workshop-deploy-project-create-instance.png)
 
-## Upload de son frontend sur GCP
+### Upload de son frontend sur GCP
 
 - Faire un packaging de production de votre application
     - Pour Angular : `ng build --prod --output-path angularapp`
@@ -59,7 +65,27 @@ Référence : https://medium.com/@hbmy289/how-to-set-up-a-free-micro-vps-on-goog
 
 ![Workshop Deploy GCP deploy done](./workshop-deploy-project-deploy-done.png)
 
-## Ajouter son propre nom de domaine
+### Ajouter son propre nom de domaine
 
 - Faire la documentation https://cloud.google.com/appengine/docs/standard/python/mapping-custom-domains
 - Aller sur https://domains.google/, acheter le domaine, le lier à l'instance VM
+
+## Etape 02 - Déploiement backend
+
+### Overview
+
+![Workshop Deploy GCP 02](workshop_deployment_02.svg)
+
+### Contenu
+
+TODO
+
+## Etape 03 - Deploiement base de donnée
+
+### Overview
+
+![Workshop Deploy GCP 03](workshop_deployment_03.svg)
+
+### Contenu
+
+TODO

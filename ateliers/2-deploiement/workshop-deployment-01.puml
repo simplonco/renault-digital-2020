@@ -1,0 +1,60 @@
+@startuml
+
+title
+Workshop - Deployment frontend
+end title
+
+skinparam component {
+    ArrowColor black
+    ArrowFontColor black
+}
+
+skinparam node {
+    BorderColor black
+    BackgroundColor white
+}
+
+skinparam rectangle {
+    BorderColor black
+    BackgroundColor white
+}
+
+skinparam file {
+    BorderColor black
+    BackgroundColor white
+}
+
+skinparam database {
+    BorderColor black
+    BackgroundColor white
+}
+
+rectangle "Client" as node_client
+node "Server (Google Cloud Platform - VM Instance)" as node_server {
+    rectangle "Nginx" as node_nginx {
+        rectangle "/" as node_nginx_root
+'        rectangle "/api" as node_nginx_api
+    }
+    rectangle "/var/www/html" as node_html {
+        file "index.html" as file_index
+        file "app.js" as file_app
+    }
+'    rectangle "node server.js" as node_node
+'    rectangle "java -jar server.jar" as node_java
+'    database "PostgreSQL" as database_postgres
+}
+
+' Get /
+node_client <--> node_nginx_root : "GET /                 "
+node_nginx_root <--> file_index
+
+' Get /api
+'node_client <--> node_nginx_api : "    GET /api"
+'node_nginx_api <--> node_node
+'node_nginx_api <--> node_java
+
+' Backend -> database
+'node_node <--> database_postgres
+'node_java <--> database_postgres
+
+@enduml
