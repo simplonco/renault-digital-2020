@@ -6,11 +6,9 @@
 
 ## Contenu
 
-- Stand up meeting
-    - TODO
 - Mercredi (g1)
-    - TODO
+    - [Workshop 2 : Création d'une page d'enregistrement (ajout backend)](2-backend)
 - Jeudi (g1 + g2)
-    - TODO
+    - [Workshop 3 : Création d'une page de login (ajout authentification)](../../ateliers/3-login)
 - Vendredi (tous)
-    - TODO
+    - [Workshop 4 : Déployer son chef d'oeuvre](../../ateliers/4-deployment)

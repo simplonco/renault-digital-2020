@@ -8,8 +8,8 @@
 
 - Sujet de la semaine: Authentification
 - Jeudi (tous)
-    - Authentification session
+    - [Authentification session](../../exercices/dubreuia-session)
 - Vendredi AM (g1)
-    - Landing page pour chef d'oeuvre
+    - [Workshop 1 : Création d'une landing page pour chef d'oeuvre](../../ateliers/1-landing-page)
 - Vendredi PM (g1 + g2)
-    - Landing page et authentification (session, http basic, ou oauth2+jwt)
+    - [Workshop 1 : Création d'une landing page pour chef d'oeuvre](../../ateliers/1-landing-page)

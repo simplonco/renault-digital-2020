@@ -1,4 +1,4 @@
-# Workshop 2 : Déployer son chef d'oeuvre
+# Workshop 4 : Déployer son chef d'oeuvre
 
 Le but de ce workshop est de déployer la landing page produite pendant le dernier atelier sur Google Cloud Platform (GCP).
 
