@@ -33,9 +33,12 @@ Liste de références, documents et livres pour le coaching.
 
 Sélection de tutoriels utiles pour faire votre chef d'oeuvre.
 
-- [Simplon.co - Formation Java Spring - Cities - Partie 04](https://www.youtube.com/watch?v=SVBHPcNAoE8&list=PLWPX7CYPrFFrPswEo5SdpG9jOxib8ug_a&index=1)
-- [Simplon.co - Formation Java Spring - Cities - Partie 05](https://www.youtube.com/watch?v=XWIJS8sxYKA&list=PLWPX7CYPrFFrPswEo5SdpG9jOxib8ug_a&index=2)
-- [Simplon.co - Formation Java Spring - Cities - Partie 06](https://www.youtube.com/watch?v=Ij1gIYuQmYw&list=PLWPX7CYPrFFrPswEo5SdpG9jOxib8ug_a&index=3)
-- [Simplon.co - Formation authentification 01](https://www.youtube.com/watch?v=VyQjmJe4Qx4&list=PLWPX7CYPrFFrPswEo5SdpG9jOxib8ug_a&index=9)
-- [Simplon.co - Formation autorisation 01](https://www.youtube.com/watch?v=cEM9nI66Fjc&list=PLWPX7CYPrFFrPswEo5SdpG9jOxib8ug_a&index=10)
-- [Simplon.co - Formation autorisation 02](https://www.youtube.com/watch?v=cEM9nI66Fjc&list=PLWPX7CYPrFFrPswEo5SdpG9jOxib8ug_a&index=11)
+- [Simplon.co - Formation Java Spring - Cities - Partie 04](https://www.youtube.com/watch?v=SVBHPcNAoE8&list=PLWPX7CYPrFFrPswEo5SdpG9jOxib8ug_a&index=1) : Relations (`@OneToMany`, `@ManyToMany`, etc.)
+- [Simplon.co - Formation Java Spring - Cities - Partie 05](https://www.youtube.com/watch?v=XWIJS8sxYKA&list=PLWPX7CYPrFFrPswEo5SdpG9jOxib8ug_a&index=2) : Relations (`@OneToMany`, `@ManyToMany`, etc.)
+- [Simplon.co - Formation Java Spring - Cities - Partie 06](https://www.youtube.com/watch?v=Ij1gIYuQmYw&list=PLWPX7CYPrFFrPswEo5SdpG9jOxib8ug_a&index=3) : Relations (`@OneToMany`, `@ManyToMany`, etc.)
+- [Simplon.co - Formation authentification 01](https://www.youtube.com/watch?v=VyQjmJe4Qx4&list=PLWPX7CYPrFFrPswEo5SdpG9jOxib8ug_a&index=9) : Authentification client + server (Basic HTTP Auth)
+- [Simplon.co - Formation autorisation 01](https://www.youtube.com/watch?v=cEM9nI66Fjc&list=PLWPX7CYPrFFrPswEo5SdpG9jOxib8ug_a&index=10) : Authentification client + server (Basic HTTP Auth)
+- [Simplon.co - Formation autorisation 02](https://www.youtube.com/watch?v=cEM9nI66Fjc&list=PLWPX7CYPrFFrPswEo5SdpG9jOxib8ug_a&index=11) : Authentification client + server (Basic HTTP Auth)
+- [Simplon.co - Formation Session Authentication 01](https://www.youtube.com/watch?v=sHdfyGWQ34k&list=PLWPX7CYPrFFrPswEo5SdpG9jOxib8ug_a&index=18) : Authentification client + server (Session Cookie)
+- [Simplon.co - Formation Session Authentication 02](https://www.youtube.com/watch?v=8q_FvEydHuU&list=PLWPX7CYPrFFrPswEo5SdpG9jOxib8ug_a&index=19) : Authentification client + server (Session Cookie)
+- [Simplon.co - Formation Session Authentication 02](https://www.youtube.com/watch?v=KS4U1Nh2G20&list=PLWPX7CYPrFFrPswEo5SdpG9jOxib8ug_a&index=20) : Authentification client + server (Session Cookie)

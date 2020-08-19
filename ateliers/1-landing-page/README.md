@@ -117,3 +117,7 @@ Pour l'instant, le contenu n'est pas primordial, on cherche à créer un squelet
 
 - Images - Flickr a une section "creative commons" (images en "open source") : https://www.flickr.com/search/?text=cat&license=2%2C3%2C4%2C5%2C6%2C9
 - Texte - Le plus simple pour générer du texte : https://loremipsum.io/generator/
+
+## Suite
+
+Rendez-vous à l'atelier suivant, [Workshop 2 : Création d'une page d'enregistrement (ajout backend)](2-backend), pour ajouter une page register.

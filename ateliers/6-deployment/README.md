@@ -1,4 +1,4 @@
-# Workshop 4 : Déployer son chef d'oeuvre
+# Workshop 6 : Déployer son chef d'oeuvre
 
 Le but de ce workshop est de déployer la landing page produite pendant le dernier atelier sur Google Cloud Platform (GCP).
 
@@ -88,4 +88,26 @@ TODO
 
 ### Contenu
 
-TODO
+Mode "développement", les données ne sont pas importantes on peut les perdre :
+
+- Ajouter la configuration pour drop / create la BDD a change démarrage
+    ```properties
+    spring.jpa.properties.hibernate.hbm2ddl.auto=create-drop
+    spring.jpa.generate-ddl=true
+    ```
+- Ajouter un ficher data.sql pour charger des données initiales (voir https://www.baeldung.com/spring-boot-data-sql-and-schema-sql)
+    ```sql
+    INSERT INTO user VALUES ('admin', 'password');
+    ```
+
+Mode "production", on doit garder les données :
+
+- Garder la même BDD entre les redémarrage
+    ```properties
+    spring.jpa.properties.hibernate.hbm2ddl.auto=none
+    ```
+- Il faudrait une politique de "backup" de la BDD au cas ou
+- Utiliser du SQL pour modifier le schéma : 
+    ```sql
+    ALTER TABLE user ADD COLUMN age;
+    ```

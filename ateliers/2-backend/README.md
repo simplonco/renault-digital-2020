@@ -205,3 +205,7 @@ C'est un bon prétexte pour ajouter un backend + base de donnée.
     ```
 - Vérifier que les valeurs sont bien persistées en base de données
 - Le front peut faire un forward sur la page "login" lorsque le register est ok
+
+## Suite
+
+Rendez-vous à l'atelier suivant, [Workshop 3 : Création d'une page de login (ajout authentification)](3-login), pour ajouter une page de login.

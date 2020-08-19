@@ -193,5 +193,6 @@ Si l'authentification est réussie, on redirige vers la page racine des utilisat
 
 ![Workshop Login Root Page](workshop-login-root-page.png)
 
-Rendez-vous à l'atelier suivant, [Workshop 4 : Création d'un page de contenu authentifiée](4-contenu), pour ajouter du contenu à cette page.
+## Suite
 
+Rendez-vous à l'atelier suivant, [Workshop 4 : Création d'un page de contenu authentifiée](4-contenu), pour ajouter du contenu à cette page.
