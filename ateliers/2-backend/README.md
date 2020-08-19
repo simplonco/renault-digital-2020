@@ -1,8 +1,9 @@
+
 # Workshop 2 : Création d'une page d'enregistrement (ajout backend)
 
 Maintenant que nous avons notre première page suite à [Workshop 1 : Création d'une landing page pour chef d'oeuvre](1-landing-page), nous pouvons ajouter une page d'enregistrement d'utilisateur!
 
-![Workshop User Creation Form](./workshop-user-creation-form.png)
+![Workshop User Creation Form](./workshop-register.png)
 
 C'est un bon prétexte pour ajouter un backend + base de donnée.
 
@@ -203,3 +204,4 @@ C'est un bon prétexte pour ajouter un backend + base de donnée.
     {"username":"test","password":"test"}
     ```
 - Vérifier que les valeurs sont bien persistées en base de données
+- Le front peut faire un forward sur la page "login" lorsque le register est ok
