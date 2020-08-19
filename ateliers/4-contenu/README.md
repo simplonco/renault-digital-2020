@@ -53,13 +53,29 @@ Vous allez devoir lier chaque entités avec l'utilisateur : cela aura pour but d
     }
     ```
 - Quelques points :
+    - La restriction des URL "/api/**" est fait dans la classe `BasicAuthConfiguration` :
+        ```java
+        @Override
+            protected void configure(HttpSecurity security) throws Exception {
+                security
+                        // disable form login security (for login)
+                        .csrf().disable()
+                        // requests URL
+                        .authorizeRequests()
+                        .antMatchers("/api/**").authenticated()
+                        // authentication type
+                        .and().httpBasic()
+                        // cors
+                        .and().cors();
+            }
+        ```
     - Dans spring, le chargement des objets liés (clef étrangère) doit se faire dans un service, annoté avec `@Transactional`
     - Vous devez créer le Dto associé
     - Lorsque l'application démarre, vous pouvez ajouter quelques objets par défaut pour fin de test (nous verrons la création plus tard), par exemple:
-    ```java
-        synthesizerRepository.save(new Synthesizer("Juno-106", "Roland", "1984", adminUser));
-        synthesizerRepository.save(new Synthesizer("Synthesizer 1c/2c/3c", "Moog", "1964", adminUser));
-    ```
+        ```java
+            synthesizerRepository.save(new Synthesizer("Juno-106", "Roland", "1984", adminUser));
+            synthesizerRepository.save(new Synthesizer("Synthesizer 1c/2c/3c", "Moog", "1964", adminUser));
+        ```
 
 ## Ajouter un table dans le front (Angular)
 
