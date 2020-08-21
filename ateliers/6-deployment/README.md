@@ -17,7 +17,7 @@ Le but de ce workshop est de déployer la landing page produite pendant le derni
 
 - Aller sur la création de projet https://console.cloud.google.com/projectselector2/home/dashboard
 - Cliquer sur "Créer un projet", nommer le (ex. "Synthesizrs")
-- Télécharger le "SDK Cloud", suivre les instructions par plateforme
+- Télécharger le "SDK Cloud", suivre les instructions par plateforme (https://cloud.google.com/sdk/docs/quickstarts)
 - Ensuite `gcloud init`, suivre les instruction
 - Choisir son projet, si vous avez beaucoup de projets, il faudra entrer l'id (ex. synthesizrs)
 
@@ -42,25 +42,17 @@ Référence : https://medium.com/@hbmy289/how-to-set-up-a-free-micro-vps-on-goog
 ### Upload de son frontend sur GCP
 
 - Faire un packaging de production de votre application
-    - Pour Angular : `ng build --prod --output-path angularapp`
-    - Pour React : TODO
-    - Pour Vue.js : TODO
-- Faire un tar du dossier contenant votre app
-    - Pour Angular : `tar cf angularapp.tar angularapp`
-    - Pour React : TODO
-    - Pour Vue.js : TODO
+    - Pour Angular : `ng build --prod --output-path client` (https://angular.io/guide/deployment#basic-deployment-to-a-remote-server)
+    - Pour React : `npm run build; mv build client` (https://create-react-app.dev/docs/deployment/)
+    - Pour Vue.js : `npm run build; mv build client` (https://cli.vuejs.org/guide/deployment.html#netlify)
+- Faire un tar du dossier contenant votre app : `tar cf client.tar client`
 - Transférer le tar sur votre VM
-    - Lorsque le gcloud se connecte pour la première fois en SSH, il va créer une clef SSH, et vous demander un mot de passe pour cette clef
-    - Pour Angular : `gcloud compute scp angularapp.tar synthesizrs-instance:app.tar`
-    - Pour React : TODO
-    - Pour Vue.js : TODO
-- Se connecter à son instance : `gcloud beta compute ssh --zone "us-central1-a" "synthesizrs-instance" --project "synthesizrs"`
+    - Lorsque le gcloud se connecte pour la première fois en SSH, il va créer une clef SSH, et vous demander un mot de passe pour cette clef (https://cloud.google.com/compute/docs/instances/transfer-files)
+    - `gcloud compute scp client.tar synthesizrs-instance:app.tar`
+- Se connecter à son instance : `gcloud compute ssh --zone "us-central1-a" "synthesizrs-instance" --project "synthesizrs"` (https://cloud.google.com/compute/docs/instances/connecting-to-instance)
     - Installer nginx sur l'instance : `sudo apt install nginx`
     - Extraire son app : `taf xf app.tar`
-    - Copier son app dans le dossier racine de nginx :
-        - Pour Angular : `sudo cp -R angularapp/* /var/www/html`
-        - Pour React : TODO
-        - Pour Vue.js : TODO
+    - Copier son app dans le dossier racine de nginx : `sudo cp -R client/* /var/www/html`
 - Aller dans "Compute Engine" puis "Instance de VM", cliquer sur "Adresse IP externe"
 
 ![Workshop Deploy GCP deploy done](./workshop-deploy-project-deploy-done.png)
