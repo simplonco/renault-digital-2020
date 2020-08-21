@@ -62,7 +62,7 @@ Référence : https://medium.com/@hbmy289/how-to-set-up-a-free-micro-vps-on-goog
 - Faire la documentation https://cloud.google.com/appengine/docs/standard/python/mapping-custom-domains
 - Aller sur https://domains.google/, acheter le domaine, le lier à l'instance VM
 
-## Etape 02 - Déploiement backend
+## Etape 02 - Deploiement base de donnée
 
 ### Overview
 
@@ -70,15 +70,31 @@ Référence : https://medium.com/@hbmy289/how-to-set-up-a-free-micro-vps-on-goog
 
 ### Contenu
 
-TODO
+- Installer PostgreSQL (ou autre) (https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-20-04-quickstart)
+    - `sudo apt install postgresql postgresql-contrib`
+    - L'utilisateur "postgres" peut toujours se connecter à la base
+        - Changer d'utilisateur : `sudo -u postgres psql` (pour revenir à votre user précédant, faire `exit`)
+        - Se connecter à la BDD : `psql` (`exit` pour quitter le prompt)
+        - Changer de mot de passe : `\password postgres` (entrer le mdp 2 fois)
+        - L'utilisateur et MDP doit correspondre à votre config Sequelize ou Hibernate !
+- Créer votre base de donnée
+    - Se connecter à la BDD avec la procédure ci-haut
+    - `CREATE DATABASE synthesizrs;` (changer le nom pour votre nom de BDD)
+- Pour avoir le status de la BDD : `systemctl status postgresql`
+- Pour voir les logs : `cat /var/log/postgresql/postgresql-12-main.log`
 
-## Etape 03 - Deploiement base de donnée
+## Etape 03 - Déploiement backend
 
 ### Overview
 
 ![Workshop Deploy GCP 03](workshop_deployment_03.svg)
 
 ### Contenu
+
+- Faire un packaging de votre application backend :
+    - Spring Boot : `./gradlew bootJar` (build/libs/synthesizrs-0.0.1-SNAPSHOT.jar)
+
+## Annexes
 
 Mode "développement", les données ne sont pas importantes on peut les perdre :
 
@@ -103,3 +119,4 @@ Mode "production", on doit garder les données :
     ```sql
     ALTER TABLE user ADD COLUMN age;
     ```
+
