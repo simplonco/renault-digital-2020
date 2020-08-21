@@ -51,7 +51,7 @@ Référence : https://medium.com/@hbmy289/how-to-set-up-a-free-micro-vps-on-goog
     - `gcloud compute scp client.tar synthesizrs-instance:app.tar`
 - Se connecter à son instance : `gcloud compute ssh --zone "us-central1-a" "synthesizrs-instance" --project "synthesizrs"` (https://cloud.google.com/compute/docs/instances/connecting-to-instance)
     - Installer nginx sur l'instance : `sudo apt install nginx`
-    - Extraire son app : `taf xf app.tar`
+    - Extraire son app : `tar xf app.tar`
     - Copier son app dans le dossier racine de nginx : `sudo cp -R client/* /var/www/html`
 - Aller dans "Compute Engine" puis "Instance de VM", cliquer sur "Adresse IP externe"
 
@@ -62,11 +62,29 @@ Référence : https://medium.com/@hbmy289/how-to-set-up-a-free-micro-vps-on-goog
 - Faire la documentation https://cloud.google.com/appengine/docs/standard/python/mapping-custom-domains
 - Aller sur https://domains.google/, acheter le domaine, le lier à l'instance VM
 
+### Configurer nginx
+
+Vous avez peut-être remarqué, en ajoutant un chemin à votre URL (pe http://34.71.32.4/page), vous avez une 404, il faut dire à Nginx que tous les chemins sont servis par votre application Angular / React / Vue :
+
+- {VM} On supprime l'ancienne conf :
+    - `sudo rm /etc/nginx/sites-enabled/default`
+- {VM} Créer le fichier "/etc/nginx/sites-available/synthesizrs.conf" :
+    - `sudo nano /etc/nginx/sites-available/synthesizrs.conf`
+        ```
+        server {
+                listen 80;
+                listen [::]:80;
+                root /var/www/html;
+                location / {
+                        try_files $uri $uri/ /index.html;
+                }
+        }
+        ```
+- {VM} Activer le fichier : `sudo ln -s /etc/nginx/sites-available/synthesizrs.conf /etc/nginx/sites-enabled/default`
+- {VM} Reload nginx : `sudo systemctl Reload nginx`
+- Maintenant les URL avec chemin sont aussi pris en compte par votre application front
+
 ## Etape 02 - Deploiement base de donnée
-
-### Overview
-
-![Workshop Deploy GCP 02](workshop_deployment_02.svg)
 
 ### Contenu
 
@@ -89,10 +107,81 @@ Référence : https://medium.com/@hbmy289/how-to-set-up-a-free-micro-vps-on-goog
 
 ![Workshop Deploy GCP 03](workshop_deployment_03.svg)
 
-### Contenu
+### Contenu (Java / Spring Boot)
 
-- Faire un packaging de votre application backend :
-    - Spring Boot : `./gradlew bootJar` (build/libs/synthesizrs-0.0.1-SNAPSHOT.jar)
+- {PC} Faire un packaging de votre application backend :
+    - `./gradlew bootJar` (le jar : build/libs/synthesizrs-0.0.1-SNAPSHOT.jar)
+- {PC} Le transférer sur votre instance :
+    - `gcloud compute scp synthesizrs-0.0.1-SNAPSHOT.jar synthesizrs-instance:synthesizrs.jar`
+- {VM} Installer Java (Open JDK 14) :
+    - `sudo apt install openjdk-14-jdk`
+    - Si vous voulez trouver une autre version de Java (pe 8, 11, etc.) : `apt-cache search openjdk-`
+- {VM} Sur votre instance, vous pouvez lancer votre application :
+    - `java -jar synthesizrs.jar`
+    - Vous devriez voir Spring démarrer et créer les tables en BDD
+    - Faites CTRL+C pour quitter, on va la démarrer en "service"
+- {VM} Pour lancer votre application en mode "service" (changer les valeurs pour votre app) :
+    - Créer le ficher "/etc/systemd/system/synthesizrs.service" :
+        - sudo nano "/etc/systemd/system/synthesizrs.service" :
+            ```
+            [Unit]
+            Description=Synthesizrs
+            After=syslog.target
+            After=network.target[Service]
+            User=username
+            Type=simple
+            
+            [Service]
+            ExecStart=/usr/bin/java -jar /home/alex/synthesizrs.jar
+            Restart=always
+            StandardOutput=syslog
+            StandardError=syslog
+            SyslogIdentifier=helloworld
+            
+            [Install]
+            WantedBy=multi-user.target
+            ```
+    - Démarrer le service : `sudo systemctl start synthesizrs`
+    - Status (et log) du service : `sudo systemctl status synthesizrs`
+    - Vous pouvez le requêter : `curl 127.0.0.1:8080`
+
+Maintenant il faut configurer nginx :    
+
+- {VM} On supprime l'ancienne conf :
+    - `rm /etc/nginx/sites-enabled/default`
+- {VM} Créer le fichier "/etc/nginx/sites-available/synthesizrs.conf" :
+    - `sudo nano /etc/nginx/sites-available/synthesizrs.conf`
+        ```
+        server {
+                listen 80;
+                listen [::]:80;
+        
+                root /home/alex/client;
+        
+                location / {
+                        try_files $uri $uri/ /index.html;
+                }
+        
+                location /api {
+                     proxy_pass http://localhost:8080;
+                     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                     proxy_set_header X-Forwarded-Proto $scheme;
+                     proxy_set_header X-Forwarded-Port $server_port;
+                }
+        
+                location /public {
+                     proxy_pass http://localhost:8080;
+                     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                     proxy_set_header X-Forwarded-Proto $scheme;
+                     proxy_set_header X-Forwarded-Port $server_port;
+                }
+        }
+        ```
+- {VM} Activer le fichier : `sudo ln -s /etc/nginx/sites-enabled/default /etc/nginx/sites-available/synthesizrs.conf`
+- {VM} Restart nginx : `sudo systemctl restart nginx`
+- Le site devrait être disponible, il faut maintenant configurer les ip et chemins (TODO voir next)
+
+## Configurer son domaines et 
 
 ## Annexes
 
