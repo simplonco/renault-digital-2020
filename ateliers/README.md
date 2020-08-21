@@ -10,3 +10,10 @@
 ## Idées
 
 - Workshop upload d'image / gestion fichiers statiques
+    - Upload
+        - form based : [Workshop 5 : Upload d'image](5-upload-image)
+        - base64 encoded
+    - Hosting fichiers statiques
+        - disk : [Workshop 5 : Upload d'image](5-upload-image)
+        - database
+        - cloud (firebase)
