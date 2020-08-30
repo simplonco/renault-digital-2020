@@ -6,6 +6,7 @@
 - [Workshop 4 : Création d'un page de contenu authentifiée](4-contenu)
 - [Workshop 5 : Upload d'image](5-upload-image)
 - [Workshop 6 : Déployer son chef d'oeuvre](6-deployment)
+- [Workshop 7 - Ajouter son nom de domaine monchefdoeuvre.com](7-custom-domain)
 
 ## Idées
 

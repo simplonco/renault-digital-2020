@@ -57,11 +57,6 @@ Référence : https://medium.com/@hbmy289/how-to-set-up-a-free-micro-vps-on-goog
 
 ![Workshop Deploy GCP deploy done](./workshop-deploy-project-deploy-done.png)
 
-### Ajouter son propre nom de domaine
-
-- Faire la documentation https://cloud.google.com/appengine/docs/standard/python/mapping-custom-domains
-- Aller sur https://domains.google/, acheter le domaine, le lier à l'instance VM
-
 ### Configurer nginx
 
 Vous avez peut-être remarqué, en ajoutant un chemin à votre URL (pe http://34.71.32.4/page), vous avez une 404, il faut dire à Nginx que tous les chemins sont servis par votre application Angular / React / Vue :

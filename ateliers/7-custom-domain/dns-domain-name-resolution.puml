@@ -1,0 +1,34 @@
+@startuml
+
+title
+Domain name resolution
+end title
+
+skinparam sequence {
+	BackgroundColor STRATEGY
+	ParticipantBackgroundColor STRATEGY
+	ArrowColor DarkSlateGray
+	BorderColor DarkSlateGray
+	LifeLineBorderColor DarkSlateGray
+	ParticipantBorderColor DarkSlateGray
+}
+
+Client -> "DNS Resolver": "synthesizrs.com"
+activate "DNS Resolver"
+
+"DNS Resolver" -> "**DNS Zone**": "synthesizrs.com"
+activate "**DNS Zone**"
+"**DNS Zone**" -> "**DNS Zone**": getARecord()
+"**DNS Zone**" -> Client: 34.71.32.4
+deactivate "**DNS Zone**"
+
+deactivate "DNS Resolver"
+
+
+Client -> "34.71.32.4": "HTTP"
+activate "34.71.32.4"
+"34.71.32.4" -> "34.71.32.4": render()
+"34.71.32.4" -> Client: HTML doc
+deactivate "34.71.32.4"
+
+@enduml
