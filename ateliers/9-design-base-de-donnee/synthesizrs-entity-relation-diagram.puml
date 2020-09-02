@@ -1,0 +1,49 @@
+@startuml
+
+title
+Synthesizrs - Entity Relation diagram
+end title
+
+hide circle
+skinparam linetype ortho
+skinparam class {
+    BackgroundColor White
+    ArrowColor Black
+    BorderColor Black
+}
+skinparam note {
+    BackgroundColor LightYellow
+    ArrowColor Black
+    BorderColor Black
+}
+
+entity "user" as user {
+    *username : varchar
+    --
+    *password : varchar
+}
+
+entity "brand" as brand {
+    *id : integer <<generated>>
+    --
+    *name : varchar
+}
+
+entity "synthesizer" as synthesizer {
+    *id : integer <<generated>>
+    --
+    *name : varchar
+    *brand_id : integer <<foreign key>>
+}
+
+entity "user_favorites" as user_favorites {
+    *user_username : varchar <<foreign key>>
+    *synthesizer_id : integer <<foreign key>>
+}
+
+synthesizer --> brand
+
+user_favorites -left-> user
+user_favorites -right-> synthesizer
+
+@enduml

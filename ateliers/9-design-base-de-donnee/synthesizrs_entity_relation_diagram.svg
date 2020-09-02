@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="303.75px" preserveAspectRatio="none" style="width:860px;height:303px;" version="1.1" viewBox="0 0 860 303" width="860px" zoomAndPan="magnify"><defs><filter height="300%" id="f1cd13xhr8rv7c" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.5"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="5.0" dy="5.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="22.5" lengthAdjust="spacingAndGlyphs" textLength="415" x="226.875" y="20.885">Synthesizrs - Entity Relation diagram</text><!--MD5=[e59cf999063292dce8d6ea34dd10a338]
+class user--><rect fill="#FFFFFF" filter="url(#f1cd13xhr8rv7c)" height="81.9727" id="user" style="stroke: #000000; stroke-width: 1.875;" width="173.75" x="7.5" y="43.6914"/><text fill="#000000" font-family="sans-serif" font-size="15" lengthAdjust="spacingAndGlyphs" textLength="32.5" x="78.125" y="63.8647">user</text><line style="stroke: #000000; stroke-width: 1.875;" x1="8.75" x2="180" y1="73.6523" y2="73.6523"/><ellipse cx="21.25" cy="87.4023" fill="#000000" rx="3.75" ry="3.75" style="stroke: #000000; stroke-width: 1.25;"/><text fill="#000000" font-family="sans-serif" font-size="13.75" lengthAdjust="spacingAndGlyphs" textLength="141.25" x="32.5" y="91.4154">username : varchar</text><line style="stroke: #000000; stroke-width: 1.25;" x1="8.75" x2="180" y1="99.6582" y2="99.6582"/><ellipse cx="21.25" cy="113.4082" fill="#000000" rx="3.75" ry="3.75" style="stroke: #000000; stroke-width: 1.25;"/><text fill="#000000" font-family="sans-serif" font-size="13.75" lengthAdjust="spacingAndGlyphs" textLength="137.5" x="32.5" y="117.4213">password : varchar</text><!--MD5=[7d37753aaae3908bdf9bd61a107656cc]
+class brand--><rect fill="#FFFFFF" filter="url(#f1cd13xhr8rv7c)" height="81.9727" id="brand" style="stroke: #000000; stroke-width: 1.875;" width="205" x="613.125" y="208.6914"/><text fill="#000000" font-family="sans-serif" font-size="15" lengthAdjust="spacingAndGlyphs" textLength="45" x="693.125" y="228.8647">brand</text><line style="stroke: #000000; stroke-width: 1.875;" x1="614.375" x2="816.875" y1="238.6523" y2="238.6523"/><ellipse cx="626.875" cy="252.4023" fill="#000000" rx="3.75" ry="3.75" style="stroke: #000000; stroke-width: 1.25;"/><text fill="#000000" font-family="sans-serif" font-size="13.75" lengthAdjust="spacingAndGlyphs" textLength="172.5" x="638.125" y="256.4154">id : integer «generated»</text><line style="stroke: #000000; stroke-width: 1.25;" x1="614.375" x2="816.875" y1="264.6582" y2="264.6582"/><ellipse cx="626.875" cy="278.4082" fill="#000000" rx="3.75" ry="3.75" style="stroke: #000000; stroke-width: 1.25;"/><text fill="#000000" font-family="sans-serif" font-size="13.75" lengthAdjust="spacingAndGlyphs" textLength="110" x="638.125" y="282.4213">name : varchar</text><!--MD5=[51b00231c93f776674e1874332d39bde]
+class synthesizer--><rect fill="#FFFFFF" filter="url(#f1cd13xhr8rv7c)" height="97.9785" id="synthesizer" style="stroke: #000000; stroke-width: 1.875;" width="261.25" x="585" y="36.1914"/><text fill="#000000" font-family="sans-serif" font-size="15" lengthAdjust="spacingAndGlyphs" textLength="85" x="673.125" y="56.3647">synthesizer</text><line style="stroke: #000000; stroke-width: 1.875;" x1="586.25" x2="845" y1="66.1523" y2="66.1523"/><ellipse cx="598.75" cy="79.9023" fill="#000000" rx="3.75" ry="3.75" style="stroke: #000000; stroke-width: 1.25;"/><text fill="#000000" font-family="sans-serif" font-size="13.75" lengthAdjust="spacingAndGlyphs" textLength="172.5" x="610" y="83.9154">id : integer «generated»</text><line style="stroke: #000000; stroke-width: 1.25;" x1="586.25" x2="845" y1="92.1582" y2="92.1582"/><ellipse cx="598.75" cy="105.9082" fill="#000000" rx="3.75" ry="3.75" style="stroke: #000000; stroke-width: 1.25;"/><text fill="#000000" font-family="sans-serif" font-size="13.75" lengthAdjust="spacingAndGlyphs" textLength="110" x="610" y="109.9213">name : varchar</text><ellipse cx="598.75" cy="121.9141" fill="#000000" rx="3.75" ry="3.75" style="stroke: #000000; stroke-width: 1.25;"/><text fill="#000000" font-family="sans-serif" font-size="13.75" lengthAdjust="spacingAndGlyphs" textLength="228.75" x="610" y="125.9271">brand_id : integer «foreign key»</text><!--MD5=[d2820ecca2e376f7be3f223ae03f5348]
+class user_favorites--><rect fill="#FFFFFF" filter="url(#f1cd13xhr8rv7c)" height="81.9727" id="user_favorites" style="stroke: #000000; stroke-width: 1.875;" width="315" x="225.625" y="43.6914"/><text fill="#000000" font-family="sans-serif" font-size="15" lengthAdjust="spacingAndGlyphs" textLength="103.75" x="331.25" y="63.8647">user_favorites</text><line style="stroke: #000000; stroke-width: 1.875;" x1="226.875" x2="539.375" y1="73.6523" y2="73.6523"/><ellipse cx="239.375" cy="87.4023" fill="#000000" rx="3.75" ry="3.75" style="stroke: #000000; stroke-width: 1.25;"/><text fill="#000000" font-family="sans-serif" font-size="13.75" lengthAdjust="spacingAndGlyphs" textLength="282.5" x="250.625" y="91.4154">user_username : varchar «foreign key»</text><ellipse cx="239.375" cy="103.4082" fill="#000000" rx="3.75" ry="3.75" style="stroke: #000000; stroke-width: 1.25;"/><text fill="#000000" font-family="sans-serif" font-size="13.75" lengthAdjust="spacingAndGlyphs" textLength="268.75" x="250.625" y="107.4213">synthesizer_id : integer «foreign key»</text><line style="stroke: #000000; stroke-width: 1.875;" x1="226.875" x2="539.375" y1="115.6641" y2="115.6641"/><!--MD5=[01601b0d7c692f5c7a351ca57515a1c9]
+link synthesizer to brand--><path d="M715.625,134.0039 C715.625,134.0039 715.625,202.3414 715.625,202.3414 " fill="none" id="synthesizer-&gt;brand" style="stroke: #000000; stroke-width: 1.25;"/><polygon fill="#000000" points="715.625,208.5914,720.625,197.3414,715.625,202.3414,710.625,197.3414,715.625,208.5914" style="stroke: #000000; stroke-width: 1.25;"/><!--MD5=[8310ecba4b8ea90ca8a5dba167917eed]
+reverse link user to user_favorites--><path d="M187.65,84.9414 C187.65,84.9414 225.15,84.9414 225.15,84.9414 " fill="none" id="user&lt;-user_favorites" style="stroke: #000000; stroke-width: 1.25;"/><polygon fill="#000000" points="181.4,84.9414,192.65,89.9414,187.65,84.9414,192.65,79.9414,181.4,84.9414" style="stroke: #000000; stroke-width: 1.25;"/><!--MD5=[2ccf4c9f0224d062b4b3242ded890ed4]
+link user_favorites to synthesizer--><path d="M541.1,84.9414 C541.1,84.9414 578.3875,84.9414 578.3875,84.9414 " fill="none" id="user_favorites-&gt;synthesizer" style="stroke: #000000; stroke-width: 1.25;"/><polygon fill="#000000" points="584.6375,84.9414,573.3875,79.9414,578.3875,84.9414,573.3875,89.9414,584.6375,84.9414" style="stroke: #000000; stroke-width: 1.25;"/><!--MD5=[b4ac7796b56452786391b36871bcafc9]
+@startuml
+
+skinparam dpi 200
+
+title
+Synthesizrs - Entity Relation diagram
+end title
+
+hide circle
+skinparam linetype ortho
+skinparam class {
+    BackgroundColor White
+    ArrowColor Black
+    BorderColor Black
+}
+skinparam note {
+    BackgroundColor LightYellow
+    ArrowColor Black
+    BorderColor Black
+}
+
+entity "user" as user {
+    *username : varchar
+    - -
+    *password : varchar
+}
+
+entity "brand" as brand {
+    *id : integer <<generated>>
+    - -
+    *name : varchar
+}
+
+entity "synthesizer" as synthesizer {
+    *id : integer <<generated>>
+    - -
+    *name : varchar
+    *brand_id : integer <<foreign key>>
+}
+
+entity "user_favorites" as user_favorites {
+    *user_username : varchar <<foreign key>>
+    *synthesizer_id : integer <<foreign key>>
+}
+
+synthesizer - -> brand
+
+user_favorites -left-> user
+user_favorites -right-> synthesizer
+
+@enduml
+
+PlantUML version 1.2020.09(Sun May 10 12:51:06 CEST 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.8+10-b944.31
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

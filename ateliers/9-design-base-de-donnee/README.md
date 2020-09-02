@@ -34,7 +34,7 @@ Le but de ce workshop c'est de faire le design de sa base de donnée pour son ch
 
 ### Le diagramme
 
-TODO
+![Synthesizrs - Entity relation diagram](./synthesizrs_entity_relation_diagram.svg)
 
 ### Le SQL
 
