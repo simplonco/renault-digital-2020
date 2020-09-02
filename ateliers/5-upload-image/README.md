@@ -1,4 +1,4 @@
-# Workshop 5 : Upload d'image
+# Workshop 5 - Upload d'image (form et stockage disque)
 
 Maintenant qu'on peut afficher du contenu aux utilisateurs grâce à [Workshop 4 : Création d'un page de contenu authentifiée](4-contenu), on peut créer des formulaires pour modifier des données, entre autre pour l'upload d'image.
 
@@ -148,5 +148,5 @@ Image stockée sur disque
 
 ## Suite
 
-Maintenant que nous avons une super application, nous allons la déployer, voir [Workshop 6 : Déployer son chef d'oeuvre](../6-deployment).
+Maintenant que nous avons une super application, nous allons la déployer, voir [Workshop 6 : Déployer son chef d'oeuvre](../6-deployment-frontend).
 

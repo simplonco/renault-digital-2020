@@ -1,5 +1,4 @@
-
-# Workshop 2 : Création d'une page d'enregistrement (ajout backend)
+# Workshop 2 - Création d'une page d'enregistrement (ajout backend)
 
 Maintenant que nous avons notre première page suite à [Workshop 1 : Création d'une landing page pour chef d'oeuvre](1-landing-page), nous pouvons ajouter une page d'enregistrement d'utilisateur!
 

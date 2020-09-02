@@ -1,4 +1,4 @@
-# Workshop 3 : Création d'une page de login (ajout authentification)
+# Workshop 3 - Création d'une page de login (ajout authentification)
 
 Maintenant qu'on a une page register avec [Workshop 2 : Création d'une page d'enregistrement (ajout backend)](2-backend), on peut maintenant logger nos utilisateurs !
 

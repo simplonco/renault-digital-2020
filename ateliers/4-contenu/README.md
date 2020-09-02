@@ -1,4 +1,4 @@
-# Workshop 4 : Création d'un page de contenu authentifiée
+# Workshop 4 - Création d'un page de contenu authentifiée
 
 Maintenant qu'on a une page login avec [Workshop 3 : Création d'une page de login (ajout authentification)](3-login), on peut maintenant afficher du contenu aux utilisateurs loggué !
 
