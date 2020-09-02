@@ -8,6 +8,7 @@
 - [Workshop 6 - Déployer son chef d'oeuvre (frontend)](6-deployment-frontend)
 - [Workshop 7 - Ajouter son nom de domaine monchefdoeuvre.com](7-custom-domain)
 - [Workshop 8 - Déployer son chef d'oeuvre (backend)](8-deployment-backend)
+- [Workshop 9 - Design de sa base de donnée](9-design-base-de-donnee)
 
 ## Idées
 
