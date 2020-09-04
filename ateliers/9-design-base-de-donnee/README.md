@@ -10,6 +10,8 @@ Le but de ce workshop c'est de faire le design de sa base de donnée pour son ch
 - Écrire le SQL correspondant
 - Écrire le Java (Hibernate) / JavaScript (Sequelize) correspondant
 
+Nous avons déjà partiellement couvert ce sujet : [Simplon.co - Formation UML "Entity Relationship Diagram"](https://www.youtube.com/watch?v=WRlmzRIHX4s&list=PLWPX7CYPrFFrPswEo5SdpG9jOxib8ug_a&index=16)
+
 ## Exemple pour l'application "Synthesirs"
 
 ### Les entitées
