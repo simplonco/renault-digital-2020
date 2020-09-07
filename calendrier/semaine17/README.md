@@ -10,6 +10,6 @@
 - Jeudi (tous)
     - [Authentification session](../../exercices/dubreuia-session)
 - Vendredi AM (g1)
-    - [Workshop 1 : Création d'une landing page pour chef d'oeuvre](../../ateliers/1-landing-page)
+    - [Workshop 1 : Création d'une landing page pour chef d'oeuvre](../../ateliers/01-landing-page)
 - Vendredi PM (g1 + g2)
-    - [Workshop 1 : Création d'une landing page pour chef d'oeuvre](../../ateliers/1-landing-page)
+    - [Workshop 1 : Création d'une landing page pour chef d'oeuvre](../../ateliers/01-landing-page)

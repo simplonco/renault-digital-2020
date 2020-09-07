@@ -120,4 +120,4 @@ Pour l'instant, le contenu n'est pas primordial, on cherche à créer un squelet
 
 ## Suite
 
-Rendez-vous à l'atelier suivant, [Workshop 2 : Création d'une page d'enregistrement (ajout backend)](../2-backend), pour ajouter une page register.
+Rendez-vous à l'atelier suivant, [Workshop 2 : Création d'une page d'enregistrement (ajout backend)](../02-backend), pour ajouter une page register.

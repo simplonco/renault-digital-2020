@@ -207,4 +207,4 @@ C'est un bon prétexte pour ajouter un backend + base de donnée.
 
 ## Suite
 
-Rendez-vous à l'atelier suivant, [Workshop 3 : Création d'une page de login (ajout authentification)](../3-login), pour ajouter une page de login.
+Rendez-vous à l'atelier suivant, [Workshop 3 : Création d'une page de login (ajout authentification)](../03-login), pour ajouter une page de login.

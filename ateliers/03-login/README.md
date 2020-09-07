@@ -195,4 +195,4 @@ Si l'authentification est réussie, on redirige vers la page racine des utilisat
 
 ## Suite
 
-Rendez-vous à l'atelier suivant, [Workshop 4 : Création d'un page de contenu authentifiée](../4-contenu), pour ajouter du contenu à cette page.
+Rendez-vous à l'atelier suivant, [Workshop 4 : Création d'un page de contenu authentifiée](../04-contenu), pour ajouter du contenu à cette page.

@@ -162,5 +162,5 @@ Vous allez devoir lier chaque entités avec l'utilisateur : cela aura pour but d
 
 ## Suite
 
-Maintenant que nous avons un tableau d'objet, nous allons créer un formulaire d'envoi avec upload d'image, voir [Workshop 5 : Upload d'image](../5-upload-image).
+Maintenant que nous avons un tableau d'objet, nous allons créer un formulaire d'envoi avec upload d'image, voir [Workshop 5 : Upload d'image](../05-upload-image).
 

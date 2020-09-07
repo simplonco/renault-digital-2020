@@ -148,5 +148,5 @@ Image stockée sur disque
 
 ## Suite
 
-Maintenant que nous avons une super application, nous allons la déployer, voir [Workshop 6 : Déployer son chef d'oeuvre](../6-deployment-frontend).
+Maintenant que nous avons une super application, nous allons la déployer, voir [Workshop 6 : Déployer son chef d'oeuvre](../06-deployment-frontend).
 
