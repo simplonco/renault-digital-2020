@@ -1,0 +1,35 @@
+@startuml
+
+title
+Synthesizrs - Entity Relation diagram
+end title
+
+hide circle
+skinparam linetype ortho
+skinparam class {
+    BackgroundColor White
+    ArrowColor Black
+    BorderColor Black
+}
+skinparam note {
+    BackgroundColor LightYellow
+    ArrowColor Black
+    BorderColor Black
+}
+
+entity "brand" as brand {
+    *id : integer <<generated>>
+    --
+    *name : varchar
+}
+
+entity "synthesizer" as synthesizer {
+    *id : integer <<generated>>
+    --
+    *name : varchar
+    *brand_id : integer <<foreign key>>
+}
+
+synthesizer "0..n" --> "1" brand
+
+@enduml
