@@ -31,7 +31,6 @@ entity "synthesizer" as synthesizer {
     *created_id : varchar <<foreign key>>
 }
 
-synthesizer "0..n" --> "1" user
-
+synthesizer "0..n" --> "1" user : createdBy
 
 @enduml
