@@ -1,6 +1,6 @@
 # Workshop 11 - Design BDD 03 - Ajouter une relation
 
-Le but de ce workshop c'est de faire le design du frontend pour une relation many-to-one. Rappel du workshop précédent, [Workshop 10 - Design BDD 02 - Filtrer par utilisateur](10-design-bdd-02-filtrer-par-utilisateur) :
+Le but de ce workshop c'est de faire le design du frontend pour une relation many-to-one. Rappel du workshop précédent, [Workshop 10 - Design BDD 02 - Filtrer par utilisateur](../10-design-bdd-02-filtrer-par-utilisateur) :
  
 - Plusieurs synthetiseurs font partis d'une même marque (ManyToOne)
 - Une marque a plusieurs synthétiseurs (OneToMany)
