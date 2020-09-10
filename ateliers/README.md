@@ -8,9 +8,10 @@
 - [Workshop 06 - Déployer son chef d'oeuvre (frontend)](06-deployment-frontend)
 - [Workshop 07 - Ajouter son nom de domaine monchefdoeuvre.com](07-custom-domain)
 - [Workshop 08 - Déployer son chef d'oeuvre (backend)](08-deployment-backend)
-- [Workshop 09 - Design de sa base de donnée](09-design-base-de-donnee)
-- [Workshop 10 - Design frontend - Many to One](10-design-frontend-many-to-one)
-- [Workshop 11 - Gestion de projet](11-gestion-de-projet)
+- [Workshop 09 - Design BDD 01 - Faire son diagramme](09-design-bdd-01-diagramme)
+- [Workshop 10 - Design BDD 02 - Filtrer par utilisateur](10-design-bdd-02-filtrer-par-utilisateur)
+- [Workshop 11 - Design BDD 03 - Ajouter une relation](11-design-bdd-03-ajouter-relation)
+- [Workshop 12 - Gestion de projet](12-gestion-de-projet)
 
 ## Idées
 

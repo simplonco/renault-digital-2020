@@ -27,10 +27,3 @@ TODO
 Le synthé référence la marque, il doit avoir une liste de sélection de la marque.
 
 TODO
-
-## Bonus
-
-Tous les éléments sont créés par un utilisateur, on peut systématiquement le lier :
-
-![Synthesizrs - Entity relation diagram - Bonus](./synthesizrs_entity_relation_diagram_bonus.svg)
-

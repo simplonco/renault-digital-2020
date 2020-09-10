@@ -1,4 +1,4 @@
-# Workshop 9 - Design de sa base de donnée
+# Workshop 09 - Design BDD 01 - Faire son diagramme
 
 Le but de ce workshop c'est de faire le design de sa base de donnée pour son chef d'oeuvre :
 

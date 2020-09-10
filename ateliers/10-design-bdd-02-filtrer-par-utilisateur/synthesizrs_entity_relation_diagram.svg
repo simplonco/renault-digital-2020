@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="320px" preserveAspectRatio="none" style="width:432px;height:320px;" version="1.1" viewBox="0 0 432 320" width="432.5px" zoomAndPan="magnify"><defs><filter height="300%" id="f1warra2x6lnt2" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.5"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="5.0" dy="5.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="22.5" lengthAdjust="spacingAndGlyphs" textLength="415" x="2.5" y="20.885">Synthesizrs - Entity Relation diagram</text><!--MD5=[e59cf999063292dce8d6ea34dd10a338]
+class user--><rect fill="#FFFFFF" filter="url(#f1warra2x6lnt2)" height="81.9727" id="user" style="stroke: #000000; stroke-width: 1.875;" width="173.75" x="115.625" y="224.9414"/><text fill="#000000" font-family="sans-serif" font-size="15" lengthAdjust="spacingAndGlyphs" textLength="32.5" x="186.25" y="245.1147">user</text><line style="stroke: #000000; stroke-width: 1.875;" x1="116.875" x2="288.125" y1="254.9023" y2="254.9023"/><ellipse cx="129.375" cy="268.6523" fill="#000000" rx="3.75" ry="3.75" style="stroke: #000000; stroke-width: 1.25;"/><text fill="#000000" font-family="sans-serif" font-size="13.75" lengthAdjust="spacingAndGlyphs" textLength="141.25" x="140.625" y="272.6654">username : varchar</text><line style="stroke: #000000; stroke-width: 1.25;" x1="116.875" x2="288.125" y1="280.9082" y2="280.9082"/><ellipse cx="129.375" cy="294.6582" fill="#000000" rx="3.75" ry="3.75" style="stroke: #000000; stroke-width: 1.25;"/><text fill="#000000" font-family="sans-serif" font-size="13.75" lengthAdjust="spacingAndGlyphs" textLength="137.5" x="140.625" y="298.6713">password : varchar</text><!--MD5=[51b00231c93f776674e1874332d39bde]
+class synthesizer--><rect fill="#FFFFFF" filter="url(#f1warra2x6lnt2)" height="113.9844" id="synthesizer" style="stroke: #000000; stroke-width: 1.875;" width="278.75" x="63.125" y="36.1914"/><text fill="#000000" font-family="sans-serif" font-size="15" lengthAdjust="spacingAndGlyphs" textLength="85" x="160" y="56.3647">synthesizer</text><line style="stroke: #000000; stroke-width: 1.875;" x1="64.375" x2="340.625" y1="66.1523" y2="66.1523"/><ellipse cx="76.875" cy="79.9023" fill="#000000" rx="3.75" ry="3.75" style="stroke: #000000; stroke-width: 1.25;"/><text fill="#000000" font-family="sans-serif" font-size="13.75" lengthAdjust="spacingAndGlyphs" textLength="172.5" x="88.125" y="83.9154">id : integer «generated»</text><line style="stroke: #000000; stroke-width: 1.25;" x1="64.375" x2="340.625" y1="92.1582" y2="92.1582"/><ellipse cx="76.875" cy="105.9082" fill="#000000" rx="3.75" ry="3.75" style="stroke: #000000; stroke-width: 1.25;"/><text fill="#000000" font-family="sans-serif" font-size="13.75" lengthAdjust="spacingAndGlyphs" textLength="110" x="88.125" y="109.9213">name : varchar</text><ellipse cx="76.875" cy="121.9141" fill="#000000" rx="3.75" ry="3.75" style="stroke: #000000; stroke-width: 1.25;"/><text fill="#000000" font-family="sans-serif" font-size="13.75" lengthAdjust="spacingAndGlyphs" textLength="228.75" x="88.125" y="125.9271">brand_id : integer «foreign key»</text><ellipse cx="76.875" cy="137.9199" fill="#000000" rx="3.75" ry="3.75" style="stroke: #000000; stroke-width: 1.25;"/><text fill="#000000" font-family="sans-serif" font-size="13.75" lengthAdjust="spacingAndGlyphs" textLength="246.25" x="88.125" y="141.933">created_id : varchar «foreign key»</text><!--MD5=[919c5190d9132a9e313e71928ec0f41f]
+link synthesizer to user--><path d="M202.5,150.2289 C202.5,150.2289 202.5,218.1914 202.5,218.1914 " fill="none" id="synthesizer-&gt;user" style="stroke: #000000; stroke-width: 1.25;"/><polygon fill="#000000" points="202.5,224.4414,207.5,213.1914,202.5,218.1914,197.5,213.1914,202.5,224.4414" style="stroke: #000000; stroke-width: 1.25;"/><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacingAndGlyphs" textLength="30" x="170.2969" y="175.0802">0..n</text><text fill="#000000" font-family="sans-serif" font-size="16.25" lengthAdjust="spacingAndGlyphs" textLength="10" x="191.5469" y="211.0954">1</text><!--MD5=[b6bddf9c670f10104401423fd2be76d8]
+@startuml
+
+title
+Synthesizrs - Entity Relation diagram
+end title
+
+hide circle
+skinparam linetype ortho
+skinparam class {
+    BackgroundColor White
+    ArrowColor Black
+    BorderColor Black
+}
+skinparam note {
+    BackgroundColor LightYellow
+    ArrowColor Black
+    BorderColor Black
+}
+
+entity "user" as user {
+    *username : varchar
+    - -
+    *password : varchar
+}
+
+
+entity "synthesizer" as synthesizer {
+    *id : integer <<generated>>
+    - -
+    *name : varchar
+    *brand_id : integer <<foreign key>>
+    *created_id : varchar <<foreign key>>
+}
+
+synthesizer "0..n" - -> "1" user
+
+
+@enduml
+
+PlantUML version 1.2020.09(Sun May 10 06:51:06 EDT 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.8+10-b944.31
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

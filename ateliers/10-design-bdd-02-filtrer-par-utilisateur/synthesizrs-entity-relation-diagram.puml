@@ -17,10 +17,10 @@ skinparam note {
     BorderColor Black
 }
 
-entity "brand" as brand {
-    *id : integer <<generated>>
+entity "user" as user {
+    *username : varchar
     --
-    *name : varchar
+    *password : varchar
 }
 
 entity "synthesizer" as synthesizer {
@@ -28,8 +28,10 @@ entity "synthesizer" as synthesizer {
     --
     *name : varchar
     *brand_id : integer <<foreign key>>
+    *created_id : varchar <<foreign key>>
 }
 
-synthesizer "0..n" --> "1" brand
+synthesizer "0..n" --> "1" user
+
 
 @enduml
